@@ -6,12 +6,21 @@ Generation of static or dynamic svg images from json descriptions and typescript
 
 ## Installation
 
-### Docker
+Ensure that [`node.js`](https://nodejs.org) is installed
 
-
-
+``` sh
+npm install
+npm run build
+npm link
+```
 
 ## Usage
+
+The module can be link to other TypeScript projects by linking to the local module with:
+
+``` sh
+npm link model-image
+```
 
 - module to integrate in other programs
   - node.js or browser

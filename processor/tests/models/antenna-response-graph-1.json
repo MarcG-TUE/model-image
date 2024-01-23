@@ -1,0 +1,74 @@
+{
+    "canvas": {
+        "width": 335,
+        "height": 210
+    },
+    "data":[
+        ["parameters", [
+            {
+                "name": "M",
+                "type": "range",
+                "initialValue": 2,
+                "description": "number of antenna elements",
+                "step": 1,
+                "range": [1, 7]
+            },
+            {
+                "name": "Delta",
+                "type": "range",
+                "step": 0.02,
+                "initialValue": 0.5,
+                "description": "spacing between antenna elements in wavelengths",
+                "range": [0.1, 2]
+            }]
+        ]
+    ],
+    "elements": [
+        ["subFigure", {
+            "elements": [
+                ["response-graph", {
+                    "antennaArray": {
+                        "M": "SceneData.parameters.M",
+                        "Delta": "SceneData.parameters.Delta"
+                    },
+                    "beamFormer": "Array(SceneData.parameters.M).fill([1,0])",
+                    "width": 300,
+                    "height": 150,
+                    "origin": [175, 175],
+                    "yDom": "[0, SceneData.parameters.M+0.05]",
+                    "options":{
+                        "tickValuesY": "SceneData.linSpaceDelta(0,SceneData.parameters.M, 0.5)"
+                    },
+                    "updateOn": ["M","Delta"]
+                }
+            ]
+        ]}],
+        ["subFigure", {
+            "elements": [
+                ["latex-texts", {
+                    "texts": [
+                        {
+                            "text": "|({\\bf{}a}(\\alpha),{\\bf{}w})|",
+                            "position": [5,5]
+                        },
+                        {
+                            "text": "eval:`M=${SceneData.parameters.M}`",
+                            "position": [50,45],
+                            "updateOn": ["M"]
+                        },
+                        {
+                            "text": "eval:`\\\\Delta=${SceneData.parameters.Delta}`",
+                            "position": [50,65],
+                            "updateOn": ["Delta"]
+                        },
+                        {
+                            "text": "\\text{angle }\\alpha\\text{ [degrees]}",
+                            "position": [236,193]
+                        }
+                        ]
+                    }
+                ]
+            ]
+        }]
+    ]
+}

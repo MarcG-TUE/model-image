@@ -1,0 +1,102 @@
+{
+    "canvas": {
+        "width": 140,
+        "height": 85
+    },
+    "data": [
+        ["variables", [
+            {
+                "name": "phi",
+                "value": "120"
+            },{
+                "name": "x",
+                "value": "[Math.cos(SceneData.variables.phi/180*Math.PI),Math.sin(SceneData.variables.phi/180*Math.PI)]"
+            }
+        ]]
+    ],
+    "elements": [
+        [ "axis-2d", {
+            "type": "4Q",
+            "xDom": [-1.2,1.4],
+            "yDom": [-0.2,1.2],
+            "center": [65,65],
+            "scale": 50,
+            "options": {
+                "tickValuesX": [-1,1],
+                "tickValuesY": [1]
+            },
+            "content": [
+                ["lines", {
+                    "lines": [
+                        {
+                            "p1": "[0,Math.sin(SceneData.variables.phi/180*Math.PI)]",
+                            "p2": "SceneData.variables.x"
+                        },{
+                            "p1": "[Math.cos(SceneData.variables.phi/180*Math.PI),0]",
+                            "p2": "SceneData.variables.x"
+                        }
+                    ],
+                    "attributes": {
+                        "stroke-width": 1,
+                        "stroke-dasharray": "2 2"
+                    }
+                }],
+                ["vector", {
+                    "p1": [0,0],
+                    "p2": [1,0],
+                    "attributes": {
+                        "stroke": "#ff0000",
+                        "stroke-width": 1.5
+                    }
+                }],
+                ["arc", {
+                    "start-angle": 0,
+                    "end-angle": "SceneData.variables.phi",
+                    "arrowHeads": "end",
+                    "attributes": {
+                        "stroke-dasharray": "4 2",
+                        "stroke": "#0000aa"
+                    }
+                }],
+                ["vector", {
+                    "p1": [0,0],
+                    "p2": "SceneData.variables.x",
+                    "attributes": {
+                        "stroke": "#00aa00",
+                        "stroke-width": 1.5
+                    }
+                }]
+            ]
+        }],
+        ["latex-texts", {
+            "texts": [
+                {
+                    "text": "\\begin{bmatrix}1\\\\0\\\\\\end{bmatrix}",
+                    "position": [120,50]
+                }
+            ],
+            "scale": 1,
+            "color": "#ff0000"
+        }],
+        ["latex-texts", {
+            "texts": [
+                {
+                    "text": "\\begin{bmatrix}\\cos\\varphi\\\\\\sin\\varphi\\\\\\end{bmatrix}",
+                    "position": [0,5]
+                }
+            ],
+            "scale": 1,
+            "color": "#00aa00"
+        }],
+        ["latex-texts", {
+            "texts": [
+                {
+                    "text": "\\varphi",
+                    "position": [100,20]
+                }
+            ],
+            "scale": 1,
+            "color": "#0000aa"
+        }]
+    ]
+}

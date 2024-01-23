@@ -1,0 +1,77 @@
+{
+    "canvas": {
+        "width": 220,
+        "height": 210
+    },
+    "data": [
+        ["variables", [
+            {
+                "name": "v1",
+                "value": [6,1]
+            },{
+                "name": "v2",
+                "value": [-0.333,2]
+            },{
+                "name": "number of samples",
+                "value": 500
+            }]
+        ],
+        ["randomData", {
+            "name": "samples",
+            "length": 2,
+            "type": "gaussian",
+            "variance": 1,
+            "numberOfSamples": "SceneData.variables['number of samples']"
+        }]
+    ],
+    "elements": [
+        [ "axis-2d",
+        {
+            "type": "4Q",
+            "xDom": [-10.1,10.1],
+            "yDom": [-10.1,10.1],
+            "center": [110,105],
+            "scale": 10,
+            "options":{
+                "tickValuesX": [-10,-8,-6,-4,-2,2,4,6,8,10],
+                "tickValuesY": [-10,-8,-6,-4,-2,2,4,6,8,10],
+                "clip": true
+            },
+            "content": [
+                    [ "dataset", {
+                        "points": "SceneData.clipPoints(SceneData.randomData.samples.map(p=>SceneData.addPoint(SceneData.scalePoint(SceneData.variables.v1, p[0]),SceneData.scalePoint(SceneData.variables.v2, p[1]))), [-10,10], [-10,10])",
+                        "radius": 0.1,
+                        "attributes": {
+                            "fill": "#00aa00"
+                        }
+                    }],
+                    ["vectors",{
+                        "vectors": [
+                            {
+                                "p1": [0,0],
+                                "p2": "SceneData.variables.v1"
+                            },{
+                                "p1": [0,0],
+                                "p2": "SceneData.variables.v2"
+                            }
+                        ],
+                        "attributes": {
+                            "stroke": "#aa0000"
+                        }
+                    }],
+                    ["ellipse", {
+                        "center": [0,0],
+                        "radius-major": "SceneData.euclideanNorm(SceneData.variables.v1)",
+                        "radius-minor": "SceneData.euclideanNorm(SceneData.variables.v2)",
+                        "angle": "SceneData.angleOfPoint(SceneData.variables.v1)",
+                        "attributes": {
+                            "stroke-width": 2,
+                            "stroke": "#0000aa",
+                            "fill": "none"
+                        }
+                    }]
+                ]
+            }
+        ]
+    ]
+}

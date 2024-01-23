@@ -1,0 +1,176 @@
+{
+    "canvas": {
+        "width": 325,
+        "height": 150
+    },
+    "elements": [
+        ["clip-art", {
+            "id": "delay-block",
+            "transform": "translate(75,25)"
+        }],
+        ["clip-art", {
+            "id": "delay-block",
+            "transform": "translate(125,25)"
+        }],
+        ["clip-art", {
+            "id": "delay-block",
+            "transform": "translate(225,25)"
+        }],
+        ["clip-art", {
+            "id": "multiplier",
+            "transform": "translate(50,75)"
+        }],
+        ["clip-art", {
+            "id": "multiplier",
+            "transform": "translate(100,75)"
+        }],
+        ["clip-art", {
+            "id": "multiplier",
+            "transform": "translate(150,75)"
+        }],
+        ["clip-art", {
+            "id": "multiplier",
+            "transform": "translate(250,75)"
+        }],
+        ["clip-art", {
+            "id": "adder",
+            "transform": "translate(100,125)"
+        }],
+        ["clip-art", {
+            "id": "adder",
+            "transform": "translate(150,125)"
+        }],
+        ["clip-art", {
+            "id": "adder",
+            "transform": "translate(250,125)"
+        }],
+        ["lines", {
+            "lines": [{
+                "p1": [25,25],
+                "p2": [65,25]
+            },{
+                "p1": [85,25],
+                "p2": [115,25]
+            },{
+                "p1": [135,25],
+                "p2": [175,25]
+            },{
+                "p1": [235,25],
+                "p2": [250,25]
+            },{
+                "p1": [50,95],
+                "p2": [50,125]
+            },{
+                "p1": [160,125],
+                "p2": [175,125]
+            },{
+                "p1": [200,25],
+                "p2": [215,25]
+            }
+            ],
+            "attributes":{
+                "stroke-width": 1
+            }
+        }],
+        ["lines", {
+            "lines": [{
+                "p1": [175,25],
+                "p2": [200,25]
+            },{
+                "p1": [175,125],
+                "p2": [200,125]
+            }],
+            "attributes":{
+                "stroke-width": 1,
+                "stroke-dasharray": "3 2"
+            }
+        }],
+        ["arrows", {
+            "arrows": [{
+                "p1": [50,25],
+                "p2": [50,75]
+            },{
+                "p1": [100,25],
+                "p2": [100,75]
+            },{
+                "p1": [150,25],
+                "p2": [150,75]
+            },{
+                "p1": [250,25],
+                "p2": [250,75]
+            },{
+                "p1": [100,95],
+                "p2": [100,115]
+            },{
+                "p1": [150,95],
+                "p2": [150,115]
+            },{
+                "p1": [250,95],
+                "p2": [250,115]
+            },{
+                "p1": [50,125],
+                "p2": [90,125]
+            },{
+                "p1": [110,125],
+                "p2": [140,125]
+            },{
+                "p1": [200,125],
+                "p2": [240,125]
+            },{
+                "p1": [260,125],
+                "p2": [290,125]
+            }
+            ],
+            "attributes":{
+                "stroke-width": 1
+            }
+        }],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "s(t)",
+                        "position": [1,18]
+                    },
+                    {
+                        "text": "x_1(t)",
+                        "position": [53,45]
+                    },
+                    {
+                        "text": "w_1",
+                        "position": [58,85]
+                    },
+                    {
+                        "text": "x_2(t)",
+                        "position": [103,45]
+                    },
+                    {
+                        "text": "w_2",
+                        "position": [108,85]
+                    },
+                    {
+                        "text": "x_3(t)",
+                        "position": [153,45]
+                    },
+                    {
+                        "text": "w_3",
+                        "position": [158,85]
+                    },
+                    {
+                        "text": "x_M(t)",
+                        "position": [253,45]
+                    },
+                    {
+                        "text": "w_M",
+                        "position": [258,85]
+                    },
+                    {
+                        "text": "y(t)",
+                        "position": [294,117]
+                    }
+                ],
+                "scale": 1.0
+            }
+        ]
+    ]
+}

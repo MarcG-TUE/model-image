@@ -1,0 +1,71 @@
+{
+    "canvas": {
+        "width": 300,
+        "height": 190
+    },
+    "data":[
+        ["parameters", [
+            {
+                "name": "M",
+                "type": "range",
+                "initialValue": 4,
+                "description": "number of antenna elements",
+                "step": 1,
+                "range": [2, 10]
+            },{
+                "name": "nv",
+                "type": "range",
+                "initialValue": 1.0,
+                "description": "noise variance",
+                "step": 0.01,
+                "range": [0, 2]
+            }]
+        ],
+        ["variables", [
+            {
+                "name": "Delta",
+                "value": 0.5
+            }]
+        ]
+        ],
+    "elements": [
+        ["function-plot", {
+        "function": "(alpha)=>SceneData.TotalOutputNoiseZF({M:SceneData.parameters.M,Delta:SceneData.variables.Delta},0,alpha, SceneData.parameters.nv)",
+            "width": 250,
+            "height": 150,
+            "origin": [165, 155],
+            "xDom": [-90, 90],
+            "yDom": [0, 2],
+            "options":{
+                "tickValuesX": [-90,-75,-60,-45,-30,-15,0,15,30,45,60,75,90],
+                "tickValuesY": [0, 0.2,0.4,0.6,0.8,1.0,1.2,1.4,1.6,1.8,2],
+                "clip": true,
+                "numberOfSamples": 300
+            },
+            "updateOn": ["M", "nv"]
+        }
+        ],
+        ["line", {
+            "p1": [165,155],
+            "p2": [165,5],
+            "attributes": {
+                "stroke-dasharray": "4 2"
+            }
+        }],
+        ["latex-text", {
+            "text": "\\text{angle~between~signals}\\text{ [degrees]}",
+            "position": [86,176]
+            }
+        ],
+        [ "subFigure", {
+            "transform": "translate(-190,205) rotate(-90)",
+            "elements": [
+                ["latex-text", {
+                    "text": "\\text{output~noise~variance}",
+                    "position": [86,193]
+                    }
+                ]
+            ]
+        }]
+    ]
+}

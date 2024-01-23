@@ -1,0 +1,241 @@
+{
+    "canvas": {
+        "width": 375,
+        "height": 250
+    },
+    "elements": [
+        ["arrows", {
+            "arrows": [{
+                "p1": [20,10],
+                "p2": [100,110]
+            },{
+                "p1": [70,10],
+                "p2": [150,110]
+            },{
+                "p1": [120,10],
+                "p2": [200,110]
+            },{
+                "p1": [220,10],
+                "p2": [300,110]
+            }
+            ],
+            "attributes":{
+                "stroke-width": 1,
+                "stroke": "#0000ff"
+            }
+        }],
+        ["clip-art", {
+            "id": "antenna-array",
+            "transform": "translate(100,115)",
+            "number-of-antennas": 3,
+            "delta": [50,0]
+        }],
+        ["clip-art", {
+            "id": "antenna-array",
+            "transform": "translate(300,115)",
+            "number-of-antennas": 1,
+            "delta": [50,0]
+        }],
+        ["clip-art", {
+            "id": "multiplier",
+            "transform": "translate(100,165)"
+        }],
+        ["clip-art", {
+            "id": "multiplier",
+            "transform": "translate(150,165)"
+        }],
+        ["clip-art", {
+            "id": "multiplier",
+            "transform": "translate(200,165)"
+        }],
+        ["clip-art", {
+            "id": "multiplier",
+            "transform": "translate(300,165)"
+        }],
+        ["clip-art", {
+            "id": "adder",
+            "transform": "translate(150,225)"
+        }],
+        ["clip-art", {
+            "id": "adder",
+            "transform": "translate(200,225)"
+        }],
+        ["clip-art", {
+            "id": "adder",
+            "transform": "translate(300,225)"
+        }],
+        ["lines", {
+            "lines": [{
+                "p1": [100,110],
+                "p2": [222,12]
+            },{
+                "p1": [150,110],
+                "p2": [240,37]
+            },{
+                "p1": [200,110],
+                "p2": [260,61]
+            }
+            ],
+            "attributes":{
+                "stroke-width": 0.5,
+                "stroke": "#aa0000",
+                "stroke-dasharray": "3 2"
+            }
+        }],
+        ["arrows", {
+            "arrows": [{
+                "p1": [138,80.5],
+                "p2": [157,105]
+            },{
+                "p1": [188,80.5],
+                "p2": [207,105]
+            }
+            ],
+            "double-headed": true,
+            "attributes":{
+                "stroke-width": 0.5,
+                "stroke": "#aa0000",
+                "stroke-dasharray": "3 2"
+            }
+        }],
+        ["lines", {
+            "lines":[{
+                "p1": [75,140],
+                "p2": [225,140]
+            },{
+                "p1": [275,140],
+                "p2": [325,140]
+            }],
+            "attributes":{
+                "stroke-width": 0.5,
+                "stroke": "#000000"
+            }
+        }],
+        ["line", {
+            "p1": [225,140],
+            "p2": [275,140],
+            "attributes":{
+                "stroke-width": 0.5,
+                "stroke": "#000000",
+                "stroke-dasharray": "4 2"
+            }
+        }],
+        ["line", {
+            "p1": [225,225],
+            "p2": [275,225],
+            "attributes":{
+                "stroke-width": 1,
+                "stroke": "#000000",
+                "stroke-dasharray": "4 2"
+            }
+        }],
+        ["arrows", {
+            "arrows": [{
+                "p1": [100,145],
+                "p2": [100,165]
+            },{
+                "p1": [150,145],
+                "p2": [150,165]
+            },{
+                "p1": [200,145],
+                "p2": [200,165]
+            },{
+                "p1": [300,145],
+                "p2": [300,165]
+            },{
+                "p1": [150,185],
+                "p2": [150,215]
+            },{
+                "p1": [200,185],
+                "p2": [200,215]
+            },{
+                "p1": [300,185],
+                "p2": [300,215]
+            },{
+                "p1": [100,225],
+                "p2": [140,225]
+            },{
+                "p1": [160,225],
+                "p2": [190,225]
+            },{
+                "p1": [275,225],
+                "p2": [290,225]
+            },{
+                "p1": [310,225],
+                "p2": [335,225]
+            }
+            ],
+            "attributes":{
+                "stroke-width": 1
+            }
+        }],
+        ["lines", {
+            "lines": [{
+                "p1": [100,185],
+                "p2": [100,225]
+            },{
+                "p1": [210,225],
+                "p2": [225,225]
+            }
+            ],
+            "attributes":{
+                "stroke-width": 1
+            }
+        }],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "s(t)",
+                        "position": [85,3]
+                    },
+                    {
+                        "text": "x_1(t)",
+                        "position": [103,145]
+                    },
+                    {
+                        "text": "w_1",
+                        "position": [110,175]
+                    },
+                    {
+                        "text": "x_2(t)",
+                        "position": [153,145]
+                    },
+                    {
+                        "text": "w_2",
+                        "position": [160,175]
+                    },
+                    {
+                        "text": "x_3(t)",
+                        "position": [203,145]
+                    },
+                    {
+                        "text": "w_3",
+                        "position": [210,175]
+                    },
+                    {
+                        "text": "x_M(t)",
+                        "position": [303,145]
+                    },
+                    {
+                        "text": "w_M",
+                        "position": [310,175]
+                    },
+                    {
+                        "text": "y(t)",
+                        "position": [340,218]
+                    },
+                    {
+                        "text": "\\tau",
+                        "position": [150,85]
+                    },
+                    {
+                        "text": "\\tau",
+                        "position": [200,85]
+                    }
+                ],
+                "scale": 1.0
+            }
+        ]
+    ]
+}

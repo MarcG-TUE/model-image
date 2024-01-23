@@ -1,0 +1,134 @@
+{
+    "canvas": {
+        "width": 200,
+        "height": 200
+    },
+    "data":[
+        ["variables", [
+            {
+                "name": "alpha1",
+                "value": "Math.PI/2-0.25"
+            },{
+                "name": "alpha2",
+                "value": "-Math.PI/4"
+            },{
+                "name": "lambda1",
+                "value": "0.6"
+            },{
+                "name": "lambda2",
+                "value": "1.2"
+            },{
+                "name": "T",
+                "value": "[[Math.cos(SceneData.variables.alpha1),Math.sin(SceneData.variables.alpha1)],[Math.cos(SceneData.variables.alpha2),Math.sin(SceneData.variables.alpha2)]]"
+            },{
+                "name": "Lambda",
+                "value": "[[SceneData.variables.lambda1, 0],[0,SceneData.variables.lambda2]]"
+            },{
+                "name": "A",
+                "value": "SceneData.MatrixProduct(SceneData.variables.T,SceneData.MatrixProduct(SceneData.variables.Lambda,SceneData.MatrixInverse(SceneData.variables.T)))"
+            },{
+                "name": "SVDA",
+                "value": "SceneData.SingularValueDecomposition(SceneData.variables.A)"
+            },{
+                "name": "alpha",
+                "value": 3.6
+            }
+        ]]
+    ],
+    "elements": [
+        [ "axis-2d",{
+            "type": "4Q",
+            "xDom": [-1.2,1.2],
+            "yDom": [-1.2,1.2],
+            "center": [100,100],
+            "scale": 80,
+            "content": [
+                ["circle", {
+                    "center": [0, 0],
+                    "radius": 1,
+                    "attributes": {
+                        "stroke-width": 2,
+                        "stroke": "#00aa00",
+                        "fill": "none"
+                    }
+                }],
+                ["ellipse", {
+                    "center": [0,0],
+                    "radius-major": "SceneData.variables.SVDA.singularValues[0]",
+                    "radius-minor": "SceneData.variables.SVDA.singularValues[1]",
+                    "angle": "SceneData.angleOfPoint(SceneData.VectorToPoint(SceneData.variables.SVDA.leftSingularVectors.getColumnVector(0)))",
+                    "attributes": {
+                        "stroke-width": 2,
+                        "stroke": "#0000aa",
+                        "fill": "none"
+                    }
+                }],
+                ["vectors", {
+                    "vectors": [{
+                            "p1": [0,0],
+                            "p2": "SceneData.scalePoint(SceneData.variables.T[1],SceneData.variables.lambda2)"
+                        },{
+                            "p1": [0,0],
+                            "p2": "SceneData.MatrixVectorProduct(SceneData.variables.A, [Math.cos(SceneData.variables.alpha),Math.sin(SceneData.variables.alpha)])"
+                        }],
+                    "attributes": {
+                        "stroke": "#0000aa"
+                    }
+                }],
+                ["vectors", {
+                    "vectors": [{
+                        "p1": [0,0],
+                        "p2": "SceneData.variables.T[0]"
+                    },{
+                        "p1": [0,0],
+                        "p2": "SceneData.variables.T[1]"
+                    },{
+                        "p1": [0,0],
+                        "p2": "[Math.cos(SceneData.variables.alpha),Math.sin(SceneData.variables.alpha)]"
+                    }],
+                    "attributes": {
+                        "stroke": "#00aa00"
+                    }
+                }],
+                ["vector", {
+                    "p1": [0,0],
+                    "p2": "SceneData.scalePoint(SceneData.variables.T[0],SceneData.variables.lambda1)",
+                    "attributes": {
+                        "stroke": "#0000aa"
+                    }
+                }]
+            ]}],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "{\\bf{}x}_1",
+                        "position": [120,12]
+                    },{
+                        "text": "{\\bf{}x}_2",
+                        "position": [15,140]
+                    },{
+                        "text": "{\\bf{}x}_3",
+                        "position": [135,155]
+                    }],
+                "color": "#00aa00"
+            }
+        ],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "{\\bf{}Ax}_2",
+                        "position": [28,77]
+                    },{
+                        "text": "{\\bf{}Ax}_1=\\lambda_a{\\bf{}x}_1",
+                        "position": [115,45]
+                    },{
+                        "text": "{\\bf{}Ax}_3=\\lambda_b{\\bf{}x}_3",
+                        "position": [140,172]
+                    }],
+                "color": "#0000aa"
+            }
+        ]
+    ]
+}

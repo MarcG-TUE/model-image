@@ -1,0 +1,60 @@
+    {
+    "canvas": {
+        "width": 255,
+        "height": 125
+    },
+    "data":[
+        ["parameters", [{
+                "name": "phi1",
+                "type": "range",
+                "initialValue": 0,
+                "description": "phase of the envelop [degrees]",
+                "step": 1,
+                "range": [0, 360]
+            },{
+                "name": "phi2",
+                "type": "range",
+                "initialValue": 0,
+                "description": "phase of the modulated signal [degrees]",
+                "step": 4,
+                "range": [0, 1200]
+            }]
+        ]
+    ],
+    "elements": [
+        ["function-plot", {
+            "functions": ["(t)=>0.25*Math.cos(t*14+SceneData.parameters.phi2/180*Math.PI)*(3+Math.cos(t*1.33+SceneData.parameters.phi1/180*Math.PI))", "(t)=>0.25*(3+Math.cos(t*1.33+SceneData.parameters.phi1/180*Math.PI))"],
+            "width": 210,
+            "height": 100,
+            "origin": [30, 75],
+            "xDom": [0, 10],
+            "yDom": [-1.1, 1.1],
+            "options":{
+                "numberOfSamples": 1500,
+                "axisType": "4Q",
+                "showBackground": false,
+                "tickValuesX": [2, 4, 6, 8, 10],
+                "tickFormatX": ",.0f",
+                "tickValuesY": [-1, -0.5, 0, 0.5, 1],
+                "stroke-width": 1,
+                "colors": ["#00aa00","#ff0000"]
+            },
+            "updateOn": ["phi1", "phi2"]
+        }
+        ],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "\\mathit{Re}(z(t))",
+                        "position": [8,4]
+                    },
+                    {
+                        "text": "t",
+                        "position": [249,80]
+                    }
+                ]
+            }
+        ]
+    ]
+}

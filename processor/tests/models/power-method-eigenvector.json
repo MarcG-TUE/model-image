@@ -1,0 +1,87 @@
+{
+    "canvas": {
+        "width": 200,
+        "height": 200
+    },
+    "data": [
+        ["parameters", [{
+                "name": "iterations",
+                "type": "range",
+                "initialValue": 20,
+                "description": "number of iterations of the Power Method",
+                "range": [0, 20],
+                "step": 1
+            }]
+        ],
+        ["variables", [
+            {
+                "name": "A",
+                "value": "[[-2.1,-1],[-1.7,4]]"
+            },{
+                "name": "Points",
+                "value": "SceneData.PowerMethod(SceneData.variables.A, [1,0], SceneData.parameters.iterations+1)",
+                "updateOn": ["iterations"]
+            },{
+                "name": "Vectors",
+                "value": "SceneData.variables.Points.map(v=>{return {p1: [0,0], p2: v}})",
+                "updateOn": ["iterations"]
+            },{
+                "name": "eigenvector",
+                "value": "SceneData.variables.Vectors[SceneData.parameters.iterations]",
+                "updateOn": ["iterations"]
+            }
+        ]]
+    ],
+    "elements": [
+        [ "axis-2d",
+        {
+            "type": "4Q",
+            "xDom": [-1.2,1.2],
+            "yDom": [-1.2,1.2],
+            "center": [100,100],
+            "scale": 80,
+            "content": [
+                ["circle",{
+                    "attributes": {
+                        "stroke": "#0000ff",
+                        "stroke-opacity": 0.5
+                    }
+                }],
+                ["vectors", {
+                    "vectors": "SceneData.variables.Vectors",
+                    "attributes": {
+                        "stroke": "#ff0000",
+                        "stroke-width": 1.5
+                    },
+                    "updateOn": ["iterations"]
+                }],
+                ["polyline", {
+                    "points": "SceneData.variables.Points",
+                    "attributes": {
+                        "stroke-dasharray": "3 3"
+                    },
+                    "updateOn": ["iterations"]
+                }],
+                ["vector", {
+                    "p1": "SceneData.variables.eigenvector.p1",
+                    "p2": "SceneData.variables.eigenvector.p2",
+                    "attributes": {
+                        "stroke": "#00aa00"
+                    },
+                    "updateOn": ["iterations"]
+                }]
+            ]
+        }
+    ],
+    [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "{\\bf{}x}",
+                        "position": [120,180]
+                    }
+                ]
+            }
+        ]
+    ]
+}

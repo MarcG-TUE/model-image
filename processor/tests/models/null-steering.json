@@ -1,0 +1,134 @@
+{
+    "canvas": {
+        "width": 220,
+        "height": 215
+    },
+    "elements": [
+        ["clip-art", {
+            "id": "antenna-array",
+            "transform": "translate(50,100)",
+            "number-of-antennas": 2,
+            "delta": [100,0]
+        }],
+        ["clip-art", {
+            "id": "multiplier",
+            "transform": "translate(50,150)"
+        }],
+        ["clip-art", {
+            "id": "multiplier",
+            "transform": "translate(150,150)"
+        }],
+        ["clip-art", {
+            "id": "adder",
+            "transform": "translate(150,200)"
+        }],
+        ["arrows", {
+            "arrows": [{
+                "p1": [20,20],
+                "p2": [50,98]
+            },{
+                "p1": [20,20],
+                "p2": [150,98]
+            }
+            ],
+            "attributes":{
+                "stroke": "#0000ff",
+                "stroke-width": 1
+            }
+        }],
+        ["arrows", {
+            "arrows": [{
+                "p1": [23,17],
+                "p2": [95,60]
+            },{
+                "p1": [95,60],
+                "p2": [153,95]
+            }
+            ],
+            "double-headed": true,
+            "attributes":{
+                "stroke": "#aa0000",
+                "stroke-width": 0.5,
+                "stroke-dasharray": "4 3"
+            }
+        }],
+        ["arc", {
+            "center": [20, 20],
+            "radius": 85,
+            "start-angle": 292,
+            "end-angle": 329,
+            "attributes": {
+                "stroke": "#aa0000",
+                "stroke-width": 0.5,
+                "stroke-dasharray": "4 3"
+            }
+        }],
+        ["arrows", {
+            "arrows": [{
+                "p1": [150,170],
+                "p2": [150,190]
+            },{
+                "p1": [50,130],
+                "p2": [50,150]
+            },{
+                "p1": [150,130],
+                "p2": [150,150]
+            },{
+                "p1": [50,200],
+                "p2": [140,200]
+            },{
+                "p1": [160,200],
+                "p2": [180,200]
+            }
+            ],
+            "attributes":{
+                "stroke-width": 1
+            }
+        }],
+        ["lines", {
+            "lines": [{
+                "p1": [50,170],
+                "p2": [50,200]
+            }]
+        }],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "s(t)",
+                        "position": [1,5]
+                    },
+                    {
+                        "text": "x_1(t)",
+                        "position": [53,120]
+                    },
+                    {
+                        "text": "w_1",
+                        "position": [58,163]
+                    },
+                    {
+                        "text": "x_2(t)",
+                        "position": [153,120]
+                    },
+                    {
+                        "text": "w_2",
+                        "position": [158,163]
+                    },
+                    {
+                        "text": "y(t)",
+                        "position": [294,117]
+                    },
+                    {
+                        "text": "\\tau",
+                        "position": [125,68]
+                    },
+                    {
+                        "text": "y(t)",
+                        "position": [190,192]
+                    }
+                ],
+                "scale": 1.0
+            }
+        ]
+    ]
+}

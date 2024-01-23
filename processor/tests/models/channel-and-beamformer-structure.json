@@ -1,0 +1,146 @@
+{
+    "canvas": {
+        "width": 385,
+        "height": 145
+    },
+    "elements": [
+        ["arrows", {
+            "arrows": [{
+                "p1": [35,40],
+                "p2": [175,75]
+            },{
+                "p1": [35,115],
+                "p2": [175,100]
+            }
+            ],
+            "attributes":{
+                "stroke-width": 1,
+                "stroke": "#0000ff"
+            }
+        }],
+        ["polyline", {
+            "points": [[35,35],[120,5],[175, 35]],
+            "arrowHeads": "end",
+            "attributes":{
+                "stroke-width": 1,
+                "stroke": "#0000ff"
+            }
+        }],
+        ["clip-art", {
+            "id": "antenna-array",
+            "transform": "translate(200,35)",
+            "number-of-antennas": 2,
+            "delta": [0,60]
+        }],
+        ["line", {
+            "p1": [225,75],
+            "p2": [225,115],
+            "attributes":{
+                "stroke-width": 1,
+                "stroke": "#000000",
+                "stroke-dasharray": "1 5"
+            }
+        }],
+        ["line", {
+            "p1": [15,60],
+            "p2": [15,100],
+            "attributes":{
+                "stroke-width": 1,
+                "stroke": "#00aa00",
+                "stroke-dasharray": "1 5"
+            }
+        }],
+        ["arrows", {
+            "arrows": [{
+                "p1": [200,65],
+                "p2": [250,65]
+            },{
+                "p1": [200,125],
+                "p2": [250,125]
+            },{
+                "p1": [252,65],
+                "p2": [308,65]
+            },{
+                "p1": [252,125],
+                "p2": [308,125]
+            },{
+                "p1": [252,67],
+                "p2": [308,123]
+            },{
+                "p1": [252,123],
+                "p2": [308,67]
+            },{
+                "p1": [310,65],
+                "p2": [350,65]
+            },{
+                "p1": [310,125],
+                "p2": [350,125]
+            }
+            ],
+            "attributes":{
+                "stroke-width": 1
+            }
+        }],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "s_1[k]",
+                        "position": [5,30]
+                    },
+                    {
+                        "text": "s_d[k]",
+                        "position": [5,110]
+                    }],
+                "color": "#00aa00"
+            }
+        ],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "a_{l,m}",
+                        "position": [110,50]
+                    }],
+                "color": "#0000aa"
+            }
+        ],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "x_1[k]+n_1[k]",
+                        "position": [210,48]
+                    },
+                    {
+                        "text": "x_M[k]+n_M[k]",
+                        "position": [210,128]
+                    }],
+                "color": "#aaaa00"
+            }
+        ],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "w_{m,l}",
+                        "position": [290,92]
+                    }],
+                "color": "#aa0000"
+            }
+        ],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "y_1[k]",
+                        "position": [355,58]
+                    },
+                    {
+                        "text": "y_d[k]",
+                        "position": [355,118]
+                    }]
+            }
+        ]
+    ]
+}

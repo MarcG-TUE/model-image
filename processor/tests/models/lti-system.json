@@ -1,0 +1,47 @@
+{
+    "canvas": {
+        "width": 160,
+        "height": 50
+    },
+    "data":[
+        ["variables", []]
+    ],
+    "elements": [
+        ["rectangle", {
+            "left": 50,
+            "top": 5,
+            "width": 60,
+            "height": 40,
+            "attributes": {
+                "fill": "#ffffff",
+                "stroke-width": 1.5
+            }
+        }],
+        ["arrows", {
+            "arrows": [{
+                "p1": [5,25],
+                "p2": [50,25]    
+            },{
+                "p1": [110,25],
+                "p2": [155,25]    
+            }],
+            "attributes": {
+                "stroke-width": 1
+            }
+        }],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "f(t)",
+                        "position": [18,10]
+                    },{
+                        "text": "Hf(t)",
+                        "position": [120,10]
+                    },{
+                        "text": "H",
+                        "position": [75,20]
+                    }]            }
+        ]
+    ]
+}

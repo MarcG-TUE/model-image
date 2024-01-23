@@ -1,0 +1,100 @@
+{
+    "canvas": {
+        "width": 350,
+        "height": 125
+    },
+    "elements": [
+        ["polyline", {
+            "points": [[20, 75],[20,25],[50,75],[50,25],[57.5,32],[65,25],[72.5,32],[80,25],[80,75]],
+            "attributes": {
+                "stroke-width": 0,
+                "fill": "#BFD2FF",
+                "stroke": "#0000aa"
+            }
+        }],
+        ["polyline", {
+            "points": [[270,75],[270,25],[277.5,32],[285,25],[292.5,32],[300,25],[300,75],[330,25],[330,75]],
+            "attributes": {
+                "stroke-width": 0,
+                "fill": "#BFD2FF",
+                "stroke": "#0000aa"
+            }
+        }],
+        ["lines", {
+            "lines": [{
+                "p1": [0,75],
+                "p2": [350,75]
+            },{
+                "p1": [175,5],
+                "p2": [175,80]
+            }],
+            "attributes": {
+                "stroke-width": 1
+            }
+        }],
+        ["lines", {
+            "lines": [{
+                "p1": [50,75],
+                "p2": [50,10]
+            },{
+                "p1": [300,75],
+                "p2": [300,10]
+            }],
+            "attributes": {
+                "stroke-width": 1,
+                "stroke-dasharray": "4 2",
+                "stroke": "#0000ff"
+            }
+        }],
+        ["lines", {
+            "lines": [{
+                "p1": [270,75],
+                "p2": [270,105]
+            },{
+                "p1": [330,75],
+                "p2": [330,105]
+            }],
+            "attributes": {
+                "stroke-width": 1,
+                "stroke-dasharray": "4 2",
+                "stroke": "#0000ff"
+            }
+        }],
+        ["arrow", {
+            "double-headed": true,
+            "p1":[270,100],
+            "p2":[330,100],
+            "attributes": {
+                "stroke-width": 1,
+                "stroke-dasharray": "4 2",
+                "stroke": "#0000ff"
+            }
+        }],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "Z(f)",
+                        "position": [147,5]
+                    },
+                    {
+                        "text": "0",
+                        "position": [172,83]
+                    },
+                    {
+                        "text": "f_c",
+                        "position": [295,83]
+                    },
+                    {
+                        "text": "-f_c",
+                        "position": [38,83]
+                    },
+                    {
+                        "text": "W",
+                        "position": [294,110]
+                    }
+                ]
+            }
+        ]
+    ]
+}

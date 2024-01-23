@@ -1,0 +1,130 @@
+{
+    "canvas": {
+        "width": 250,
+        "height": 135
+    },
+    "data": [
+        ["variables", [
+            {
+                "name": "spectra",
+                "value": "(()=>{const rnGen = SceneData.rnGen(3); return SceneData.mp3Spectra(rnGen)})()"
+            }]
+        ]
+    ],
+    "elements": [
+        [ "subFigure", { "comment": "frequency",
+            "transform": "translate(10,105) matrix(0.866 0.45 -0.866 0.5 0 0)",
+            "elements":[
+                ["text", {
+                    "text": "frequency",
+                    "position": [0,0],
+                    "fontSize": 1.5
+                }]
+            ]
+        }],
+        [ "axis-3d",
+        {
+            "type": "Perspective8Q",
+            "xDom": [-8,8],
+            "yDom": [-8,8],
+            "zDom": [8,8],
+            "center": [150,55],
+            "scale": 600,
+            "position": [-14,-10,10],
+            "target": [3,3,0],
+            "fieldOfView": 70,
+            "options": {
+                "showAxes": false
+            },
+            "content": [
+                ["polygon", { "comment": "compressed band",
+                    "points": [[2,0,0],[3,0,0],[3,6,0],[2,6,0]],
+                    "attributes": {
+                        "stroke":  "#888",
+                        "fill": "#aaaaaa",
+                        "stroke-width": 0
+                    }
+                }],
+                ["polygons", { "comment": "grid",
+                    "polygons":[
+                        {
+                            "points": [[0,0,0],[6,0,0],[6,6,0],[0,6,0]]
+                        },{
+                            "points": [[1,0,0],[5,0,0],[5,6,0],[1,6,0]]
+                        },{
+                            "points": [[2,0,0],[4,0,0],[4,6,0],[2,6,0]]
+                        },{
+                            "points": [[2,0,0],[3,0,0],[3,6,0],[2,6,0]]
+                        },{
+                            "points": [[0,0,0],[6,0,0],[6,6,0],[0,6,0]]
+                        },{
+                            "points": [[-1,0,0],[7,0,0],[7,6,0],[-1,6,0]]
+                        },{
+                            "points": [[-2,0,0],[8,0,0],[8,6,0],[-2,6,0]]
+                        }
+                    ],
+                    "attributes": {
+                        "stroke":  "#888",
+                        "stroke-width": 1.0
+                    }
+                }],
+                ["polygon", {
+                    "points": "SceneData.variables.spectra[0]",
+                    "attributes": {
+                        "stroke":  "##0072BD",
+                        "fill": "#0072BD",
+                        "stroke-width": 0,
+                        "fill-opacity": 0.65
+                    }
+                }],
+                ["polygon", {
+                    "points": "SceneData.variables.spectra[1]",
+                    "attributes": {
+                        "stroke":  "#D95319",
+                        "fill": "#D95319",
+                        "stroke-width": 0,
+                        "fill-opacity": 0.65
+                    }
+                }],
+                ["polygon", {
+                    "points": "SceneData.variables.spectra[2]",
+                    "attributes": {
+                        "stroke":  "#EDB120",
+                        "fill": "#EDB120",
+                        "stroke-width": 0,
+                        "fill-opacity": 0.65
+                    }
+                }],
+                ["polygon", {
+                    "points": "SceneData.variables.spectra[3]",
+                    "attributes": {
+                        "stroke":  "#7E2F8E",
+                        "fill": "#7E2F8E",
+                        "stroke-width": 0,
+                        "fill-opacity": 0.65
+                    }
+                }],
+                ["polygon", {
+                    "points": "SceneData.variables.spectra[4]",
+                    "attributes": {
+                        "stroke":  "#77AC30",
+                        "fill": "#77AC30",
+                        "stroke-width": 0,
+                        "fill-opacity": 0.65
+                    }
+                }]
+            ]
+        }
+        ],
+        [ "subFigure", { "comment": "time",
+            "transform": "translate(195,95) matrix(0.866 -0.65 0.866 0.4 0 0)",
+            "elements":[
+                ["text", {
+                    "text": "time",
+                    "position": [0,0],
+                    "fontSize": 1.5
+                }]
+            ]
+        }]
+    ]
+}

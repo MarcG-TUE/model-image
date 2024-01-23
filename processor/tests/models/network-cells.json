@@ -1,0 +1,151 @@
+{
+    "canvas": {
+        "width": 300,
+        "height": 200
+    },
+    "data": [
+        ["variables", [
+            {
+                "name": "cell-tower-positions",
+                "value": [[85,35], [105,100],[210,50]]
+            }]]],
+    "elements": [
+        ["stencil", {
+            "offsets": "SceneData.variables['cell-tower-positions']",
+            "elements":[
+                ["ellipse", {
+                    "center": [0,37],
+                    "radius-major": 80,
+                    "radius-minor": 42,
+                    "angle": 0,
+                    "attributes": {
+                        "stroke": "#000000",
+                        "fill": "#FFFFCA",
+                        "stroke-width": 2.0
+                    }
+                }]
+            ]
+        }],
+        ["stencil", {
+            "offsets": "SceneData.variables['cell-tower-positions']",
+            "elements":[
+                ["ellipse", {
+                    "center": [0,37],
+                    "radius-major": 80,
+                    "radius-minor": 42,
+                    "angle": 0,
+                    "attributes": {
+                        "stroke": "#000000",
+                        "fill": "none",
+                        "stroke-width": 2.0
+                    }
+                }]
+            ]
+        }],
+        ["stencil", {
+            "offsets": "SceneData.variables['cell-tower-positions']",
+            "elements":[
+                ["clip-art", {
+                    "id": "from-file",
+                    "transform": "translate(-26,-28) scale(0.33)",
+                    "filename": "Wifi_symbol.svg"
+                }]
+            ]
+        }],
+        ["stencil", {
+            "offsets": [[145,65]],
+            "elements":[
+                ["clip-art", {
+                    "id": "from-file",
+                    "transform": "translate(-24,-19) scale(0.27)",
+                    "filename": "Black_Man_Driving_Car_Cartoon_Vector.svg"
+                }]
+            ]
+        }],
+        ["stencil", {
+            "offsets": [[125,130]],
+            "elements":[
+                ["clip-art", {
+                    "id": "from-file",
+                    "transform": "translate(-20,-17) scale(0.27)",
+                    "filename": "Man_Driving_Car_Cartoon_Vector.svg"
+                }]
+            ]
+        }],
+        ["stencil", {
+            "offsets": [[240,105]],
+            "elements":[
+                ["clip-art", {
+                    "id": "from-file",
+                    "transform": "translate(0,-30) scale(0.2)",
+                    "filename": "Crystal128-home-white.svg"
+                }]
+            ]
+        }],
+        ["stencil", {
+            "offsets": [[20,185]],
+            "elements":[
+                ["clip-art", {
+                    "id": "from-file",
+                    "transform": "translate(36,-55) scale(0.025)",
+                    "filename": "Mobile_phone_font_awesome2.svg"
+                }]
+            ]
+        }],
+        ["polylines", {
+            "polylines": [{
+                "points": [[103,97],[78,130]],
+                "arrowHeads": "end",
+                "attributes":{
+                    "stroke-width": 1.5,
+                    "stroke": "#0000ff"
+                }
+            },{
+                "points": [[103,97],[80,110],[75,130]],
+                "arrowHeads": "end",
+                "attributes":{
+                    "stroke-width": 1.5,
+                    "stroke": "#0000ff",
+                    "stroke-dasharray":"6 2"
+                }
+            },{
+                "points": [[81,30],[25,75],[60, 131]],
+                "arrowHeads": "end",
+                "attributes":{
+                    "stroke-width": 1.5,
+                    "stroke": "#ff0000",
+                    "stroke-dasharray": "6 2"
+                }
+            },{
+                "points": [[93,30],[125,45],[145,70]],
+                "arrowHeads": "end",
+                "attributes":{
+                    "stroke-width": 1.5,
+                    "stroke": "#ff0000"
+                }
+            },{
+                "points": [[206,46],[195,50],[185,40],[175,70]],
+                "arrowHeads": "end",
+                "attributes":{
+                    "stroke-width": 1.5,
+                    "stroke": "#00aa00"
+                }
+            },{
+                "points": [[218,47],[225,65],[230,55],[243,78]],
+                "arrowHeads": "end",
+                "attributes":{
+                    "stroke-width": 1.5,
+                    "stroke": "#00aa00"
+                }
+            },{
+                "points": [[165,90],[150,125]],
+                "arrowHeads": "end",
+                "attributes":{
+                    "stroke-width": 1.5,
+                    "stroke": "#aa00aa",
+                    "stroke-dasharray":"6 2"
+                }
+            }]
+        }]
+    ]
+}

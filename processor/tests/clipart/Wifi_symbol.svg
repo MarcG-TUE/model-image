@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="171.15625"
+   height="215.57358"
+   id="svg2">
+  <title
+     id="title8321">Wireless Symbol</title>
+  <defs
+     id="defs4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Wireless Symbol</dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/publicdomain/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Scott Gilliland</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:description>A symbol that looks like a radio tower with radio waves.</dc:description>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <path
+     d="M 32.15625,10.00073 C 18.46968,23.68079 10,42.58553 10,63.43823 10,84.29094 18.47099,103.16703 32.15625,116.84448 L 32.1875,116.84448 36.5625,112.46948 C 24.01752,99.93231 16.25,82.60206 16.25,63.43823 16.25,44.27441 23.98497,26.94675 36.53125,14.40698 L 32.15625,10.00073 z M 139,10.03198 134.625,14.40698 C 147.16477,26.94675 154.90625,44.2744 154.90625,63.43823 154.90625,82.60206 147.16217,99.93231 134.625,112.46948 L 139,116.84448 C 152.67745,103.16703 161.15625,84.29093 161.15625,63.43823 161.15625,42.59357 152.67077,23.71078 139,10.03198 z M 43.78125,21.62573 C 33.0686,32.33838 26.40625,47.12216 26.40625,63.43823 26.40625,79.75431 33.03214,94.54069 43.75,105.25073 L 43.78125,105.25073 48.15625,100.87573 C 38.57867,91.30597 32.65625,78.06544 32.65625,63.43823 32.65625,48.81103 38.58388,35.5731 48.15625,26.00073 L 43.78125,21.62573 z M 127.40625,21.62573 123,26.00073 C 123.00533,26.00606 122.99467,26.02664 123,26.03198 132.55645,35.60309 138.46875,48.81919 138.46875,63.43823 138.46875,78.06544 132.56195,91.30597 123,100.87573 L 127.40625,105.25073 C 138.10848,94.54069 144.71875,79.75431 144.71875,63.43823 144.71875,47.12216 138.11239,32.33838 127.40625,21.62573 z M 55.59375,33.46948 C 47.9115,41.15173 43.15625,51.74534 43.15625,63.43823 43.15625,75.13112 47.9076,85.72864 55.59375,93.40698 L 55.625,93.40698 60,89.03198 C 53.45413,82.49392 49.40625,73.44225 49.40625,63.43823 49.40625,53.43422 53.45803,44.38645 60,37.84448 L 55.59375,33.46948 z M 115.5625,33.46948 111.15625,37.84448 C 111.16149,37.84972 111.15102,37.87049 111.15625,37.87573 117.68247,44.41646 121.71875,53.44223 121.71875,63.43823 121.71875,73.44224 117.6865,82.49392 111.15625,89.03198 L 115.5625,93.40698 C 123.23303,85.72864 127.96875,75.13112 127.96875,63.43823 127.96875,51.74534 123.23824,41.15173 115.5625,33.46948 z"
+     id="path2987"
+     style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:7.5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
+  <path
+     d="M 102.78782,63.438812 A 17.20747,17.20747 0 1 1 68.37288,63.438812 17.20747,17.20747 0 1 1 102.78782,63.438812 z"
+     id="path2985"
+     style="color:#000000;fill:#000000;fill-opacity:1;stroke:none;stroke-width:5;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+  <g
+     transform="matrix(0.80809804,0,0,0.65555881,-203.02607,-230.80175)"
+     id="g3953">
+    <path
+       d="M 308.21426,658.79071 357.14285,484.50504 406.07141,658.79071"
+       id="path3821"
+       style="fill:none;stroke:#000000;stroke-width:12.36530018;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <g
+       transform="translate(-155.3229,39.597991)"
+       id="g3914">
+      <path
+         d="M 465.17575,609.56183 547.75572,568.25487"
+         id="path3823"
+         style="fill:none;stroke:#000000;stroke-width:6.86961079;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         d="M 559.75572,609.56183 477.17575,568.25487"
+         id="path3823-6"
+         style="fill:none;stroke:#000000;stroke-width:6.86961079;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <g
+       transform="matrix(0.60945085,0,0,0.60945085,44.820158,225.80818)"
+       id="g3914-5">
+      <path
+         d="M 465.17575,609.56183 547.75572,568.25487"
+         id="path3823-7"
+         style="fill:none;stroke:#000000;stroke-width:11.27180576;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         d="M 559.75572,609.56183 477.17575,568.25487"
+         id="path3823-6-6"
+         style="fill:none;stroke:#000000;stroke-width:11.27180576;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <g
+       transform="matrix(0.51136035,0,0,0.51136035,95.088178,249.87912)"
+       id="g3914-9">
+      <path
+         d="M 465.17575,609.56183 547.75572,568.25487"
+         id="path3823-1"
+         style="fill:none;stroke:#000000;stroke-width:13.43399239;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         d="M 559.75572,609.56183 477.17575,568.25487"
+         id="path3823-6-4"
+         style="fill:none;stroke:#000000;stroke-width:13.43399239;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+  </g>
+</svg>

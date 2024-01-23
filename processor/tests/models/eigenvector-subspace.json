@@ -1,0 +1,119 @@
+{
+    "canvas": {
+        "width": 280,
+        "height": 100
+    },
+    "data":[
+        ["variables", [
+            {
+                "name": "x1",
+                "value": "[3,2]"
+            },{
+                "name": "x2",
+                "value": "[2, 0.6]"
+            },{
+                "name": "x3",
+                "value": "[1, 1]"
+            },
+            {
+                "name": "minScale",
+                "value": "-0.2"
+            },
+            {
+                "name": "maxScale",
+                "value": "1.3"
+            }
+        ]]
+    ],
+    "elements": [
+        [ "axis-2d",{
+            "type": "4Q",
+            "xDom": [-0.2,4.2],
+            "yDom": [-0.2,2.8],
+            "center": [20,75],
+            "scale": 25,
+            "content": [
+                ["line", {
+                    "p1": "SceneData.scalePoint(SceneData.variables.x1, SceneData.variables.minScale)",
+                    "p2": "SceneData.scalePoint(SceneData.variables.x1, SceneData.variables.maxScale)",
+                    "attributes": {
+                        "stroke-width": 3,
+                        "stroke": "#FBD7BB"
+                    }
+                }],
+                ["vectors", {
+                    "vectors": [{
+                            "p1": [0,0],
+                            "p2": "SceneData.variables.x1"
+                        }],
+                    "attributes": {
+                        "stroke": "#0000aa"
+                    }
+                }]
+            ]}],
+        [ "axis-2d",{
+            "type": "4Q",
+            "xDom": [-0.2,4.2],
+            "yDom": [-0.2,2.8],
+            "center": [170,75],
+            "scale": 25,
+            "content": [
+                ["polygon", {
+                    "points": [
+                        "SceneData.scalePoint(SceneData.addPoint(SceneData.variables.x2,SceneData.variables.x3), SceneData.variables.minScale)", 
+                        "SceneData.addPoint(SceneData.scalePoint(SceneData.variables.x2,SceneData.variables.maxScale),SceneData.scalePoint(SceneData.variables.x3,SceneData.variables.minScale))", 
+                        "SceneData.scalePoint(SceneData.addPoint(SceneData.variables.x2,SceneData.variables.x3), SceneData.variables.maxScale)",
+                        "SceneData.addPoint(SceneData.scalePoint(SceneData.variables.x3,SceneData.variables.maxScale),SceneData.scalePoint(SceneData.variables.x2,SceneData.variables.minScale))" 
+                    ],
+                    "attributes":{
+                        "fill": "#FBD7BB",
+                        "stroke-width": 0,
+                        "fill-opacity": 0.6
+                    }
+                }],
+                ["lines", {
+                    "lines": [{
+                            "p1": "SceneData.variables.x2",
+                            "p2": "SceneData.addPoint(SceneData.variables.x3,SceneData.variables.x2)"
+                        },{
+                            "p1": "SceneData.variables.x3",
+                            "p2": "SceneData.addPoint(SceneData.variables.x3,SceneData.variables.x2)"
+                        }],
+                    "attributes": {
+                        "stroke": "#000000",
+                        "stroke-width": 1,
+                        "stroke-dasharray": "3 3"
+                    }
+                }],
+                ["vectors", {
+                    "vectors": [{
+                            "p1": [0,0],
+                            "p2": "SceneData.variables.x2"
+                        },{
+                            "p1": [0,0],
+                            "p2": "SceneData.variables.x3"
+                        },{
+                            "p1": [0,0],
+                            "p2": "SceneData.addPoint(SceneData.variables.x3,SceneData.variables.x2)"
+                        }],
+                    "attributes": {
+                        "stroke": "#0000aa"
+                    }
+                }]
+            ]}],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "\\lambda_1",
+                        "position": [60,25]
+                    },{
+                        "text": "\\lambda_2",
+                        "position": [175,42]
+                    },{
+                        "text": "\\lambda_2",
+                        "position": [220,62]
+                    }]            }
+        ]
+    ]
+}

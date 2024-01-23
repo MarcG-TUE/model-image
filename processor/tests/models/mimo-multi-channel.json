@@ -1,0 +1,74 @@
+{
+    "canvas": {
+        "width": 350,
+        "height": 200
+    },
+    "elements": [
+        ["stencil",{ "comment": "antennas",
+            "offsets": [[20,145],[320,15]],
+            "elements":[
+                ["stencil", {
+                    "offsets": [[0,0],[8,8],[16,16]],
+                    "elements":[
+                        ["clip-art", {
+                            "id": "antenna",
+                            "transform": "scale(0.8)"
+                        }]
+                    ]
+                }]
+            ]
+        }],
+        ["stencil", { "comment": "beam 1",
+            "offsets": [[50,150],[310,45]],
+            "rotations": [-22,158],
+            "scales": [0.75,0.75],
+            "elements":[
+                ["path", {
+                    "string": "M 0 0 l 100 -15 c 40,-6 40,36 0,30 Z",
+                    "attributes":{
+                        "stroke": "#888823",
+                        "stroke-width": 1,
+                        "fill": "#FFFFC6"}
+                }]
+            ]
+        }],
+        ["stencil", { "comment": "beam 2",
+            "offsets": [[50,150],[310,45]],
+            "rotations": [-44,180],
+            "scales": [0.75,0.75],
+            "elements":[
+                ["path", {
+                    "string": "M 0 0 l 100 -15 c 40,-6 40,36 0,30 Z",
+                    "attributes":{
+                        "stroke": "#0026FF",
+                        "stroke-width": 1,
+                        "fill": "#CEE7FF"}
+                }]
+            ]
+        }],
+        ["stencil", { "comment": "building",
+            "offsets": [[150,30]],
+            "elements":[
+                ["clip-art", {
+                    "id": "from-file",
+                    "transform": "translate(-40,-30) scale(0.35)",
+                    "filename": "Pueblo_building_block.svg"
+                }]
+            ]
+        }],
+        ["lines",{ "comment": "lines xmit-recv",
+            "lines": [
+                {
+                    "p1": [50,150],
+                    "p2": [310,45]
+                },{
+                    "p1": [50,150],
+                    "p2": [160,45]
+                },{
+                    "p1": [160,45],
+                    "p2": [310,45]
+                }
+            ]
+        }]
+    ]
+}

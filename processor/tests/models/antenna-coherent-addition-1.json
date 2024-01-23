@@ -1,0 +1,12 @@
+{
+    "canvas": {
+        "width": 180,
+        "height": 180
+    },
+    "elements": [
+        ["clip-art", {
+            "id": "parabolic-antenna-coherent-addition",
+            "transform": "translate(0,0)"
+        }]
+    ]
+}

@@ -1,0 +1,242 @@
+{
+    "canvas": {
+        "height": 150,
+        "width": 450
+    },
+    "data": [
+        ["makeBasis", {
+            "name": "basis",
+            "alpha": 220,
+            "beta": 20
+        }],
+        ["vectors", [
+            {
+                "name": "b",
+                "value": "SceneData.inBasis(SceneData.basis,[0.4, 0.7, 0.6])"
+            },
+            {
+                "name": "bh",
+                "value": "SceneData.project(SceneData.vectors.b, SceneData.basis.getColumnVector(0), SceneData.basis.getColumnVector(1))"
+            }]
+        ]
+    ],
+    "elements": [
+        [ "axis-2d",
+            {
+                "type": "4Q",
+                "xDom": [-1.2,1.2],
+                "yDom": [-1.2,1.2],
+                "center": [
+                    100,
+                    75
+                ],
+                "scale": 60,
+                "content": [
+                    ["polyline", {
+                        "points": [
+                            [1,0],
+                            [0,1],
+                            [-1,0],
+                            [0,-1]
+                        ],
+                        "attributes": {
+                            "stroke": "#0000ff",
+                            "fill": "#FEBFBF",
+                            "stroke-width": 0.0
+                        }
+                    }],
+                    ["lines", {
+                        "lines": [
+                            { "p1": [0, 0], "p2": [1,1]},
+                            { "p1": [0, 0], "p2": [-1,1]}
+                        ],
+                        "attributes": {
+                            "stroke": "#0000ff",
+                            "stroke-dasharray": "4 1",
+                            "stroke-width": 1
+                        }
+                    }],
+                    ["vectors", {
+                        "vectors": [
+                            { "p1": [0, 0], "p2": [0.5,0.5]},
+                            { "p1": [0, 0], "p2": [-0.5,0.5]}
+                        ],
+                        "attributes": {
+                            "stroke": "#0000ff",
+                            "stroke-width": 2.0
+                        }
+                    }],
+                    ["vector", {
+                        "p1": [0, 0],
+                        "p2": [0.5,-0.25],
+                        "attributes": {
+                            "stroke": "#00aa00",
+                            "stroke-width": 2.0
+                        }
+                    }]
+                ]
+            }
+        ],
+        [ "axis-3d",
+            {
+                "type": "Perspective1Q",
+                "position": [3,3,3],
+                "target": [0,0,0],
+                "fieldOfView": 45,
+                "xDom": 1.2,
+                "yDom": 1.2,
+                "zDom": 1.2,
+                "center": [
+                    350,
+                    75
+                ],
+                "scale": 270,
+                "content": [
+                    ["span2D", {
+                        "axis1": "SceneData.basis.getColumnVector(0)",
+                        "axis2": "SceneData.basis.getColumnVector(1)"
+                    }],
+                    ["vectors", {
+                        "vectors": [
+                            {
+                                "p1": [0, 0,0 ],
+                                "p2": "SceneData.basis.getColumnVector(0)"
+                            },
+                            {
+                                "p1": [0, 0,0 ],
+                                "p2": "SceneData.basis.getColumnVector(1)"
+                            }
+                        ],
+                        "attributes": {
+                            "stroke": "#0000ff",
+                            "stroke-width": 2.0
+                        }
+                    }],
+                    ["vectors", {
+                        "vectors": [{
+                            "p1": [0, 0,0 ],
+                            "p2": "SceneData.vectors.b"
+                        },
+                        {
+                            "p1": [0, 0,0 ],
+                            "p2": "SceneData.vectors.bh"
+                        }],
+                        "attributes": {
+                            "stroke": "#00aa00",
+                            "stroke-width": 2.0
+                        }
+                    }],
+                    ["line", {
+                        "p1": "SceneData.vectors.b",
+                        "p2": "SceneData.vectors.bh",
+                        "attributes": {
+                            "stroke": "#00aa00",
+                            "stroke-dasharray": "4 1",
+                            "stroke-width": 1
+                        }
+                    }],
+                    ["line", {
+                        "p1": [0, 0, 0],
+                        "p2": [0, 0, 1.2],
+                        "attributes": {
+                            "stroke": "#000000",
+                            "stroke-width": 2.0
+                        }
+                    }]
+
+                ]
+            }
+        ],
+        [ "fat-arrow", {
+            "start": [200,65],
+            "end": [250,65],
+            "width": 10,
+            "head-width": 20,
+            "head-length": 20,
+            "attributes": {
+                "stroke": "#000000",
+                "fill": "#009999",
+                "stroke-width": 0.0
+            }
+        }
+        ],
+        [ "fat-arrow", {
+            "start": [250,85],
+            "end": [200,85],
+            "width": 10,
+            "head-width": 20,
+            "head-length": 20,
+            "attributes": {
+                "stroke": "#000000",
+                "fill": "#009999",
+                "stroke-width": 0.0
+            }
+        }
+        ],
+        [ "latex-texts",
+        {
+            "texts": [
+                {
+                    "text": "{\\mathbb{C}^n}",
+                    "position": [135,10]
+                },
+                {
+                    "text": "\\hat{{\\bf{}x}}",
+                    "position": [130,90]
+                }
+            ],
+            "scale": 1.0
+        }
+        ],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "{\\mathbb{C}^m}",
+                        "position": [330,10]
+                    },
+                    {
+                        "text": "{\\bf{}b}",
+                        "position": [367,5]
+                    },
+                    {
+                        "text": "\\hat{{\\bf{}b}}",
+                        "position": [374,38]
+                    }
+                ],
+                "scale": 1.0
+            }
+        ],
+        [ "latex-texts",
+            {
+                "texts":[
+                    {
+                        "text": "\\hat{{\\bf{}b}}={\\bf{}A}\\hat{{\\bf{}x}}",
+                        "position": [200,5]
+                    },
+                    {
+                        "text": "\\hat{{\\bf{}x}}={\\bf{}A}^{\\dagger}{\\bf{}b}={\\bf{}A}^{\\dagger}\\hat{{\\bf{}b}}",
+                        "position": [185,125]
+                    }
+                ],
+                "scale": 1.0
+            }
+        ],
+        [ "latex-texts",
+            {
+                "texts":[
+                    {
+                        "text": "{\\bf{}A}",
+                        "position": [210,35]
+                    },
+                    {
+                        "text": "{\\bf{}A}^{\\dagger}",
+                        "position": [210,95]
+                    }
+                ],
+                "scale": 2.0,
+                "color": "#009999"
+            }
+        ]
+    ]
+}

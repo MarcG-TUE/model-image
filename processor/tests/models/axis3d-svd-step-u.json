@@ -1,0 +1,159 @@
+{
+    "canvas": {
+        "width": 400,
+        "height": 125
+    },
+    "data": [
+        ["makeBasis", {
+            "name": "dom",
+            "alpha": 60,
+            "beta": -130
+        }],
+        ["makeBasis", {
+            "name": "ran",
+            "alpha": 20,
+            "beta": -30
+        }],
+        ["variables", [{
+            "name": "sigma1",
+            "value": 1.2
+        },{
+            "name": "sigma2",
+            "value": 0.7
+        },{
+            "name": "sigma3",
+            "value": 0.33
+        },{
+            "name": "u1",
+            "value": "SceneData.VectorToPoint3D(SceneData.bases['ran'].getColumnVector(0))"
+        },{
+            "name": "u2",
+            "value": "SceneData.VectorToPoint3D(SceneData.bases['ran'].getColumnVector(1))"
+        },{
+            "name": "u3",
+            "value": "SceneData.VectorToPoint3D(SceneData.bases['ran'].getColumnVector(2))"
+        },{
+            "name": "v1",
+            "value": "SceneData.VectorToPoint3D(SceneData.bases['dom'].getColumnVector(0))"
+        },{
+            "name": "v2",
+            "value": "SceneData.VectorToPoint3D(SceneData.bases['dom'].getColumnVector(1))"
+        },{
+            "name": "v3",
+            "value": "SceneData.VectorToPoint3D(SceneData.bases['dom'].getColumnVector(2))"
+        }]]
+    ],
+    "elements": [
+        [ "axis-3d",
+            {
+                "type": "Perspective1Q",
+                "position": [3,3,3],
+                "target": [0,0,0],
+                "fieldOfView": 45,
+                "xDom": 1.2,
+                "yDom": 1.2,
+                "zDom": 1.2,
+                "scale": 270,
+                "center": [80,80],
+                "content": [
+                    ["vectors", {
+                        "vectors": [
+                            { "p1": [0, 0, 0], "p2": "[SceneData.variables.sigma1,0,0]"},
+                            { "p1": [0, 0, 0], "p2": "[0,SceneData.variables.sigma2,0]"},
+                            { "p1": [0, 0, 0], "p2": "[0,0,SceneData.variables.sigma3]"}
+                        ],
+                        "attributes": {
+                            "stroke": "#aa0000",
+                            "stroke-width": 2}
+                    }]
+                ]
+            }
+        ],
+        [ "axis-3d",
+            {
+                "type": "Perspective1Q",
+                "position": [3,3,3],
+                "target": [0,0,0],
+                "fieldOfView": 45,
+                "xDom": 1.2,
+                "yDom": 1.2,
+                "zDom": 1.2,
+                "scale": 270,
+                "center": [320,80],
+                "content": [
+                    ["vectors", {
+                        "vectors":[
+                            {"p1": [0, 0, 0], "p2": "SceneData.scalePoint3D(SceneData.variables.u1,SceneData.variables.sigma1)"},
+                            {"p1": [0, 0, 0], "p2": "SceneData.scalePoint3D(SceneData.variables.u2,SceneData.variables.sigma2)"},
+                            {"p1": [0, 0, 0], "p2": "SceneData.scalePoint3D(SceneData.variables.u3,SceneData.variables.sigma3)"}
+                        ],
+                            "attributes": {
+                                "stroke": "#555555",
+                                "stroke-width": 2
+                            }
+                    }]
+                ]
+            }
+        ],
+        [ "fat-arrow", {
+            "start": [175,90],
+            "end": [225,90],
+            "width": 10,
+            "head-width": 20,
+            "head-length": 20,
+            "attributes": {
+                "stroke": "#000000",
+                "fill": "#009999",
+                "stroke-width": 0}
+        }
+        ],
+        [ "latex-texts",
+        {
+            "texts": [
+                {
+                    "text": "\\sigma_1\\cdot{}{\\bf{}i}_1",
+                    "position": [5,90]
+                },
+                {
+                    "text": "\\sigma_2\\cdot{}{\\bf{}i}_2",
+                    "position": [115,85]
+                },
+                {
+                    "text": "{\\sigma_3\\cdot{}\\bf{}i}_3",
+                    "position": [85,55]
+                }
+        ],
+            "scale": 1,
+            "color": "#aa0000"
+        }
+    ],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "\\sigma_1\\cdot{}{\\bf{}u}_1",
+                        "position": [252,48]
+                    },
+                    {
+                        "text": "\\sigma_2\\cdot{}{\\bf{}u}_2",
+                        "position": [320,105]
+                    },
+                    {
+                        "text": "{\\sigma_3\\cdot{}\\bf{}u}_3",
+                        "position": [335,55]
+                    }
+                ],
+                "scale": 1,
+                "color": "#555555"
+            }
+        ],
+        [ "latex-text",
+            {
+                "text": "{\\bf{}U}",
+                "position": [178, 63],
+                "scale": 2,
+                "color": "#009999"
+            }
+        ]
+    ]
+}

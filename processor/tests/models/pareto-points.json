@@ -1,0 +1,60 @@
+{
+    "canvas": {
+        "width": 200,
+        "height": 200
+    },
+    "elements": [
+        [ "axis-2d",
+            {
+                "type": "4Q",
+                "xDom": [-0.2,6.2],
+                "yDom": [-0.2,6.2],
+                "center": [
+                    25,
+                    175
+                ],
+                "options":{
+                    "tickValuesY": [0, 1, 2, 3, 4, 5, 6],
+                    "tickValuesX": [0, 1, 2, 3, 4, 5, 6]
+                },
+                "scale": 25,
+                "content": [
+                    ["circles", {
+                        "circles": [{
+                            "center": [1,6]
+                        },{
+                            "center": [2,3]
+                        },{
+                            "center": [4,1]
+                        },{
+                            "center": [4,3]
+                        },{
+                            "center": [5,1]
+                        },{
+                            "center": [6,6]
+                        }],
+                        "radius": 0.15,
+                        "attributes": {
+                            "stroke": "none",
+                            "fill": "#0000ff",
+                            "stroke-width": 2.0
+                        }}]
+                ]
+            }
+        ],
+        [ "latex-texts",
+        {
+            "texts": [
+                {
+                    "text": "q_1",
+                    "position": [180,180]
+                },{
+                    "text": "q_2",
+                    "position": [5,5]
+                }
+            ],
+            "scale": 1.5
+        }
+        ]
+    ]
+}

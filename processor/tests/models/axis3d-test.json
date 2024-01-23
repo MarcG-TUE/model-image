@@ -1,0 +1,91 @@
+{
+    "canvas": {
+        "height": 300,
+        "width": 300
+    },
+    "data": [
+        ["makeBasis", {
+            "name": "basis",
+            "alpha": 0,
+            "beta": 20
+        }],
+        ["vectors", [
+            {
+                "name": "b", 
+                "value": "SceneData.inBasis(SceneData.basis,[0.4, 0.7, 0.6])"
+            },
+            {
+                "name": "bh",
+                "value": "SceneData.project(SceneData.vectors.b, SceneData.basis.getColumnVector(0), SceneData.basis.getColumnVector(1))"
+            }
+            ]
+        ]
+    ],
+    "elements": [
+        [ "axis-3d",
+            {
+                "type": "Isometric1Q",
+                "xDom": 1.2,
+                "yDom": 1.2,
+                "zDom": 1.2,
+                "center": [
+                    100,
+                    75
+                ],
+                "scale": 60,
+                "content": [
+                    ["comment", ""],
+                    ["span2D", {
+                        "axis1": "SceneData.basis.getColumnVector(0)",
+                        "axis2": "SceneData.basis.getColumnVector(1)"
+                    }],
+                    ["vectors", {
+                        "vectors": [
+                            {
+                                "p1": [0,0,0],
+                                "p2": "SceneData.basis.getColumnVector(0)"
+                            },
+                            {
+                                "p1": [0,0,0],
+                                "p2": "SceneData.basis.getColumnVector(1)"
+                            },
+                            {
+                                "p1": [0,0,0],
+                                "p2": "SceneData.basis.getColumnVector(2)"
+                            }
+                        ],
+                        "attributes": {
+                            "stroke": "#0000ff",
+                            "stroke-width": 2.0
+                        }
+                    }],
+                    ["vectors", {
+                        "vectors": [
+                            {
+                                "p1": [0,0,0],
+                                "p2": "SceneData.vectors.b"
+                            },
+                            {
+                                "p1": [0,0,0],
+                                "p2": "SceneData.vectors.bh"
+                            }
+                        ],
+                        "attributes": {
+                            "stroke": "#00aa00",
+                            "stroke-width": 2.0
+                        }
+                    }],
+                    ["line", {
+                        "p1": "SceneData.vectors.b",
+                        "p2": "SceneData.vectors.bh",
+                        "attributes": {
+                            "stroke": "#00aa00",
+                            "stroke-dasharray": "4 1",
+                            "stroke-width": 1
+                        }
+                    }]
+                ]
+            }
+        ]
+    ]
+}

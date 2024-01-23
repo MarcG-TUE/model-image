@@ -1,0 +1,205 @@
+{
+    "canvas": {
+        "width": 300,
+        "height": 300
+    },
+    "data": [
+        ["parameters", [
+            {
+                "name": "alpha1",
+                "type": "range",
+                "initialValue": 46,
+                "description": "direction of source s1",
+                "range": [-90, 90]
+            },
+            {
+                "name": "alpha2",
+                "type": "range",
+                "initialValue": 24,
+                "description": "direction of source s2",
+                "range": [-90, 90]
+            }
+            ]
+        ]
+    ],
+    "elements": [
+        [ "axis-3d",
+            {
+                "type": "Perspective8Q",
+                "position": [3,3,3],
+                "target": [0,0,0],
+                "fieldOfView": 45,
+                "xDom": [-1.5,1.5],
+                "yDom": [-1.5,1.5],
+                "zDom": [-1.5,1.5],
+                "center": [150,150],
+                "scale": 412,
+                "content": [
+                    ["manifold",
+                        {
+                            "M": 5,
+                            "Delta": 0.5,
+                            "response-vectors": [
+                                "SceneData.parameters['alpha1']/180*Math.PI",
+                                "SceneData.parameters['alpha2']/180*Math.PI"
+                            ],
+                            "oneSide": {
+                                "side": "back",
+                                "axis1": "SceneData.manifold.responseVectors[0]",
+                                "axis2": "SceneData.manifold.responseVectors[1]"
+                            },
+                            "updateOn": ["alpha1", "alpha2"]
+                        }
+                    ],
+                    ["span2D", {
+                        "axis1": "SceneData.scalePoint3D(SceneData.manifold.responseVectors[0], 1.15)",
+                        "axis2": "SceneData.scalePoint3D(SceneData.manifold.responseVectors[1], 1.15)",
+                        "updateOn": ["alpha1", "alpha2"]
+                    }],
+                    ["manifold",
+                        {
+                            "M": 5,
+                            "Delta": 0.5,
+                            "response-vectors": [
+                                "SceneData.parameters['alpha1']/180*Math.PI",
+                                "SceneData.parameters['alpha2']/180*Math.PI"
+                            ],
+                            "oneSide": {
+                                "side": "front",
+                                "axis1": "SceneData.manifold.responseVectors[0]",
+                                "axis2": "SceneData.manifold.responseVectors[1]"
+                            },
+                            "updateOn": ["alpha1", "alpha2"]
+                        }
+                    ],
+                    ["lines", {
+                        "lines": [
+                            {
+                                "p1": "SceneData.scalePoint3D(SceneData.manifold.responseVectors[0], 0.7)",
+                                "p2": "SceneData.addPoint3D(SceneData.scalePoint3D(SceneData.manifold.responseVectors[0], 0.7),SceneData.scalePoint3D(SceneData.manifold.responseVectors[1], 0.5))"
+                            },
+                            {
+                                "p1": "SceneData.scalePoint3D(SceneData.manifold.responseVectors[1], 0.5)",
+                                "p2": "SceneData.addPoint3D(SceneData.scalePoint3D(SceneData.manifold.responseVectors[0], 0.7),SceneData.scalePoint3D(SceneData.manifold.responseVectors[1], 0.5))"
+                            },
+                            {
+                                "p1": [0,0,0],
+                                "p2": "SceneData.scalePoint3D(SceneData.manifold.responseVectors[0], -0.2)"
+                            },
+                            {
+                                "p1": "SceneData.scalePoint3D(SceneData.manifold.responseVectors[0], -0.2)",
+                                "p2": "SceneData.addPoint3D(SceneData.scalePoint3D(SceneData.manifold.responseVectors[0], -0.2),SceneData.scalePoint3D(SceneData.manifold.responseVectors[1], 0.8))"
+                            },
+                            {
+                                "p1": "SceneData.scalePoint3D(SceneData.manifold.responseVectors[1], 0.8)",
+                                "p2": "SceneData.addPoint3D(SceneData.scalePoint3D(SceneData.manifold.responseVectors[0], -0.2),SceneData.scalePoint3D(SceneData.manifold.responseVectors[1], 0.8))"
+                            }
+                        ],
+                        "attributes": {
+                            "stroke":  "#aa00aa",
+                            "stroke-width": 1.0,
+                            "stroke-dasharray": "4 1"
+                        },
+                        "updateOn": ["alpha1", "alpha2"]
+                    }],
+                    ["lines", { "comment": "visible axes",
+                        "lines": [
+                            {
+                                "p1": [0,0,0],
+                                "p2": [0,0,1]
+                            },{
+                                "p1": [0,0,0],
+                                "p2": [0,-1,0]
+                            },{
+                                "p1": [0,0,0],
+                                "p2": [1.2,0,0]
+                            }
+                        ],
+                        "attributes": {
+                            "stroke":  "#000000",
+                            "stroke-width": 1.0
+                        }
+                    }],
+                    ["vector", {
+                        "p1": [0,0,0],
+                        "p2":"SceneData.manifold.responseVectors[0]",
+                        "attributes": {
+                            "stroke":  "#0000aa",
+                            "stroke-width": 1.5
+                        },
+                        "updateOn": ["alpha1"]
+                    }],
+                    ["vectors", {
+                        "vectors": [
+                            {
+                                "p1": [0,0,0],
+                                "p2": "SceneData.addPoint3D(SceneData.scalePoint3D(SceneData.manifold.responseVectors[0], 0.7),SceneData.scalePoint3D(SceneData.manifold.responseVectors[1], 0.5))"
+                            },
+                            {
+                                "p1": [0,0,0],
+                                "p2": "SceneData.addPoint3D(SceneData.scalePoint3D(SceneData.manifold.responseVectors[0], -0.2),SceneData.scalePoint3D(SceneData.manifold.responseVectors[1], 0.8))"
+                            }
+                        ],
+                        "attributes": {
+                            "stroke":  "#aa00aa",
+                            "stroke-width": 1.5
+                        },
+                        "updateOn": ["alpha1", "alpha2"]
+                    }],
+                    ["manifold",
+                        {
+                            "M": 5,
+                            "Delta": 0.5,
+                            "show-response-vectors": false,
+                            "response-vectors": [
+                                "SceneData.parameters['alpha1']/180*Math.PI",
+                                "SceneData.parameters['alpha2']/180*Math.PI"
+                            ],
+                            "oneSide": {
+                                "side": "front",
+                                "axis1": "SceneData.manifold.responseVectors[0]",
+                                "axis2": "SceneData.manifold.responseVectors[1]"
+                            },
+                            "updateOn": ["alpha1", "alpha2"]
+                        }
+                    ]
+                ]
+            }
+        ],
+        [
+            "latex-text",
+            {
+                "text": "{\\cal A}",
+                "position": [
+                    175,
+                    25
+                ],
+                "scale": 2.5,
+                "color": "#0000ff"
+            }
+        ],
+        [
+            "latex-text",
+            {
+                "text": "{\\bf{}x}[k]",
+                "position": [120,105],
+                "scale": 1,
+                "color": "#aa00aa"
+            }
+        ],
+        [
+            "latex-text", {
+                "text": "{\\bf{}a}(\\alpha_2)",
+                "position": [50,175],
+                "color": "#aa0000"
+            }
+        ],
+        [
+            "latex-text", {
+                "text": "{\\bf{}a}(\\alpha_1)",
+                "position": [185,80],
+                "color": "#0000aa"
+            }
+        ]
+    ]
+}

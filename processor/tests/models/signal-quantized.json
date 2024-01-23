@@ -1,0 +1,85 @@
+{
+    "canvas": {
+        "width": 300,
+        "height": 150
+    },
+    "data": [
+        ["parameters", [{
+                "name": "sample-period",
+                "type": "range",
+                "initialValue": 0.1,
+                "description": "sample period",
+                "range": [0.04, 1],
+                "step": 0.01
+            },{
+                "name": "quantization-step",
+                "type": "range",
+                "initialValue": 0.5,
+                "description": "quantization step",
+                "range": [0.1, 1],
+                "step": 0.01
+            }]
+        ]
+    ],
+    "elements": [
+        [ "axis-2d",
+            {
+                "type": "4Q",
+                "xDom": [-0.0,2.1],
+                "yDom": [-2.7,2.7],
+                "center": [
+                    25,
+                    75
+                ],
+                "scale": [125,25],
+                "content": [
+                    ["continuous-function", {
+                        "function": "(t)=>0.75+Math.cos(t*12+Math.PI)+Math.cos(t*6+Math.PI)+Math.cos(t*3)",
+                        "xDom": [0, 2],
+                        "attributes": {
+                            "stroke": "#1D80C4"
+                        }
+                    }],
+                    ["lines", {
+                        "lines": "(()=>{var ls=[]; var N=Math.floor(2.7/SceneData.parameters['quantization-step']);for(var i=-N; i<=N; i=i+1){ls.push({p1: [0,i*SceneData.parameters['quantization-step']], p2: [2,i*SceneData.parameters['quantization-step']]})} return ls})()",
+                        "attributes": {
+                            "stroke": "#999999",
+                            "stroke-width": 0.5
+                        },
+                        "updateOn": ["quantization-step"]
+                    }],
+                    ["discrete-function", {
+                        "function": "(t)=>SceneData.parameters['quantization-step']*Math.round(((0.75+Math.cos(t*12+Math.PI)+Math.cos(t*6+Math.PI)+Math.cos(t*3)))/SceneData.parameters['quantization-step'])",
+                        "samples": "SceneData.linSpaceDelta(0,2,SceneData.parameters['sample-period'])",
+                        "radius": 0.015,
+                        "stem": true,
+                        "attributes": {
+                            "stroke": "none",
+                            "fill": "#D74F16"
+                        },
+                        "stem-attributes": {
+                            "stroke": "#D74F16",
+                            "stroke-width": 1.5
+                        },
+                        "updateOn": ["sample-period", "quantization-step"]
+                    }]
+                ]
+            }
+        ],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "t",
+                        "position": [285,82],
+                        "scale":1.2
+                    },{
+                        "text": "x(t)",
+                        "position": [1,1],
+                        "scale":1.2
+                    }
+                ]
+            }
+        ]
+    ]
+}

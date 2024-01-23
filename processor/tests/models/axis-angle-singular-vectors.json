@@ -1,0 +1,81 @@
+{
+    "canvas": {
+        "width": 150,
+        "height": 150
+    },
+    "elements": [
+        ["comment", "vectors a1, a2: length 2.5, at 25 and 55 degr."],
+        [ "axis-2d",
+            {
+                "type": "4Q",
+                "xDom": [-0.7,4.2],
+                "yDom": [-0.7,4.2],
+                "center": [20,130],
+                "scale": 30,
+                "content": [
+                    ["vectors", {
+                        "vectors": [
+                            { "p1": [1.4339,2.0479], "p2": [3.6997, 3.10440]},
+                            { "p1": [2.2658,1.0565], "p2": [3.6997, 3.10440]}
+                        ],
+                        "attributes": {
+                            "stroke": "#888888",
+                            "stroke-width": 2.0
+                        }
+                    }],
+                    ["vectors", {
+                        "vectors": [
+                            { "p1": [0, 0], "p2": [1.4339,2.0479]},
+                            { "p1": [0, 0], "p2": [2.2658,1.0565]}
+                        ],
+                        "attributes": {
+                            "stroke": "#0000ff",
+                            "stroke-width": 2.0
+                        }
+                    }],
+                    ["vectors", {
+                        "vectors": [
+                            { "p1": [0, 0], "p2": [3.6997, 3.10440]},
+                            { "p1": [2.2658,1.0565], "p2": [1.4339,2.0479]}
+                        ],
+                        "attributes": {
+                            "stroke": "#ff0000",
+                            "stroke-width": 2.0
+                        }
+                    }]
+                ]
+            }
+        ],
+        [ "latex-texts",
+        {
+            "texts": [
+                {
+                    "text": "{\\bf{}a}_1",
+                    "position": [30,85]        
+                },
+                {
+                    "text": "{\\bf{}a}_2",
+                    "position": [60,120]
+                }
+            ],
+            "scale": 1,
+            "color": "#0000ff"
+        }
+    ],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "\\sqrt{2}\\sigma_1{\\bf{}u}_1",
+                        "position": [100,20]        
+                    },
+                    {
+                        "text": "\\sqrt{2}\\sigma_2{\\bf{}u}_2",
+                        "position": [30,46]
+                    }
+                ],
+                "scale": 1.0
+            }
+        ]
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "canvas": {
+        "width": 215,
+        "height": 115
+    },
+    "elements": [
+        ["polyline", {
+            "points": [[25,80],[117,7],[175,80]],
+            "attributes": {
+                "stroke-width": 0,
+                "fill": "#ddddff"
+            }
+        }],
+        ["arrows", { "id": "rays",
+            "arrows": [{
+                "p1": [117,7],
+                "p2": [175,80]
+            }
+            ],
+            "attributes":{
+                "stroke-width": 3,
+                "stroke": "#0000ff"
+            }
+        }],
+        ["lines", {
+            "lines": [{ "id": "dashed",
+                "p1": [25,80],
+                "p2": [117,7]
+            }
+            ],
+            "attributes":{
+                "stroke-width": 1.5,
+                "stroke": "#aa0000",
+                "stroke-dasharray": "9 6"
+            }
+        }],
+        ["lines", {
+            "lines":[{
+                "p1": [25,80],
+                "p2": [175,80]
+            }],
+            "attributes":{
+                "stroke-width": 1.5,
+                "stroke": "#000000"
+            }
+        }],
+        ["arc", {
+            "center": [25,80],
+            "radius": 35,
+            "start-angle": 0,
+            "end-angle": 37,
+            "arrowHeads": "both",
+            "attributes": {
+                "stroke-width": 1.0
+            }
+        }],
+
+       [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "\\tau=\\frac{\\Delta\\sin \\alpha}{f}",
+                        "position": [150,20]
+                    },
+                    {
+                        "text": "\\frac{\\Delta}{f}",
+                        "position": [100,85]
+                    },
+                    {
+                        "text": "\\alpha",
+                        "position": [63,63]
+                    }
+                ],
+                "scale": 1.0
+            }
+        ]
+    ]
+}

@@ -1,0 +1,143 @@
+{
+    "canvas": {
+        "width": 450,
+        "height": 165
+    },
+    "elements": [
+        ["ellipse", {
+            "center": [130,115],
+            "radius-major": 120,
+            "radius-minor": 45,
+            "angle": 0,
+            "attributes": {
+                "stroke-width": 1,
+                "stroke": "#000000",
+                "fill": "#dddddd"
+            }
+        }],
+        ["ellipse", {
+            "center": [70,125],
+            "radius-major": 20,
+            "radius-minor": 15,
+            "angle": 40,
+            "attributes": {
+                "stroke-width": 1,
+                "stroke": "#000000",
+                "fill": "#FFFFC6"
+            }
+        }],
+        ["ellipse", {
+            "center": [190,95],
+            "radius-major": 20,
+            "radius-minor": 15,
+            "angle": 20,
+            "attributes": {
+                "stroke-width": 1,
+                "stroke": "#000000",
+                "fill": "#FFFFC6"
+            }
+        }],
+        ["ellipse", {
+            "center": [165,135],
+            "radius-major": 20,
+            "radius-minor": 15,
+            "angle": -40,
+            "attributes": {
+                "stroke-width": 1,
+                "stroke": "#000000",
+                "fill": "#FFFFC6"
+            }
+        }],
+        ["polygons", {
+            "polygons":[
+                {"points": "SceneData.RegularPolygon(6,15,[275,30])"},
+                {"points": "SceneData.RegularPolygon(6,15,[275,30+30*Math.cos(Math.PI/6)])"},
+                {"points": "SceneData.RegularPolygon(6,15,[290+15*Math.cos(Math.PI/3),30-15*Math.cos(Math.PI/6)])"},
+                {
+                    "points": "SceneData.RegularPolygon(6,15,[290+15*Math.cos(Math.PI/3),30+15*Math.cos(Math.PI/6)])",
+                    "attributes":{
+                        "fill": "#dddddd"
+                    }
+                },
+                {"points": "SceneData.RegularPolygon(6,15,[290+15*Math.cos(Math.PI/3),30+45*Math.cos(Math.PI/6)])"},
+                {"points": "SceneData.RegularPolygon(6,15,[305+30*Math.cos(Math.PI/3),30])"},
+                {"points": "SceneData.RegularPolygon(6,15,[305+30*Math.cos(Math.PI/3),30+30*Math.cos(Math.PI/6)])"},
+                {"points": "SceneData.RegularPolygon(6,45,[400,120])",
+                "attributes":{
+                    "fill": "#dddddd"
+                }}
+            ],
+            "attributes": {
+                 "stroke": "#0000aa",
+                 "stroke-width": 1,
+                 "fill": "#9595FF"
+                }
+         }],
+        ["stencil", {
+            "offsets": [[130,115]],
+            "elements":[
+                ["clip-art", {
+                    "id": "from-file",
+                    "transform": "translate(-48,-115) scale(0.55)",
+                    "filename": "Wifi_symbol.svg"
+                }]
+            ]
+        }],
+        ["stencil", {
+            "offsets": [[73,125],[194,95]],
+            "elements":[
+                ["clip-art", {
+                    "id": "from-file",
+                    "transform": "translate(-37.5,-15.5) scale(0.15)",
+                    "filename": "Black_Man_Driving_Car_Cartoon_Vector.svg"
+                }]
+            ]
+        }],
+        ["stencil", {
+            "offsets": [[169,137]],
+            "elements":[
+                ["clip-art", {
+                    "id": "from-file",
+                    "transform": "translate(-37.5,-15.5) scale(0.15)",
+                    "filename": "Man_Driving_Car_Cartoon_Vector.svg"
+                }]
+            ]
+        }],
+        ["polylines", {
+            "polylines": [
+                {"points": [[133,35],[58, 116]]},
+                {"points": [[133,35],[88, 125]]},
+                {"points": [[133,35],[147,128]]},
+                {"points": [[133,35],[181,132]]},
+                {"points": [[133,35],[172,104]]},
+                {"points": [[133,35],[207,84]]}
+            ],
+            "attributes":{
+                "stroke-width": 0.7,
+                "stroke": "#000000"
+            }
+        }],
+        ["lines", {
+            "lines": [
+                { "p1": [305, 30], "p2": [423,81]},
+                { "p1": [289, 56], "p2": [378,159]}
+            ],
+            "attributes": {
+                "stroke": "#000000",
+                "stroke-dasharray": "4 1",
+                "stroke-width": 1
+            }
+        }],
+        ["stencil", {
+            "offsets": [[400,120],[400,120],[400,120]],
+            "rotations": [0, 85, 230],
+            "scales": [0.28,0.28,0.28],
+            "elements":[
+                ["path", {
+                    "string": "M 0 0 l 100 -20 c 40,-8 40,48 0,40 Z",
+                    "attributes":{"stroke-width": 1,"fill": "#FFFFC6"}
+                }]
+            ]
+        }]
+    ]
+}

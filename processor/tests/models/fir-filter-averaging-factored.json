@@ -1,0 +1,76 @@
+{
+    "canvas": {
+        "width": 400,
+        "height": 80
+    },
+    "elements": [
+        ["array",{
+            "horizontal": 3,
+            "deltaHorizontal": 70,
+            "elements":[
+                ["clip-art", {
+                    "id": "delay-block",
+                    "label": "z^{-1}",
+                    "labelScale": 1,
+                    "labelPosition": [-7.5,-5],
+                    "transform": "translate(130,15)"
+                }]
+            ]
+        }],
+        ["clip-art", {
+                    "id": "multiplier2",
+                    "transform": "translate(60,15)"
+        }],
+        ["clip-art", {
+            "id": "adder",
+            "transform": "translate(335,60)"
+        }],
+        ["lines",{
+            "lines": [
+                {"p1": [25,15], "p2": [50,15]},
+                {"p1": [70,15], "p2": [120,15]},
+                {"p1": [140,15], "p2": [190,15]},
+                {"p1": [210,15], "p2": [260,15]},
+                {"p1": [60,25], "p2": [60,50]},
+                {"p1": [345,60], "p2": [370,60]}
+            ]
+        }],
+        ["polylines",{
+            "polylines": [
+                {"points": [[280,15],[305,15],[305,52.5],[327.8,52.5]]},
+                {"points": [[235,15],[235,57.5],[325,57.5]]},
+                {"points": [[165,15],[165,62.5],[325,62.5]]},
+                {"points": [[95,15],[95,67.5],[327.8,67.5]]}
+            ]
+        }],
+        ["circles",{
+            "circles":[
+                {"center":[95,15]},
+                {"center":[165,15]},
+                {"center":[235,15]}
+            ],
+            "radius": 3,
+            "attributes":{
+                "fill": "#000",
+                "stroke-width": 0
+            }
+
+        }],
+        ["latex-texts",{
+            "texts":[
+                {
+                    "text": "x[k]",
+                    "position": [5,10]
+                },
+                {
+                    "text": "y[k]",
+                    "position": [375,55]
+                },
+                {
+                    "text": "\\frac{1}{4}",
+                    "position": [55,55]
+                }
+            ]
+        }]
+    ]
+    }

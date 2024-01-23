@@ -1,0 +1,30 @@
+{
+    "canvas": {
+        "width": 270,
+        "height": 175
+    },
+    "data": [
+        ["variables", [
+            {
+                "name": "drift",
+                "value": "SceneData.driftExample()"
+            }
+        ]]
+    ],
+    "elements": [
+        ["function-plot", {
+            "function": "(x)=>SceneData.variables['drift'][Math.floor(x)]",
+            "width": 200,
+            "height": 150,
+            "origin": [50, 80],
+            "xDom": [0, 19999],
+            "yDom": [-1.5e-14, 1.5e-14],
+            "options":{
+                "tickValuesX": [1, 5000, 10000, 15000, 20000],
+                "tickValuesY": [0, -1e-14, 1e-14],
+                "tickFormatY": ",.1e",
+                "stroke-width": 1
+            }
+        }]
+    ]
+}

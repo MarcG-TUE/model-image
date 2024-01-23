@@ -1,0 +1,227 @@
+{
+    "canvas": {
+        "width": 340,
+        "height": 200
+    },
+    "data": [
+        ["variables", [{
+            "name": "u",
+            "value": [1,-2]
+        },{
+            "name": "v",
+            "value": [2,-1]
+        },{
+            "name": "Tu",
+            "value": [3,0.5]
+        },{
+            "name": "Tv",
+            "value": [1.5,-1.5]
+        },{
+            "name": "c",
+            "value": 1.3
+        }]]
+    ],
+    "elements": [
+        ["subFigure", {
+            "transform": "translate(20,100) scale(25)",
+            "elements":[
+                ["line", {
+                    "p1": "SceneData.variables.u",
+                    "p2": "SceneData.addPoint(SceneData.variables.u,SceneData.variables.v)",
+                    "attributes": {
+                        "stroke-width": 0.04,
+                        "stroke-dasharray": "0.15 0.15",
+                        "stroke": "#00dd00"
+                    }
+                }],
+                ["line", {
+                    "p1": "SceneData.variables.v",
+                    "p2": "SceneData.addPoint(SceneData.variables.u,SceneData.variables.v)",
+                    "attributes": {
+                        "stroke-width": 0.04,
+                        "stroke-dasharray": "0.15 0.15",
+                        "stroke": "#0000ff"
+                    }
+                }],
+                ["vector", {
+                    "p1": [0,0],
+                    "p2": "SceneData.variables.u",
+                    "attributes": {
+                        "stroke-width": 0.06,
+                        "stroke": "#0000ff"
+                    }
+                }],
+                ["vector", {
+                    "p1": [0,0],
+                    "p2": "SceneData.variables.v",
+                    "attributes": {
+                        "stroke-width": 0.06,
+                        "stroke": "#00dd00"
+                    }
+                }],
+                ["vector", {
+                    "p1": [0,0],
+                    "p2": "SceneData.addPoint(SceneData.variables.u,SceneData.variables.v)",
+                    "attributes": {
+                        "stroke-width": 0.06,
+                        "stroke": "#ff0000"
+                    }
+                }]
+            ]
+
+        }],
+        ["subFigure", {
+            "transform": "translate(200,75) scale(25)",
+            "elements":[
+                ["line", {
+                    "p1": "SceneData.variables.Tu",
+                    "p2": "SceneData.addPoint(SceneData.variables.Tu,SceneData.variables.Tv)",
+                    "attributes": {
+                        "stroke-width": 0.04,
+                        "stroke-dasharray": "0.15 0.15",
+                        "stroke": "#00dd00"
+                    }
+                }],
+                ["line", {
+                    "p1": "SceneData.variables.Tv",
+                    "p2": "SceneData.addPoint(SceneData.variables.Tu,SceneData.variables.Tv)",
+                    "attributes": {
+                        "stroke-width": 0.04,
+                        "stroke-dasharray": "0.15 0.15",
+                        "stroke": "#0000ff"
+                    }
+                }],
+                ["vector", {
+                    "p1": [0,0],
+                    "p2": "SceneData.variables.Tu",
+                    "attributes": {
+                        "stroke-width": 0.06,
+                        "stroke": "#0000ff"
+                    }
+                }],
+                ["vector", {
+                    "p1": [0,0],
+                    "p2": "SceneData.variables.Tv",
+                    "attributes": {
+                        "stroke-width": 0.06,
+                        "stroke": "#00dd00"
+                    }
+                }],
+                ["vector", {
+                    "p1": [0,0],
+                    "p2": "SceneData.addPoint(SceneData.variables.Tu,SceneData.variables.Tv)",
+                    "attributes": {
+                        "stroke-width": 0.06,
+                        "stroke": "#ff0000"
+                    }
+                }]
+            ]
+
+        }],
+        ["subFigure", {
+            "transform": "translate(20,190) scale(25)",
+            "elements":[
+                ["vector", {
+                    "p1": [0,0],
+                    "p2": "SceneData.scalePoint(SceneData.variables.u,SceneData.variables.c)",
+                    "attributes": {
+                        "stroke-width": 0.06,
+                        "stroke": "#000099"
+                    }
+                }],
+                ["vector", {
+                    "p1": [0,0],
+                    "p2": "SceneData.variables.u",
+                    "attributes": {
+                        "stroke-width": 0.06,
+                        "stroke": "#0000ff"
+                    }
+                }]
+            ]
+        }],
+        ["subFigure", {
+            "transform": "translate(200,150) scale(25)",
+            "elements":[
+                ["vector", {
+                    "p1": [0,0],
+                    "p2": "SceneData.scalePoint(SceneData.variables.Tu,SceneData.variables.c)",
+                    "attributes": {
+                        "stroke-width": 0.06,
+                        "stroke": "#000099"
+                    }
+                }],
+                ["vector", {
+                    "p1": [0,0],
+                    "p2": "SceneData.variables.Tu",
+                    "attributes": {
+                        "stroke-width": 0.06,
+                        "stroke": "#0000ff"
+                    }
+                }]
+            ]
+        }],
+        [ "fat-arrow", {
+            "start": [125,100],
+            "end": [175,100],
+            "width": 10,
+            "head-width": 20,
+            "head-length": 20,
+            "attributes": {
+                "stroke": "#000000",
+                "fill": "#009999",
+                "stroke-width": "0.0"}
+        }
+        ],
+
+        ["latex-texts", {
+            "texts": [
+                {
+                    "text": "{\\bf{}u}",
+                    "position": [25,50]
+                },
+                {
+                    "text": "{\\bf{}v}",
+                    "position": [65,85]
+                },
+                {
+                    "text": "{\\bf{}u}+{\\bf{}v}",
+                    "position": [90,12]
+                },
+                {
+                    "text": "T({\\bf{}u})",
+                    "position": [250,93]
+                },
+                {
+                    "text": "T({\\bf{}v})",
+                    "position": [212,23]
+                },
+                {
+                    "text": "T({\\bf{}u}+{\\bf{}v})",
+                    "position": [290,35]
+                },
+                {
+                    "text": "T",
+                    "position": [135,75],
+                    "scale": 1.7
+                },
+                {
+                    "text": "{\\bf{}u}",
+                    "position": [50,150]
+                },
+                {
+                    "text": "c\\cdot{}{\\bf{}u}",
+                    "position": [58,130]
+                },
+                {
+                    "text": "T({\\bf{}u})",
+                    "position": [250,140]
+                },
+                {
+                    "text": "T(c\\cdot{}{\\bf{}u})",
+                    "position": [285,148]
+                }
+            ],
+            "fontSize": 0.7
+        }]
+    ]
+}

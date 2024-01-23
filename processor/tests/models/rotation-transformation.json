@@ -1,0 +1,123 @@
+{
+    "canvas": {
+        "width": 126,
+        "height": 103
+    },
+    "data": [
+        ["variables", [{
+            "name": "phi",
+            "value": 45
+        },{
+            "name": "v",
+            "value": [2,1]
+        },{
+            "name": "Uv",
+            "value": "SceneData.rotatePoint(SceneData.variables.v,SceneData.variables.phi)"
+        },{
+            "name": "u1",
+            "value": "SceneData.rotatePoint([1,0],SceneData.variables.phi)"
+        },{
+            "name": "u2",
+            "value": "SceneData.rotatePoint([0,1],SceneData.variables.phi)"
+        }]]
+    ],
+    "elements": [
+        [ "axis-2d",
+        {
+            "type": "4Q",
+            "xDom": [-1.57,2.5],
+            "yDom": [-0.5,2.8],
+            "center": [50,85],
+            "scale": 30,
+            "content": [
+                ["lines", {
+                    "lines": [{
+                        "p1": "[SceneData.variables.v[0],0]",
+                        "p2": "SceneData.variables.v"
+                    },{
+                        "p1": "[0,SceneData.variables.v[1]]",
+                        "p2": "SceneData.variables.v"
+                    },{
+                        "p1": [0,0],
+                        "p2": "SceneData.rotatePoint([SceneData.variables.v[0],0],SceneData.variables.phi)"
+                    },{
+                        "p1": "SceneData.variables.Uv",
+                        "p2": "SceneData.rotatePoint([SceneData.variables.v[0],0],SceneData.variables.phi)"
+                    },{
+                        "p1": "SceneData.variables.Uv",
+                        "p2": "SceneData.rotatePoint([0,SceneData.variables.v[1]],SceneData.variables.phi)"
+                    }],
+                    "attributes": {
+                        "stroke-width": 0.5,
+                        "stroke-dasharray": "2 2"
+                    }
+                }],
+                ["vector", {
+                    "p1": [0,0],
+                    "p2": "SceneData.variables.v",
+                    "attributes": {
+                        "stroke": "#00aa00"
+                    }
+                }],
+                ["vector", {
+                    "p1": [0,0],
+                    "p2": "SceneData.variables.Uv",
+                    "attributes": {
+                        "stroke": "#00aa00",
+                        "stroke-dasharray": "4 4"
+                    }
+                }],
+                ["vectors", {
+                    "vectors":[
+                        {
+                            "p1": [0,0],
+                            "p2": "SceneData.variables.u1"
+                        },{
+                            "p1": [0,0],
+                            "p2": "SceneData.variables.u2"
+                        }
+
+                    ],
+                    "attributes": {
+                        "stroke": "#ff0000"
+                    }
+                }],
+                ["arc", {
+                    "center": [0, 0],
+                    "radius": 1.5,
+                    "start-angle": "SceneData.angleOfPoint(SceneData.variables.v)",
+                    "end-angle": "SceneData.angleOfPoint(SceneData.variables.v)+SceneData.variables.phi",
+                    "arrowHeads": "both",
+                    "attributes": {
+                        "stroke-width": 0.5
+                    }
+                }]
+            ]
+        }],
+        ["latex-texts", {
+            "texts": [
+                {
+                    "text": "{\\bf{}u}_1",
+                    "position": [73,57]
+                },
+                {
+                    "text": "{\\bf{}v}",
+                    "position": [115,50]
+                },
+                {
+                    "text": "{\\bf{}u}_2",
+                    "position": [15,55]
+                },
+                {
+                    "text": "{\\bf{}Uv}",
+                    "position": [62,6]
+                },
+                {
+                    "text": "\\varphi",
+                    "position": [75,38]
+                }
+            ],
+            "fontSize": 0.7
+        }]
+    ]
+}

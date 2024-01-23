@@ -1,0 +1,125 @@
+{
+    "canvas": {
+        "width": 130,
+        "height": 120
+    },
+    "data": [
+        ["variables", [
+            {
+                "name": "alpha",
+                "value": "20"
+            },{
+                "name": "phi",
+                "value": "75"
+            },{
+                "name": "length",
+                "value": "1.6"
+            },{
+                "name": "length2",
+                "value": "SceneData.variables.length*Math.tan((SceneData.variables.phi-SceneData.variables.alpha)/180*Math.PI)"
+            },{
+                "name": "x",
+                "value": "[SceneData.variables.length*Math.cos(SceneData.variables.alpha/180*Math.PI),SceneData.variables.length*Math.sin(SceneData.variables.alpha/180*Math.PI)]"
+            },{
+                "name": "y",
+                "value": "[SceneData.variables.length2*Math.cos(SceneData.variables.phi/180*Math.PI),SceneData.variables.length2*Math.sin(SceneData.variables.phi/180*Math.PI)]"
+            },{
+                "name": "z",
+                "value": "[SceneData.variables.length*Math.cos(SceneData.variables.phi/180*Math.PI),SceneData.variables.length*Math.sin(SceneData.variables.phi/180*Math.PI)]"
+            }
+        ]]
+    ],
+    "elements": [
+        [ "axis-2d", {
+            "type": "4Q",
+            "xDom": [-0.4,2.6],
+            "yDom": [-0.4,2.3],
+            "center": [20,100],
+            "scale": 40,
+            "options": {
+                "tickValuesX": [-2,-1,1,2],
+                "tickValuesY": [-1,1,2]
+            },
+            "content": [
+                ["line", {
+                    "p1": "SceneData.variables.x",
+                    "p2": "SceneData.variables.y",
+                    "attributes": {
+                        "stroke-width": 1,
+                        "stroke-dasharray": "2 2"
+                    }
+                }],
+                ["vector", {
+                    "p1": [0,0],
+                    "p2": "SceneData.variables.x",
+                    "attributes": {
+                        "stroke": "#ff0000",
+                        "stroke-width": 1.5
+                    }
+                }],
+                ["arc", {
+                    "start-angle": "SceneData.variables.alpha",
+                    "end-angle": "SceneData.variables.phi",
+                    "arrowHeads": "end",
+                    "radius": "SceneData.variables.length",
+                    "attributes": {
+                        "stroke-dasharray": "2 2",
+                        "stroke": "#0000aa"
+                    }
+                }],
+                ["vectors", {
+                    "vectors": [
+                        {
+                            "p1": [0,0],
+                            "p2": "SceneData.variables.y",
+                            "attributes": {
+                                "stroke": "#006600"
+                            }
+                        },{
+                            "p1": [0,0],
+                            "p2": "SceneData.variables.z"
+                        }
+
+                    ],
+                    "attributes": {
+                        "stroke": "#00aa00",
+                        "stroke-width": 1.5
+                    }
+                }]
+            ]
+        }],
+        ["latex-texts", {
+            "texts": [
+                {
+                    "text": "{\\bf{}v}",
+                    "position": [82,80]
+                }
+            ],
+            "scale": 1,
+            "color": "#ff0000"
+        }],
+        ["latex-texts", {
+            "texts": [
+                {
+                    "text": "{\\bf{}U}'{\\bf{}v}",
+                    "position": [45,5],
+                    "color": "#006600"
+                },{
+                    "text": "{\\bf{}U}{\\bf{}v}",
+                    "position": [15,30]
+                }
+            ],
+            "scale": 1,
+            "color": "#00aa00"
+        }],
+        ["latex-texts", {
+            "texts": [
+                {
+                    "text": "\\varphi",
+                    "position": [52,55]
+                }
+            ],
+            "color": "#0000aa"
+        }]
+    ]
+}

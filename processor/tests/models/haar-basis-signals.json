@@ -1,0 +1,291 @@
+{
+    "canvas": {
+        "width": 600,
+        "height": 315
+    },
+    "data": [
+        ["variables", [
+            {
+                "name": "signals",
+                "value": "[[0.3536,0.3536,0.3536,0.3536,0.3536,0.3536,0.3536,0.3536],[0.3536,0.3536,0.3536,0.3536,-0.3536,-0.3536,-0.3536,-0.3536],[0.5,0.5,-0.5,-0.5,0,0,0,0],[0,0,0,0,0.5,0.5,-0.5,-0.5],[0.7071,-0.7071,0,0,0,0,0,0],[0,0,0.7071,-0.7071,0,0,0,0],[0,0,0,0,0.7071,-0.7071,0,0],[0,0,0,0,0,0,0.7071,-0.7071]]"
+            }
+            ]
+        ]
+    ],
+    "elements": [
+        [ "subFigure", {
+            "transform": "scale(0.94)",
+            "elements": [
+                [ "axis-2d", { "comment": "L0",
+                    "type": "4Q",
+                    "xDom": [0,7],
+                    "yDom": [-1,1],
+                    "center": [268,45],
+                    "scale": [15,25],
+                    "content": [
+                        ["discrete-function", {
+                            "function": "(n)=>SceneData.variables.signals[0][n]",
+                            "samples": "SceneData.linSpace(0,7,8)",
+                            "radius": 0.2,
+                            "stem": true,
+                            "attributes": {
+                                "stroke": "none",
+                                "fills": ["#0072BD","#D95319","#EDB120","#7E2F8E","#77AC30","#4DBEEE","#A2142F"]
+                            },
+                            "stem-attributes": {
+                                "stroke-width": 1.0
+                            }
+                        }]
+                    ],
+                    "options":{
+                        "tickValuesX": [1,2,3,4,5,6,7],
+                        "tickValuesY": [-1,-0.5,0,0.5,1],
+                        "tickFormatY": ",.1f"
+                        }
+                }],
+                [ "axis-2d", { "comment": "L1",
+                    "type": "4Q",
+                    "xDom": [0,7],
+                    "yDom": [-1,1],
+                    "center": [268,130],
+                    "scale": [15,25],
+                    "content": [
+                        ["discrete-function", {
+                            "function": "(n)=>SceneData.variables.signals[1][n]",
+                            "samples": "SceneData.linSpace(0,7,8)",
+                            "radius": 0.2,
+                            "stem": true,
+                            "attributes": {
+                                "stroke": "none",
+                                "fills": ["#D95319"]
+                            },
+                            "stem-attributes": {
+                                "stroke-width": 1.0
+                            }
+                        }]
+                    ],
+                    "options":{
+                        "tickValuesX": [1,2,3,4,5,6,7],
+                        "tickValuesY": [-1,-0.5,0,0.5,1],
+                        "tickFormatY": ",.1f"
+                    }
+                }],
+                [ "axis-2d", { "comment": "L2a",
+                    "type": "4Q",
+                    "xDom": [0,7],
+                    "yDom": [-1,1],
+                    "center": [190,215],
+                    "scale": [15,25],
+                    "content": [
+                        ["discrete-function", {
+                            "function": "(n)=>SceneData.variables.signals[2][n]",
+                            "samples": "SceneData.linSpace(0,7,8)",
+                            "radius": 0.2,
+                            "stem": true,
+                            "attributes": {
+                                "stroke": "none",
+                                "fills": ["#EDB120","#7E2F8E","#77AC30","#4DBEEE","#A2142F"]
+                            },
+                            "stem-attributes": {
+                                "stroke-width": 1.0
+                            }
+                        }]
+                    ],
+                    "options":{
+                        "tickValuesX": [1,2,3,4,5,6,7],
+                        "tickValuesY": [-1,-0.5,0,0.5,1],
+                        "tickFormatY": ",.1f"
+                    }
+                }],
+                [ "axis-2d", { "comment": "L2b",
+                    "type": "4Q",
+                    "xDom": [0,7],
+                    "yDom": [-1,1],
+                    "center": [350,215],
+                    "scale": [15,25],
+                    "content": [
+                        ["discrete-function", {
+                            "function": "(n)=>SceneData.variables.signals[3][n]",
+                            "samples": "SceneData.linSpace(0,7,8)",
+                            "radius": 0.2,
+                            "stem": true,
+                            "attributes": {
+                                "stroke": "none",
+                                "fills": ["#EDB120","#7E2F8E","#77AC30","#4DBEEE","#A2142F"]
+                            },
+                            "stem-attributes": {
+                                "stroke-width": 1.0
+                            }
+                        }]
+                    ],
+                    "options":{
+                        "tickValuesX": [1,2,3,4,5,6,7],
+                        "tickValuesY": [-1,-0.5,0,0.5,1],
+                        "tickFormatY": ",.1f"
+                    }
+                }],
+                [ "axis-2d", { "comment": "L3a",
+                    "type": "4Q",
+                    "xDom": [0,7],
+                    "yDom": [-1,1],
+                    "center": [30,300],
+                    "scale": [15,25],
+                    "content": [
+                        ["discrete-function", {
+                            "function": "(n)=>SceneData.variables.signals[4][n]",
+                            "samples": "SceneData.linSpace(0,7,8)",
+                            "radius": 0.2,
+                            "stem": true,
+                            "attributes": {
+                                "stroke": "none",
+                                "fills": ["#7E2F8E","#77AC30","#4DBEEE","#A2142F"]
+                            },
+                            "stem-attributes": {
+                                "stroke-width": 1.0
+                            }
+                        }]
+                    ],
+                    "options":{
+                        "tickValuesX": [1,2,3,4,5,6,7],
+                        "tickValuesY": [-1,-0.5,0,0.5,1],
+                        "tickFormatY": ",.1f"
+                    }
+                }],
+                [ "axis-2d", { "comment": "L3b",
+                    "type": "4Q",
+                    "xDom": [0,7],
+                    "yDom": [-1,1],
+                    "center": [190,300],
+                    "scale": [15,25],
+                    "content": [
+                        ["discrete-function", {
+                            "function": "(n)=>SceneData.variables.signals[5][n]",
+                            "samples": "SceneData.linSpace(0,7,8)",
+                            "radius": 0.2,
+                            "stem": true,
+                            "attributes": {
+                                "stroke": "none",
+                                "fills": ["#7E2F8E","#77AC30","#4DBEEE","#A2142F"]
+                            },
+                            "stem-attributes": {
+                                "stroke-width": 1.0
+                            }
+                        }]
+                    ],
+                    "options":{
+                        "tickValuesX": [1,2,3,4,5,6,7],
+                        "tickValuesY": [-1,-0.5,0,0.5,1],
+                        "tickFormatY": ",.1f"
+                    }
+                }],
+                [ "axis-2d", { "comment": "L3c",
+                    "type": "4Q",
+                    "xDom": [0,7],
+                    "yDom": [-1,1],
+                    "center": [350,300],
+                    "scale": [15,25],
+                    "content": [
+                        ["discrete-function", {
+                            "function": "(n)=>SceneData.variables.signals[6][n]",
+                            "samples": "SceneData.linSpace(0,7,8)",
+                            "radius": 0.2,
+                            "stem": true,
+                            "attributes": {
+                                "stroke": "none",
+                                "fills": ["#7E2F8E","#77AC30","#4DBEEE","#A2142F"]
+                            },
+                            "stem-attributes": {
+                                "stroke-width": 1.0
+                            }
+                        }]
+                    ],
+                    "options":{
+                        "tickValuesX": [1,2,3,4,5,6,7],
+                        "tickValuesY": [-1,-0.5,0,0.5,1],
+                        "tickFormatY": ",.1f"
+                    }
+                }],
+                [ "axis-2d", { "comment": "L3d",
+                    "type": "4Q",
+                    "xDom": [0,7],
+                    "yDom": [-1,1],
+                    "center": [510,300],
+                    "scale": [15,25],
+                    "content": [
+                        ["discrete-function", {
+                            "function": "(n)=>SceneData.variables.signals[7][n]",
+                            "samples": "SceneData.linSpace(0,7,8)",
+                            "radius": 0.2,
+                            "stem": true,
+                            "attributes": {
+                                "stroke": "none",
+                                "fills": ["#7E2F8E","#77AC30","#4DBEEE","#A2142F"]
+                            },
+                            "stem-attributes": {
+                                "stroke-width": 1.0
+                            }
+                        }]
+                    ],
+                    "options":{
+                        "tickValuesX": [1,2,3,4,5,6,7],
+                        "tickValuesY": [-1,-0.5,0,0.5,1],
+                        "tickFormatY": ",.1f"
+                    }
+                }],
+                ["latex-texts", {
+                    "texts":[
+                        {
+                            "text": "h_0[k]",
+                            "position": [240,1]
+                        },{
+                            "text": "h_1[k]",
+                            "position": [240,86]
+                        },{
+                            "text": "h_{2,1}[k]",
+                            "position": [157,171]
+                        },{
+                            "text": "h_{2,2}[k]",
+                            "position": [317,171]
+                        },{
+                            "text": "h_{3,1}[k]",
+                            "position": [1,256]
+                        },{
+                            "text": "h_{3,2}[k]",
+                            "position": [157,256]
+                        },{
+                            "text": "h_{3,3}[k]",
+                            "position": [317,256]
+                        },{
+                            "text": "h_{3,4}[k]",
+                            "position": [477,256]
+                        },{
+                            "text": "k",
+                            "position": [385,53]
+                        },{
+                            "text": "k",
+                            "position": [385,138]
+                        },{
+                            "text": "k",
+                            "position": [307,223]
+                        },{
+                            "text": "k",
+                            "position": [465,223]
+                        },{
+                            "text": "k",
+                            "position": [144,308]
+                        },{
+                            "text": "k",
+                            "position": [304,308]
+                        },{
+                            "text": "k",
+                            "position": [464,308]
+                        },{
+                            "text": "k",
+                            "position": [623,308]
+                        }
+                    ]
+                }]
+            ]
+        }]
+    ]
+}

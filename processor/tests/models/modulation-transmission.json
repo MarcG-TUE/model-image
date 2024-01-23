@@ -1,0 +1,108 @@
+{
+    "canvas": {
+        "width": 350,
+        "height": 125
+    },
+    "elements": [
+        ["arrows", {
+            "arrows": [{
+                "p1": [25,25],
+                "p2": [25,50]
+            },{
+                "p1": [25,75],
+                "p2": [25,100]
+            },{
+                "p1": [40,115],
+                "p2": [180,115]
+            },{
+                "p1": [200,50],
+                "p2": [200,25]
+            },{
+                "p1": [200,100],
+                "p2": [200,75]
+            }],
+            "attributes": {
+                "stroke-width": 1
+            }
+        }],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "s[k]",
+                        "position": [15,5]
+                    },
+                    {
+                        "text": "s(t)",
+                        "position": [15,57]
+                    },
+                    {
+                        "text": "z(t)",
+                        "position": [15,107]
+                    },
+                    {
+                        "text": "a\\cdot{}\\hat{z}(t)",
+                        "position": [185,107]
+                    },
+                    {
+                        "text": "a\\cdot{}\\hat{s}(t)",
+                        "position": [185,57]
+                    },
+                    {
+                        "text": "a\\cdot{}\\hat{s}[k]",
+                        "position": [185,5]
+                    }
+                ]
+            }
+        ],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "\\mathrm{pulse~shaping}",
+                        "position": [30,32]
+                    },
+                    {
+                        "text": "\\mathrm{modulation}",
+                        "position": [30,84]
+                    },
+                    {
+                        "text": "\\mathrm{transmission}",
+                        "position": [75,105]
+                    },
+                    {
+                        "text": "\\mathrm{demodulation}",
+                        "position": [137,84]
+                    },
+                    {
+                        "text": "\\mathrm{demodulation}",
+                        "position": [137,32]
+                    }
+                ],
+
+                "scale": 0.75
+            }
+        ],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "\\mathrm{digital~data}",
+                        "position": [250,8]
+                    },
+                    {
+                        "text": "\\mathrm{base-band~signal}",
+                        "position": [250,59]
+                    },
+                    {
+                        "text": "\\mathrm{modulated~signal}",
+                        "position": [250,108]
+                    }
+                ],
+
+                "scale": 1.0,
+                "color": "#0000ff"
+            }
+        ]
+    ]
+}

@@ -1,0 +1,156 @@
+{
+    "canvas": {
+        "width": 455,
+        "height": 165
+    },
+    "data": [
+    ],
+    "comment": "Three FFT stages",
+    "elements": [
+        ["array", {
+            "vertical": 8,
+            "deltaVertical": 20,
+            "horizontal": 4,
+            "deltaHorizontal": 120,
+            "elements":[
+                ["arrow", {
+                    "p1": [30,15],
+                    "p2": [70,15],
+                    "attributes":{
+                        "stroke-width": 1
+                    }
+                }]
+            ]
+        }],
+        ["rectangles", {
+            "rectangles": [{
+                "left": 70,
+                "top": 8,
+                "width": 80,
+                "height": 34
+            },{
+                "left": 70,
+                "top": 48,
+                "width": 80,
+                "height": 34
+            },{
+                "left": 70,
+                "top": 88,
+                "width": 80,
+                "height": 34
+            },{
+                "left": 70,
+                "top": 128,
+                "width": 80,
+                "height": 34
+            },{
+                "left": 190,
+                "top": 8,
+                "width": 80,
+                "height": 74
+            },{
+                "left": 190,
+                "top": 88,
+                "width": 80,
+                "height": 74
+            },{
+                "left": 310,
+                "top": 8,
+                "width": 80,
+                "height": 154
+            }],
+            "attributes":{
+                "fill": "#DBEEF3",
+                "stroke-width": 1.5
+            }
+        }],
+        ["latex-texts",{
+            "texts": [
+                {
+                    "position": [5,10],
+                    "text": "x[0]"
+                },{
+                    "position": [5,30],
+                    "text": "x[4]"
+                },{
+                    "position": [5,50],
+                    "text": "x[2]"
+                },{
+                    "position": [5,70],
+                    "text": "x[6]"
+                },{
+                    "position": [5,90],
+                    "text": "x[1]"
+                },{
+                    "position": [5,110],
+                    "text": "x[5]"
+                },{
+                    "position": [5,130],
+                    "text": "x[3]"
+                },{
+                    "position": [5,150],
+                    "text": "x[7]"
+                },{
+                    "position": [430,10],
+                    "text": "X[0]"
+                },{
+                    "position": [430,30],
+                    "text": "X[1]"
+                },{
+                    "position": [430,50],
+                    "text": "X[2]"
+                },{
+                    "position": [430,70],
+                    "text": "X[3]"
+                },{
+                    "position": [430,90],
+                    "text": "X[4]"
+                },{
+                    "position": [430,110],
+                    "text": "X[5]"
+                },{
+                    "position": [430,130],
+                    "text": "X[6]"
+                },{
+                    "position": [430,150],
+                    "text": "X[7]"
+                }
+            ]
+        }],
+        ["texts",{
+            "texts": [
+                {
+                    "position": [87.5,27.5],
+                    "text": "2-point DFT"
+                },{
+                    "position": [87.5,67.5],
+                    "text": "2-point DFT"
+                },{
+                    "position": [87.5,107.5],
+                    "text": "2-point DFT"
+                },{
+                    "position": [87.5,147.5],
+                    "text": "2-point DFT"
+                },{
+                    "position": [210,40],
+                    "text": "combine"
+                },{
+                    "position": [202.5,55],
+                    "text": "2-point DFTs"
+                },{
+                    "position": [210,120],
+                    "text": "combine"
+                },{
+                    "position": [202.5,135],
+                    "text": "2-point DFTs"
+                },{
+                    "position": [330,80],
+                    "text": "combine"
+                },{
+                    "position": [322.5,95],
+                    "text": "4-point DFTs"
+                }
+            ]
+        }]
+    ]
+}

@@ -1,0 +1,126 @@
+{
+    "canvas": {
+        "width": 310,
+        "height": 150
+    },
+    "elements": [
+        ["arrows", {
+            "arrows": [{
+                "p1": [35,40],
+                "p2": [175,75]
+            },{
+                "p1": [35,115],
+                "p2": [175,100]
+            }
+            ],
+            "attributes":{
+                "stroke-width": 1,
+                "stroke": "#0000ff"
+            }
+        }],
+        ["polyline", {
+            "points": [[35,35],[120,5],[175, 35]],
+            "arrowHeads": "end",
+            "attributes":{
+                "stroke-width": 1,
+                "stroke": "#0000ff"
+            }
+        }],
+        ["clip-art", {
+            "id": "antenna-array",
+            "transform": "translate(200,35)",
+            "number-of-antennas": 2,
+            "delta": [0,60]
+        }],
+        ["line", {
+            "p1": [240,75],
+            "p2": [240,115],
+            "attributes":{
+                "stroke-width": 1,
+                "stroke": "#000000",
+                "stroke-dasharray": "1 5"
+            }
+        }],
+        ["line", {
+            "p1": [15,60],
+            "p2": [15,100],
+            "attributes":{
+                "stroke-width": 1,
+                "stroke": "#00aa00",
+                "stroke-dasharray": "1 5"
+            }
+        }],
+        ["line", {
+            "p1": [288,78],
+            "p2": [288,118],
+            "attributes":{
+                "stroke-width": 1,
+                "stroke": "#aaaa00",
+                "stroke-dasharray": "1 5"
+            }
+        }],
+        ["arrows", {
+            "arrows": [{
+                "p1": [200,65],
+                "p2": [270,65]
+            },{
+                "p1": [200,125],
+                "p2": [270,125]
+            }
+            ],
+            "attributes":{
+                "stroke-width": 1
+            }
+        }],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "s_1[k]",
+                        "position": [5,30]
+                    },
+                    {
+                        "text": "s_d[k]",
+                        "position": [5,110]
+                    },
+                    {
+                        "text": "{\\bf{}S}",
+                        "position": [13,140]
+                    }],
+                "color": "#00aa00"
+            }
+        ],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "a_{l,m}",
+                        "position": [110,50]
+                    },
+                    {
+                        "text": "{\\bf{}A}",
+                        "position": [110,140]
+                    }],
+                "color": "#0000aa"
+            }
+        ],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "x_1[k]",
+                        "position": [280,58]
+                    },
+                    {
+                        "text": "x_M[k]",
+                        "position": [280,118]
+                    },
+                    {
+                        "text": "{\\bf{}X}",
+                        "position": [285,140]
+                    }],
+                "color": "#aaaa00"
+            }
+        ]
+    ]
+}

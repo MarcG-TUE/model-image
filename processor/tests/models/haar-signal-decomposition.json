@@ -1,0 +1,80 @@
+{
+    "canvas": {
+        "width": 480,
+        "height": 125
+    },
+    "data": [
+        ["variables", [
+            {
+                "name": "signal",
+                "value": "[4,6,10,12,10,8,3,3]"
+            }
+            ]
+        ]
+    ],
+    "elements": [
+        [ "subFigure", {
+            "transform": "scale(0.94)",
+            "elements": [
+                [ "axis-2d", { "comment": "x",
+                    "type": "1Q",
+                    "xDom": [0,7],
+                    "yDom": [0,13],
+                    "center": [25,85],
+                    "scale": [30,5],
+                    "content": [
+                        ["discrete-function", {
+                            "function": "(n)=>SceneData.variables.signal[n]",
+                            "samples": "SceneData.linSpace(0,7,8)",
+                            "radius": 0.125,
+                            "stem": true,
+                            "attributes": {
+                                "stroke": "none",
+                                "fills": ["#0072BD","#D95319","#EDB120","#7E2F8E","#77AC30","#4DBEEE","#A2142F"]
+                            },
+                            "stem-attributes": {
+                                "stroke-width": 1.5
+                            }
+                        }]
+                    ],
+                    "options":{
+                        "tickValuesX": [0,1,2,3,4,5,6,7],
+                        "tickValuesY": [0,2,4,6,8,10,12],
+                        "tickFormatY": ",.0f"
+                        }
+                }],
+                ["latex-texts", {
+                    "texts":[
+                        {
+                            "text": "x[k]",
+                            "position": [4,2]
+                        },{
+                            "text": "k",
+                            "position": [248,93]
+                        },{
+                            "text": "x[k]=",
+                            "position": [15,120],
+                            "color": "#000000"
+                        },{
+                            "text": "14\\sqrt{2}\\cdot{}h_0[k]",
+                            "position": [47,117],
+                            "color": "#0072BD"
+                        },{
+                            "text": "+2\\sqrt{2}\\cdot{}h_1[k]",
+                            "position": [103,117],
+                            "color": "#D95319"
+                        },{
+                            "text": "-6\\cdot{}h_{2,1}[k]+6\\cdot{}h_{2,2}[k]",
+                            "position": [162,120],
+                            "color": "#EDB120"
+                        },{
+                            "text": "-\\sqrt{2}\\cdot{}h_{3,1}[k]-\\sqrt{2}\\cdot{}h_{3,2}[k]+\\sqrt{2}\\cdot{}h_{3,3}[k]+0\\cdot{}h_{3,4}[k]",
+                            "position": [268,117],
+                            "color": "#7E2F8E"
+                        }
+                    ]
+                }]
+            ]
+        }]
+    ]
+}

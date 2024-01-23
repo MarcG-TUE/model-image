@@ -1,0 +1,224 @@
+{
+    "canvas": {
+        "width": 390,
+        "height": 200
+    },
+    "elements": [
+        ["arrows",{
+            "arrows": [
+                {"p1": [67,30], "p2": [67,107]},
+                {"p1": [97,107], "p2": [143,30]},
+                {"p1": [232,30], "p2": [275,55]}
+            ],
+            "attributes": {
+                "stroke-width": 1
+            }
+        }],
+        ["texts",{ "comment": "headers",
+            "texts":[
+                {
+                    "text": "memory",
+                    "position": [8,10]
+                },{
+                    "text": "location",
+                    "position": [9,20]
+                },
+                {
+                    "text": "read",
+                    "position": [70,10]
+                },
+                {
+                    "text": "write",
+                    "position": [145,10]
+                },
+                {
+                    "text": "read",
+                    "position": [210,10]
+                },
+                {
+                    "text": "write",
+                    "position": [275,10]
+                },
+                {
+                    "text": "read",
+                    "position": [340,10]
+                }
+            ],
+            "attributes":{
+            "fill":"#0000aa"}
+        }],
+        ["latex-texts",{ "comment": "column 1",
+            "texts":[
+                {
+                    "text": "0",
+                    "position": [22.5,25]
+                },
+                {
+                    "text": "1",
+                    "position": [22.5,50]
+                },
+                {
+                    "text": "2",
+                    "position": [22.5,75]
+                },
+                {
+                    "text": "3",
+                    "position": [22.5,100]
+                }
+            ]
+        }],
+        ["latex-texts",{ "comment": "column 2",
+            "texts":[
+                {
+                    "text": "x[0]",
+                    "position": [72.5,25]
+                },
+                {
+                    "text": "x[1]",
+                    "position": [72.5,50]
+                },
+                {
+                    "text": "x[2]",
+                    "position": [72.5,75]
+                },
+                {
+                    "text": "x[3]",
+                    "position": [72.5,100]
+                }
+            ]
+        }],
+        ["latex-texts",{ "comment": "column 3",
+            "texts":[
+                {
+                    "text": "x[4]",
+                    "position": [150,25],
+                    "color": "#ff0000"
+                },
+                {
+                    "text": "x[1]",
+                    "position": [150,50]
+                },
+                {
+                    "text": "x[2]",
+                    "position": [150,75]
+                },
+                {
+                    "text": "x[3]",
+                    "position": [150,100]
+                }
+            ]
+        }],
+        ["latex-texts",{ "comment": "column 4",
+            "texts":[
+                {
+                    "text": "x[4]",
+                    "position": [213.5,25]
+                },
+                {
+                    "text": "x[1]",
+                    "position": [213.5,50]
+                },
+                {
+                    "text": "x[2]",
+                    "position": [213.5,75]
+                },
+                {
+                    "text": "x[3]",
+                    "position": [213.5,100]
+                }
+            ]
+        }],
+        ["latex-texts",{ "comment": "column 5",
+            "texts":[
+                {
+                    "text": "x[4]",
+                    "position": [279,25]
+                },
+                {
+                    "text": "x[5]",
+                    "position": [279,50],
+                    "color": "#ff0000"
+                },
+                {
+                    "text": "x[2]",
+                    "position": [279,75]
+                },
+                {
+                    "text": "x[3]",
+                    "position": [279,100]
+                }
+            ]
+        }],
+        ["latex-texts",{ "comment": "column 6",
+            "texts":[
+                {
+                    "text": "x[4]",
+                    "position": [342,25]
+                },
+                {
+                    "text": "x[5]",
+                    "position": [342,50]
+                },
+                {
+                    "text": "x[2]",
+                    "position": [342,75]
+                },
+                {
+                    "text": "x[3]",
+                    "position": [342,100]
+                }
+            ]
+        }],
+        ["path", {
+            "string": "M 205 55 L 205 100 c 0,10 -10,10 -10,0 L 195,30 c 0,-10 10,-10 10,0 L 205 35",
+            "attributes":{"stroke-width": 1},
+            "arrowHeads": "end"
+        }],
+        ["path", {
+            "string": "M 335 80 L 335 100 c 0,10 -10,10 -10,0 L 325,30 c 0,-10 10,-10 10,0 L 335 58",
+            "attributes":{"stroke-width": 1},
+            "arrowHeads": "end"
+        }],
+        ["circles", {
+            "circles": [{
+                "center": [205,55]
+            },{
+                "center": [335,80]
+            },{
+                "center": [67,30]
+            }],
+            "radius": 2.5,
+            "attributes": {
+                "stroke-width": 0,
+                "fill": "#000000"
+            }
+        }],
+        ["latex-texts",{ "comment": "y[]=",
+            "texts":[
+                {
+                    "text": "y[3]=",
+                    "position": [25,145]
+                },
+                {
+                    "text": "y[4]=",
+                    "position": [25,165]
+                },
+                {
+                    "text": "y[5]=",
+                    "position": [25,185]
+                },{
+                    "text": "h[0]\\cdot{}x[3]+h[1]\\cdot{}x[2]+h[2]\\cdot{}x[1]+h[3]\\cdot{}x[0]",
+                    "position": [170,145]
+                },
+                {
+                    "text": "h[0]\\cdot{}x[4]+h[1]\\cdot{}x[3]+h[2]\\cdot{}x[2]+h[3]\\cdot{}x[1]",
+                    "position": [113.5,165]
+                },
+                {
+                    "text": "h[0]\\cdot{}x[5]+h[1]\\cdot{}x[4]+h[2]\\cdot{}x[3]+h[3]\\cdot{}x[2]",
+                    "position": [57,185]
+                }
+            ]
+        }]
+    ]
+    }

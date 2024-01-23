@@ -1,0 +1,20 @@
+{
+    "canvas": {
+        "width": 50,
+        "height": 50
+    },
+    "elements": [
+        ["clip-art", {
+            "id": "from-file",
+            "transform": "translate(23,-8) scale(0.085) rotate(70)",
+            "filename": "Hexahedron.svg"
+        }],
+        ["text", {
+                "text": "View in 3D",
+                "position": [1.5,48.5],
+                "scale": 1.5,
+                "color": "#0000ff"
+            }
+        ]
+    ]
+}

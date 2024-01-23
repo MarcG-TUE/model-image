@@ -1,0 +1,153 @@
+{
+    "canvas": {
+        "width": 350,
+        "height": 150
+    },
+    "data":[
+        ["parameters", [
+            {
+                "name": "sigma1",
+                "type": "range",
+                "initialValue": 1.24,
+                "description": "one singular value",
+                "step": 0.01,
+                "range": [0, 2]
+            },{
+                "name": "sigma2",
+                "type": "range",
+                "initialValue": 0.4,
+                "description": "another singular value",
+                "step": 0.01,
+                "range": [0, 2]
+            }]
+        ],
+        [ "variables", [
+            {
+                "name": "alpha1",
+                "value": "40/180*Math.PI"
+            },{
+                "name": "alpha2",
+                "value": "130/180*Math.PI"
+            }]
+        ]
+    ],
+    "elements": [
+        [ "axis-2d",
+            {
+                "type": "4Q",
+                "xDom": [-1.2,1.2],
+                "yDom": [-1.2,1.2],
+                "center": [75,75],
+                "scale": 50,
+                "content": [
+                    ["circle", {
+                        "center": [0,0],
+                        "radius": 1,
+                        "attributes": {
+                            "stroke": "#0000ff",
+                            "fill": "none",
+                            "stroke-width": 2.0
+                        }
+                    }],
+                    ["vectors", {
+                        "vectors": [
+                            { "p1": [0, 0], "p2": [-0.3420,0.9397]},
+                            { "p1": [0, 0], "p2": [-0.9397,-0.3420]}
+                        ],
+                        "attributes": {
+                            "stroke": "#ff0000",
+                            "stroke-width": 2.0
+                        }
+                    }]
+                ]
+            }
+        ],
+        [ "axis-2d",
+            {
+                "type": "4Q",
+                "xDom": [-1.2,1.2],
+                "yDom": [-1.2,1.2],
+                "center": [275,75],
+                "scale": 50,
+                "content": [
+                    ["ellipse", {
+                        "center": [0,0],
+                        "radius-major": "SceneData.parameters.sigma1",
+                        "radius-minor": "SceneData.parameters.sigma2",
+                        "angle": "180*SceneData.variables.alpha1/Math.PI",
+                        "attributes": {
+                            "stroke": "#0000ff",
+                            "fill": "none",
+                            "stroke-width": 2.0
+                        },
+                        "updateOn": ["sigma1", "sigma2"]
+                    }],
+                    ["vectors", {
+                        "vectors": [
+                            { "p1": [0, 0], "p2": "[SceneData.parameters.sigma1*Math.cos(SceneData.variables.alpha1),SceneData.parameters.sigma1*Math.sin(SceneData.variables.alpha1)]"},
+                            { "p1": [0, 0], "p2": "[SceneData.parameters.sigma2*Math.cos(SceneData.variables.alpha2),SceneData.parameters.sigma2*Math.sin(SceneData.variables.alpha2)]"}
+                        ],
+                        "attributes": {
+                            "stroke": "#ff0000",
+                            "stroke-width": 2.0
+                        },
+                        "updateOn": ["sigma1", "sigma2"]
+                    }]
+                ]
+            }
+        ],
+        [ "fat-arrow", {
+            "start": [150,75],
+            "end": [200,75],
+            "width": 10,
+            "head-width": 20,
+            "head-length": 20,
+            "attributes": {
+                "stroke": "#000000",
+                "fill": "#009999",
+                "stroke-width": 0.0
+            }
+        }
+        ],
+        [ "latex-texts",
+        {
+            "texts": [
+                {
+                    "text": "{\\bf{}v}_1",
+                    "position": [40,15]
+                },
+                {
+                    "text": "{\\bf{}v}_2",
+                    "position": [10,95]
+                }
+            ],
+            "scale": 1,
+            "color": "#ff0000"
+        }
+    ],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "\\sigma_1\\cdot{}{\\bf{}u}_1",
+                        "position": [318,25]
+                    },
+                    {
+                        "text": "\\sigma_2\\cdot{}{\\bf{}u}_2",
+                        "position": [240,40]
+                    }
+                ],
+                "scale": 1.0,
+                "color": "#555555"
+            }
+        ],
+        [ "latex-text",
+            {
+                "text": "{\\bf{}A}",
+                "position": [155,45],
+                "scale": 2,
+                "color": "#009999"
+            }
+        ]
+    ]
+}

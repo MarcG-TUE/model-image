@@ -1,0 +1,159 @@
+{
+    "canvas": {
+        "width": 210,
+        "height": 155
+    },
+    "data": [
+        ["variables", [
+            {
+                "name": "ext",
+                "value": 1.1
+            },{
+                "name": "ext-l-min",
+                "value": -0.3
+            },{
+                "name": "ext-l-max",
+                "value": 1.4
+            },{
+                "name": "a1",
+                "value": [1,3,2.6]
+            },{
+                "name": "a3",
+                "value": [1,0,3]
+            },{
+                "name": "a2",
+                "value": [-1.5,0,3]
+            },{
+                "name": "a1p",
+                "value": "SceneData.scalePoint3D(SceneData.variables.a1,SceneData.variables.ext)"
+            },{
+                "name": "a2p",
+                "value": "SceneData.scalePoint3D(SceneData.variables.a2,SceneData.variables.ext)"
+            },{
+                "name": "a3p",
+                "value": "SceneData.scalePoint3D(SceneData.variables.a3,SceneData.variables.ext)"
+            }
+            ]
+        ]
+    ],
+    "elements": [
+        ["axis-3d",
+            {
+                "type": "Perspective8Q",
+                "position": [5,5,3.5],
+                "target": [0,0,0],
+                "fieldOfView": 45,
+                "xDom": [0,2],
+                "yDom": [0,2],
+                "zDom": [0,3.5],
+                "center": [65,130],
+                "scale": 165,
+                "content": [
+                    ["polygon", {
+                        "points": [[0,0,0],"SceneData.variables.a2p","SceneData.variables.a3p"],
+                        "attributes": {
+                             "fill": "#FF9595",
+                             "stroke-width": 0
+                        }
+                     }],
+                     ["polygon", {
+                        "points": [[0,0,0],"SceneData.variables.a1p","SceneData.variables.a2p"],
+                        "attributes": {
+                             "fill": "#FFBBBB",
+                             "stroke-width": 0
+                        }
+                     }],
+                     ["line", { "comment": "z-axis",
+                        "p1": [0,0,0],
+                        "p2": [0,0,3.5],
+                        "attributes": {
+                             "stroke-width": 1.5
+                        }
+                     }],
+                     ["line", {
+                        "p1": "SceneData.scalePoint3D(SceneData.variables.a2,SceneData.variables['ext-l-min'])",
+                        "p2": "SceneData.scalePoint3D(SceneData.variables.a2,SceneData.variables['ext-l-max'])",
+                        "attributes": {
+                             "stroke": "#0000aa",
+                             "stroke-width": 1,
+                             "stroke-dasharray":"4 4"
+                        }
+                     }],
+                     ["vector", {
+                        "p1": [0,0,0],
+                        "p2": "SceneData.variables.a2",
+                        "attributes": {
+                             "stroke": "#0000aa"
+                        }
+                     }],
+                      ["polygon", {
+                         "points": [[0,0,0],"SceneData.variables.a3p","SceneData.variables.a1p"],
+                         "attributes": {
+                              "fill": "#FFC8C8",
+                              "stroke-width": 0,
+                              "fill-opacity": 0.75
+                         }
+                      }],
+                      ["line", {
+                        "p1": "SceneData.scalePoint3D(SceneData.variables.a1,SceneData.variables['ext-l-min'])",
+                        "p2": "SceneData.scalePoint3D(SceneData.variables.a1,SceneData.variables['ext-l-max'])",
+                        "attributes": {
+                             "stroke": "#00aa00",
+                             "stroke-width": 1,
+                             "stroke-dasharray":"4 4"
+                        }
+                     }],
+                      ["line", {
+                        "p1": "SceneData.scalePoint3D(SceneData.variables.a3,SceneData.variables['ext-l-min'])",
+                        "p2": "SceneData.scalePoint3D(SceneData.variables.a3,SceneData.variables['ext-l-max'])",
+                        "attributes": {
+                             "stroke": "#aa0000",
+                             "stroke-width": 1,
+                             "stroke-dasharray":"4 4"
+                        }
+                     }],
+                    ["vector", {
+                       "p1": [0,0,0],
+                       "p2": "SceneData.variables.a1",
+                       "attributes": {
+                            "stroke": "#00aa00"
+                       }
+                    }],
+                    ["vector", {
+                       "p1": [0,0,0],
+                       "p2": "SceneData.variables.a3",
+                       "attributes": {
+                            "stroke": "#aa0000"
+                       }
+                    }],
+                    ["polygon", {
+                        "points": ["SceneData.variables.a1p","SceneData.variables.a2p","SceneData.variables.a3p"],
+                        "attributes": {
+                             "fill": "#FF9595",
+                             "fill-opacity":0.6,
+                             "stroke-width": 0
+                        }
+                     }]
+                ]
+            }
+        ],
+        ["latex-text", {
+                "text": "{\\bf{}a}_1",
+                "position": [135,80],
+                "scale": 1,
+                "color": "#00aa00"
+        }],
+        ["latex-text", {
+                "text": "{\\bf{}a}_2",
+                "position": [105,35],
+                "scale": 1.0,
+                "color": "#0000aa"
+        }],
+        ["latex-text", {
+                "text": "{\\bf{}a}_n",
+                "position": [26,50],
+                "scale": 1.0,
+                "color": "#aa0000"
+        }]
+    ]
+}

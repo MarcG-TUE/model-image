@@ -1,0 +1,49 @@
+{
+    "canvas": {
+        "width": 175,
+        "height": 50
+    },
+    "elements": [
+        ["rectangle", {
+            "left": 50,
+            "top": 2,
+            "width": 75,
+            "height": 46,
+            "attributes": {
+                "stroke": "#000000",
+                "stroke-width": 1,
+                "fill": "#CCFFCC"
+            }
+        }],
+        ["arrows", {
+            "arrows": [{
+                "p1": [25,25],
+                "p2": [50,25]
+            },{
+                "p1": [125,25],
+                "p2": [150,25]
+            }],
+            "attributes": {
+                "stroke-width": 1
+            }
+        }],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "s[k]",
+                        "position": [5,18]
+                    },
+                    {
+                        "text": "y[k]",
+                        "position": [153,18]
+                    },
+                    {
+                        "text": "a(t)",
+                        "position": [78,18]
+                    }
+                ]
+            }
+        ]
+    ]
+}

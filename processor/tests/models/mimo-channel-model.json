@@ -1,0 +1,261 @@
+{
+    "canvas": {
+        "width": 355,
+        "height": 250
+    },
+    "elements": [
+        ["rectangle", {
+            "left": 45,
+            "top": 5,
+            "width": 265,
+            "height": 200,
+            "attributes": {
+                "stroke": "#000000",
+                "stroke-width": 1,
+                "stroke-dasharray": "8 6",
+                "fill": "#eeeeee"
+            }
+        }],
+        ["rectangle", {
+            "left": 60,
+            "top": 30,
+            "width": 30,
+            "height": 100,
+            "attributes": {
+                "stroke": "#000000",
+                "stroke-width": 1,
+                "fill": "#CCFFCC"
+            }
+        }],
+        ["rectangle", {
+            "left": 265,
+            "top": 30,
+            "width": 30,
+            "height": 160,
+            "attributes": {
+                "stroke": "#000000",
+                "stroke-width": 1,
+                "fill": "#FFCC99"
+            }
+        }],
+        ["clip-art", {
+            "id": "adder",
+            "transform": "translate(215,40)"
+        }],
+        ["clip-art", {
+            "id": "adder",
+            "transform": "translate(215,110)"
+        }],
+        ["clip-art", {
+            "id": "adder",
+            "transform": "translate(215,180)"
+        }],
+        ["clip-art", {
+            "id": "multiplier2",
+            "transform": "translate(150,40)"
+        }],
+        ["clip-art", {
+            "id": "multiplier2",
+            "transform": "translate(150,110)"
+        }],
+        ["arrows", {
+            "arrows": [{
+                "p1": [150,15],
+                "p2": [150,30]
+            },{
+                "p1": [215,15],
+                "p2": [215,30]
+            },{
+                "p1": [5,40],
+                "p2": [60,40]
+            },{
+                "p1": [90,40],
+                "p2": [140,40]
+            },{
+                "p1": [160,40],
+                "p2": [205,40]
+            },{
+                "p1": [225,40],
+                "p2": [265,40]
+            },{
+                "p1": [295,40],
+                "p2": [350,40]
+            },{
+                "p1": [150,85],
+                "p2": [150,100]
+            },{
+                "p1": [215,85],
+                "p2": [215,100]
+            },{
+                "p1": [5,110],
+                "p2": [60,110]
+            },{
+                "p1": [90,110],
+                "p2": [140,110]
+            },{
+                "p1": [160,110],
+                "p2": [205,110]
+            },{
+                "p1": [225,110],
+                "p2": [265,110]
+            },{
+                "p1": [295,110],
+                "p2": [350,110]
+            },{
+                "p1": [215,155],
+                "p2": [215,170]
+            },{
+                "p1": [225,180],
+                "p2": [265,180]
+            },{
+                "p1": [295,180],
+                "p2": [350,180]
+            }
+            ],
+            "attributes":{
+                "stroke-width": 1
+            }
+        }],
+        ["lines", {
+            "lines": [{
+                "p1": [25,50],
+                "p2": [25,90]
+            },{
+                "p1": [112.5,50],
+                "p2": [112.5,90]
+            },{
+                "p1": [242.5,50],
+                "p2": [242.5,90]
+            },{
+                "p1": [242.5,120],
+                "p2": [242.5,160]
+            },{
+                "p1": [325,50],
+                "p2": [325,90]
+            },{
+                "p1": [325,120],
+                "p2": [325,160]
+            }
+            ],
+            "attributes":{
+                "stroke-width": 1,
+                "stroke-dasharray": "2 4"
+            }
+        }],
+        ["arrows", {
+            "arrows": [{
+                "p1": [25,215],
+                "p2": [25,125]
+            },{
+                "p1": [112.5,215],
+                "p2": [112.5,125]
+            },{
+                "p1": [242.5,215],
+                "p2": [242.5,190]
+            },{
+                "p1": [325,215],
+                "p2": [325,190]
+            }],
+            "attributes":{
+                "stroke": "#0000aa",
+                "stroke-width": 1
+            }
+        }],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "{\\bf{}V}^H",
+                        "position": [67,72]
+                    },{
+                        "text": "{\\bf{}U}",
+                        "position": [275,74]
+                    },{
+                        "text": "s_1",
+                        "position": [20,30]
+                    },{
+                        "text": "s_d",
+                        "position": [20,100]
+                    },{
+                        "text": "s_1^*",
+                        "position": [107,25]
+                    },{
+                        "text": "s_d^*",
+                        "position": [107,95]
+                    },{
+                        "text": "x_1^*",
+                        "position": [237,25]
+                    },{
+                        "text": "x_d^*",
+                        "position": [237,95]
+                    },{
+                        "text": "x_M^*",
+                        "position": [237,165]
+                    },{
+                        "text": "x_1",
+                        "position": [322,30]
+                    },{
+                        "text": "x_d",
+                        "position": [322,100]
+                    },{
+                        "text": "x_M",
+                        "position": [322,170]
+                    },{
+                        "text": "\\sigma_1",
+                        "position": [135,15]
+                    },{
+                        "text": "n_1^*",
+                        "position": [195,15]
+                    },{
+                        "text": "\\sigma_d",
+                        "position": [135,85]
+                    },{
+                        "text": "n_d^*",
+                        "position": [195,85]
+                    }],
+                "color": "#000000"
+            }
+        ],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "{\\bf{}A}",
+                        "position": [55,170]
+                    }],
+                "color": "#0000aa",
+                "scale": 2.5
+            }
+        ],
+        [ "texts",
+            {
+                "texts": [
+                    {
+                        "text": "channel",
+                        "position": [145,200]
+                    },{
+                        "text": "transmitted",
+                        "position": [1,225]
+                    },{
+                        "text": "virtually",
+                        "position": [95,225]
+                    },{
+                        "text": "transmitted",
+                        "position": [88,237]
+                    },{
+                        "text": "virtually",
+                        "position": [225,225]
+                    },{
+                        "text": "received",
+                        "position": [223,237]
+                    },{
+                        "text": "received",
+                        "position": [307,225]
+                    }],
+                    "attributes":{
+                        "fill": "#0000aa"
+                    }
+            }
+        ]
+    ]
+}

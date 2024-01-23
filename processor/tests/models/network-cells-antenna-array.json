@@ -1,0 +1,197 @@
+{
+    "canvas": {
+        "width": 500,
+        "height": 200
+    },
+    "data": [
+        ["variables", [
+            {
+                "name": "cell-tower-positions",
+                "value": [[225,60], [225,150],[300,100]]
+            }]]],
+    "elements": [
+        ["polygons", {
+            "polygons":[
+                {
+                    "points": "SceneData.RegularPolygon(6,50,[225,60])",
+                    "attributes":{
+                        "fill": "#FF9595"
+                    }
+                },{
+                    "points": "SceneData.RegularPolygon(6,50,[225,146.6])",
+                    "attributes":{
+                        "fill": "#95FF95"
+                    }
+                },{
+                    "points": "SceneData.RegularPolygon(6,50,[300,103.3])",
+                    "attributes":{
+                        "fill": "#9595FF"
+                    }
+                }
+            ],
+            "attributes": {
+                 "stroke": "#0000aa",
+                 "stroke-width": 3
+            }
+         }],
+        ["stencil", {
+            "offsets": "SceneData.variables['cell-tower-positions']",
+            "elements":[
+                ["clip-art", {
+                    "id": "from-file",
+                    "transform": "translate(-15,-38) scale(0.19)",
+                    "filename": "Wifi_symbol.svg"
+                }]
+            ]
+        }],
+        ["stencil", {
+            "offsets": [[260,125]],
+            "elements":[
+                ["clip-art", {
+                    "id": "from-file",
+                    "transform": "translate(-16,-33) scale(0.115)",
+                    "filename": "Black_Man_Driving_Car_Cartoon_Vector.svg"
+                }]
+            ]
+        }],
+        ["stencil", {
+            "offsets": [[200,72],[245,165]],
+            "elements":[
+                ["clip-art", {
+                    "id": "from-file",
+                    "transform": "translate(-7,-13) scale(0.018)",
+                    "filename": "Mobile_phone_font_awesome2.svg"
+                }]
+            ]
+        }],
+        ["polylines", {
+            "polylines": [{
+                "points": [[225,35],[203, 60]]
+            },{
+                "points": [[294,79],[275,95]]
+            },{
+                "points": [[225,125],[245,150]]
+            }],
+            "attributes":{
+                "stroke-width": 1.5,
+                "stroke": "#ff0000"
+            },
+            "arrowHeads": "end"
+        }],
+        ["rectangle", {
+            "left": 395,
+            "top": 75,
+            "width": 100,
+            "height": 60,
+            "attributes": {
+                "stroke": "#000000",
+                "stroke-width": 1.5,
+                "fill": "#FFFFCA"
+            }
+        }],
+        ["lines", {
+            "lines": [
+                { "p1": [225, 60], "p2": [395,105]},
+                { "p1": [225, 150], "p2": [395,105]},
+                { "p1": [300, 100], "p2": [395,105]},
+                { "p1": [287, 87], "p2": [300,165]},
+                { "p1": [100, 70], "p2": [220,120]},
+                { "p1": [135, 150], "p2": [220,135]}
+            ],
+            "attributes": {
+                "stroke": "#000000",
+                "stroke-dasharray": "4 1",
+                "stroke-width": 1
+            }
+        }],
+        ["lines", {
+            "lines": [
+                { "p1": [10, 140], "p2": [140,140]}
+            ],
+            "attributes": {
+                "stroke": "#000000",
+                "stroke-width": 2
+            }
+        }],
+        ["array",{
+            "horizontal": 5,
+            "deltaHorizontal": 20,
+            "elements":[
+                ["rectangle", {
+                    "left": 30,
+                    "top": 122.5,
+                    "width": 10,
+                    "height": 35,
+                    "attributes": {
+                        "stroke": "#000000",
+                        "stroke-width": 1.5,
+                        "fill": "#FFFFCA"
+                    }
+                }]
+            ]
+        }],
+        ["stencil", {
+            "offsets": [[15,85],[25,80],[35,75],[45,70],[55,65]],
+            "elements":[
+                ["rectangle", {
+                    "left": 0,
+                    "top": 10,
+                    "width": 7,
+                    "height": 25,
+                    "attributes": {
+                        "stroke": "#000000",
+                        "stroke-width": 1.5,
+                        "fill": "#FFFFCA"
+                    }
+                }]
+            ]
+        }],
+        ["stencil", {
+            "offsets": [[127,85],[117,80],[107,75],[97,70],[87,65]],
+            "elements":[
+                ["rectangle", {
+                    "left": 0,
+                    "top": 10,
+                    "width": 7,
+                    "height": 25,
+                    "attributes": {
+                        "stroke": "#000000",
+                        "stroke-width": 1.5,
+                        "fill": "#FFFFCA"
+                    }
+                }]
+            ]
+        }],
+        ["lines", {
+            "lines": [
+                { "p1": [70, 80], "p2": [5,120]},
+                { "p1": [80, 80], "p2": [145,120]}
+            ],
+            "attributes": {
+                "stroke": "#000000",
+                "stroke-width": 2
+            }
+        }],
+        ["texts", {
+            "texts":[
+                {
+                    "text": "mobile telephone",
+                    "position": [407,100]
+                },{
+                    "text": "switching office",
+                    "position": [412,115]
+                },{
+                    "text": "time multiplexing",
+                    "position": [300,175]
+                },{
+                    "text": "frequency multiplexing",
+                    "position": [300,190]
+                },{
+                    "text": "antenna array",
+                    "position": [43,175]
+                }
+            ],
+            "fontSize": 1.0
+        }]
+    ]
+}

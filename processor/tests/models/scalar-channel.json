@@ -1,0 +1,72 @@
+{
+    "canvas": {
+        "width": 250,
+        "height": 45
+    },
+    "elements": [
+        ["clip-art", {
+            "id": "adder",
+            "transform": "translate(125,30)"
+        }],
+        ["clip-art", {
+            "id": "multiplier2",
+            "transform": "translate(60,30)"
+        }],
+        ["clip-art", {
+            "id": "multiplier2",
+            "transform": "translate(190,30)"
+        }],
+        ["arrows", {
+            "arrows": [{
+                "p1": [60,5],
+                "p2": [60,20]
+            },{
+                "p1": [125,5],
+                "p2": [125,20]
+            },{
+                "p1": [190,5],
+                "p2": [190,20]
+            },{
+                "p1": [5,30],
+                "p2": [50,30]
+            },{
+                "p1": [70,30],
+                "p2": [115,30]
+            },{
+                "p1": [135,30],
+                "p2": [180,30]
+            },{
+                "p1": [200,30],
+                "p2": [245,30]
+            }],
+            "attributes":{
+                "stroke-width": 1
+            }
+        }],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "s",
+                        "position": [20,20]
+                    },{
+                        "text": "x",
+                        "position": [150,20]
+                    },{
+                        "text": "y",
+                        "position": [215,20]
+                    },{
+                        "text": "\\sigma",
+                        "position": [48,7]
+                    },{
+                        "text": "n",
+                        "position": [113,7]
+                    },{
+                        "text": "w",
+                        "position": [175,7]
+                    }],
+                "color": "#000000"
+            }
+        ]
+    ]
+}

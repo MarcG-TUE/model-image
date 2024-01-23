@@ -1,0 +1,38 @@
+{
+    "canvas": {
+        "width": 500,
+        "height": 175
+    },
+    "elements": [
+        ["function-plot", {
+            "function": "(x)=>2+x/5",
+            "scatter": "(()=>{const rnGen = SceneData.rnGen(1); return Array.from({length: 25}, (_, i) => ((x)=>[x, 2+x/5+rnGen()-0.5])(rnGen()*10))})()",
+            "width": 200,
+            "height": 150,
+            "origin": [30, 155],
+            "xDom": [0, 10],
+            "yDom": [0, 5.1],
+            "options":{
+                "tickValuesX": [0,2,4,6,8,10],
+                "tickValuesY": [0, 1, 2, 3, 4, 5],
+                "tickFormatY": ",.0f",
+                "scatterRadius": 2.5
+            }
+        }],
+        ["function-plot", {
+            "function": "(x)=>2-0.08*(x-2)*(x-2)",
+            "scatter": "(()=>{const rnGen = SceneData.rnGen(3); return Array.from({length: 25}, (_, i) => ((x)=>[x, 2-0.08*(x-2)*(x-2)+2*rnGen()-1.0])(rnGen()*10))})()",
+            "width": 200,
+            "height": 150,
+            "origin": [290, 80],
+            "xDom": [0, 10],
+            "yDom": [-4.2, 4.2],
+            "options":{
+                "tickValuesX": [2,4,6,8,10],
+                "tickValuesY": [-4,-2,0,2,4],
+                "scatterRadius": 2.5,
+                "axisType": "4Q"
+            }
+        }]
+    ]
+}

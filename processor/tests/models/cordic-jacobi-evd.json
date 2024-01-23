@@ -1,0 +1,299 @@
+{
+    "canvas": {
+        "width": 255,
+        "height": 255
+    },
+    "data": [
+    ],
+    "comment": "A 8x8 matrix Brent-Luk-EVD array",
+    "elements": [
+        ["stencil",{ "comment": "green rectangles",
+            "offsets": [[10,10],[75,75],[140,140],[205,205]],
+            "elements":[
+                ["rectangle",{
+                    "top": 0,
+                    "left": 0,
+                    "width": 40,
+                    "height": 40,
+                    "attributes": {
+                        "fill": "#00B050",
+                        "stroke-width": 1.5
+                    }
+                }]
+            ]
+        }],
+        ["stencil",{ "comment": "blue rectangles",
+            "offsets": [
+                [75,10],[140,10],[205,10],
+                [10,75],[140,75],[205,75],
+                [10,140],[75,140],[205,140],
+                [10,205],[75,205],[140,205]
+            ],
+            "elements":[
+                ["rectangle",{
+                    "top": 0,
+                    "left": 0,
+                    "width": 40,
+                    "height": 40,
+                    "attributes": {
+                        "fill": "#5B9BD5",
+                        "stroke-width": 1.5
+                    }
+                }]
+            ]
+        }],
+        ["array",{ "comment": "diagonal arrows",
+            "horizontal": 3,
+            "vertical": 3,
+            "deltaHorizontal": 65,
+            "deltaVertical": 65,
+            "elements":[
+                ["polylines",{
+                    "polylines": [{
+                        "points": [[50,50],[75,75]]
+                    },{
+                        "points": [[75,50],[50,75]]
+                    }],
+                    "arrowHeads": "both",
+                    "attributes": {
+                        "stroke-width": 1,
+                        "stroke": "#0000ff"
+                    }
+                }]
+            ]
+        }],
+        ["stencil",{ "comment": "left-right arrows",
+            "offsets": [
+                [50,30],[115,30],[180,30],
+                [115,95],[180,95],
+                [180,160]
+            ],
+            "elements":[
+                ["arrow",{
+                    "p1": [0,0],
+                    "p2": [25,0],
+                    "attributes": {
+                        "stroke-width": 1
+                    }
+                }]
+            ]
+        }],
+        ["stencil",{ "comment": "right-left arrows",
+            "offsets": [
+                [75,95],
+                [75,160],[140,160],
+                [75,225],[140,225],[205,225]
+            ],
+            "elements":[
+                ["arrow",{
+                    "p1": [0,0],
+                    "p2": [-25,0],
+                    "attributes": {
+                        "stroke-width": 1
+                    }
+                }]
+            ]
+        }],
+        ["stencil",{ "comment": "top-down arrows",
+            "offsets": [
+                [30,50],[30,115],[30,180],
+                [95,115],[95,180],
+                [160,180]
+            ],
+            "elements":[
+                ["arrow",{
+                    "p1": [0,0],
+                    "p2": [0,25],
+                    "attributes": {
+                        "stroke-width": 1
+                    }
+                }]
+            ]
+        }],
+        ["stencil",{ "comment": "bottom-up arrows",
+            "offsets": [
+                [95,75],
+                [160,75],[160,140],
+                [225,75],[225,140],[225,205]
+            ],
+            "elements":[
+                ["arrow",{
+                    "p1": [0,0],
+                    "p2": [0,-25],
+                    "attributes": {
+                        "stroke-width": 1
+                    }
+                }]
+            ]
+        }],
+        ["stencil",{ "comment": "top exchange arrows",
+            "offsets": [
+                [0,0],[65,0],[130,0]
+            ],
+            "elements":[
+                ["arc", {
+                    "center": [62.5,17],
+                    "radius": 15,
+                    "start-angle": 30,
+                    "end-angle": 150,
+                    "arrowHeads": "both",
+                    "attributes": {
+                        "stroke-width": 1,
+                        "stroke": "#0000ff"
+                    }
+                }]
+            ]
+        }],
+        ["stencil",{ "comment": "right exchange arrows",
+            "offsets": [
+                [0,0],[0,65],[0,130]
+            ],
+            "elements":[
+                ["arc", {
+                    "center": [237.5,62.5],
+                    "radius": 15,
+                    "start-angle": -60,
+                    "end-angle": 60,
+                    "arrowHeads": "both",
+                    "attributes": {
+                        "stroke-width": 1,
+                        "stroke": "#0000ff"
+                    }
+                }]
+            ]
+        }],
+        ["stencil",{ "comment": "bottom exchange arrows",
+            "offsets": [
+                [0,0],[65,0],[130,0]
+            ],
+            "elements":[
+                ["arc", {
+                    "center": [62.5,237],
+                    "radius": 15,
+                    "start-angle": 210,
+                    "end-angle": 330,
+                    "arrowHeads": "both",
+                    "attributes": {
+                        "stroke-width": 1,
+                        "stroke": "#0000ff"
+                    }
+                }]
+            ]
+        }],
+        ["stencil",{ "comment": "left exchange arrows",
+            "offsets": [
+                [0,0],[0,65],[0,130]
+            ],
+            "elements":[
+                ["arc", {
+                    "center": [17.5,62.5],
+                    "radius": 15,
+                    "start-angle": 120,
+                    "end-angle": 240,
+                    "arrowHeads": "both",
+                    "attributes": {
+                        "stroke-width": 1,
+                        "stroke": "#0000ff"
+                    }
+                }]
+            ]
+        }],
+        ["arc", { "comment": "top-left exchange arrow",
+            "center": [10,10],
+            "radius": 8,
+            "start-angle": 0,
+            "end-angle": 270,
+            "arrowHeads": "both",
+            "attributes": {
+                "stroke-width": 1,
+                "stroke": "#0000ff"
+            }
+        }],
+        ["arc", { "comment": "top-right exchange arrow",
+            "center": [245,10],
+            "radius": 8,
+            "start-angle": -90,
+            "end-angle": 180,
+            "arrowHeads": "both",
+            "attributes": {
+                "stroke-width": 1,
+                "stroke": "#0000ff"
+            }
+        }],
+        ["arc", { "comment": "bottom-right exchange arrow",
+            "center": [245,245],
+            "radius": 8,
+            "start-angle": -180,
+            "end-angle": 90,
+            "arrowHeads": "both",
+            "attributes": {
+                "stroke-width": 1,
+                "stroke": "#0000ff"
+            }
+        }],
+        ["arc", { "comment": "bottom-left exchange arrow",
+            "center": [10,245],
+            "radius": 8,
+            "start-angle": 90,
+            "end-angle": 360,
+            "arrowHeads": "both",
+            "attributes": {
+                "stroke-width": 1,
+                "stroke": "#0000ff"
+            }
+        }],
+        ["latex-texts",{
+            "texts": [
+                {
+                    "position": [17.5,25],
+                    "text": "PE_{11}"
+                },{
+                    "position": [17.5,90],
+                    "text": "PE_{21}"
+                },{
+                    "position": [17.5,155],
+                    "text": "PE_{31}"
+                },{
+                    "position": [17.5,220],
+                    "text": "PE_{41}"
+                },{
+                    "position": [82.5,25],
+                    "text": "PE_{12}"
+                },{
+                    "position": [82.5,90],
+                    "text": "PE_{22}"
+                },{
+                    "position": [82.5,155],
+                    "text": "PE_{32}"
+                },{
+                    "position": [82.5,220],
+                    "text": "PE_{42}"
+                },{
+                    "position": [147.5,25],
+                    "text": "PE_{13}"
+                },{
+                    "position": [147.5,90],
+                    "text": "PE_{23}"
+                },{
+                    "position": [147.5,155],
+                    "text": "PE_{33}"
+                },{
+                    "position": [147.5,220],
+                    "text": "PE_{43}"
+                },{
+                    "position": [212.5,25],
+                    "text": "PE_{14}"
+                },{
+                    "position": [212.5,90],
+                    "text": "PE_{24}"
+                },{
+                    "position": [212.5,155],
+                    "text": "PE_{34}"
+                },{
+                    "position": [212.5,220],
+                    "text": "PE_{44}"
+                }
+            ]
+        }]
+    ]
+}

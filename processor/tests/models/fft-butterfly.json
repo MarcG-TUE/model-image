@@ -1,0 +1,80 @@
+{
+    "canvas": {
+        "width": 255,
+        "height": 120
+    },
+    "data": [
+    ],
+    "comment": "An FFT butterfly operation",
+    "elements": [
+        ["stencil",{ "comment": "adders",
+            "offsets": [[0,0],[0,60]],
+            "elements":[
+                ["clip-art", {
+                    "id": "adder",
+                    "transform": "translate(145,15)"
+                }]
+        ]
+        }],
+        ["clip-art", {
+            "id": "multiplier2",
+            "transform": "translate(85,75)"
+        }],
+        ["arrows", {
+            "arrows": [{
+                "p1": [35,15],
+                "p2": [135,15]
+            },{
+                "p1": [85,15],
+                "p2": [138,68]
+            },{
+                "p1": [35,75],
+                "p2": [75,75]
+            },{
+                "p1": [95,75],
+                "p2": [135,75]
+            },{
+                "p1": [92,68],
+                "p2": [138,22]
+            },{
+                "p1": [85,100],
+                "p2": [85,85]
+            },{
+                "p1": [155,15],
+                "p2": [200,15]
+            },{
+                "p1": [155,75],
+                "p2": [200,75]
+            }],
+            "attributes": {
+                "stroke-width": 1
+            }
+        }],
+        ["latex-texts",{
+            "texts": [
+                {
+                    "position": [5,10],
+                    "text": "X^e[k]"
+                },{
+                    "position": [5,70],
+                    "text": "X^o[k]"
+                },{
+                    "position": [75,100],
+                    "text": "e^{\\frac{-j\\pi{}k}{M}}"
+                },                {
+                    "position": [205,10],
+                    "text": "X[k]"
+                },{
+                    "position": [205,70],
+                    "text": "X[k+M]"
+                },{
+                    "position": [125,80],
+                    "text": "-"
+                },{
+                    "position": [200,100],
+                    "text": "0\\leq{}k<M"
+                }
+            ]
+        }]
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "canvas": {
+        "width": 285,
+        "height": 100
+    },
+    "elements": [
+        ["rectangle", {
+            "left": 150,
+            "top": 47,
+            "width": 75,
+            "height": 46,
+            "attributes": {
+                "stroke": "#000000",
+                "stroke-width": 1,
+                "fill": "#CCFFCC"
+            }
+        }],
+        ["circle", {
+            "center": [75, 70],
+            "radius": 20,
+            "attributes": {
+                "stroke-width": 1,
+                "fill": "#99CCFF"
+            }
+        }],
+        ["lines", {
+            "lines": [{
+                "p1": [67,78],
+                "p2": [83,62]
+            },{
+                "p1": [67,62],
+                "p2": [83,78]
+            }],
+            "attributes": {
+                "stroke-width": 1
+            }
+        }],
+        ["arrows", {
+            "arrows": [{
+                "p1": [30,70],
+                "p2": [55,70]
+            },{
+                "p1": [95,70],
+                "p2": [150,70]
+            },{
+                "p1": [75,25],
+                "p2": [75,50]
+            },{
+                "p1": [225,70],
+                "p2": [260,70]
+            }],
+            "attributes": {
+                "stroke-width": 1
+            }
+        }],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "s(t)",
+                        "position": [5,63]
+                    },
+                    {
+                        "text": "y(t)",
+                        "position": [263,63]
+                    },
+                    {
+                        "text": "h(t,t)",
+                        "position": [173,73]
+                    },
+                    {
+                        "text": "\\mathrm{channel}",
+                        "position": [167,55]
+                    },
+                    {
+                        "text": "z(t)",
+                        "position": [110,55]
+                    },
+                    {
+                        "text": "e^{j2\\pi{}f_ct}",
+                        "position": [62,8]
+                    }
+                ]
+            }
+        ]
+    ]
+}

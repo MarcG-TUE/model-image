@@ -1,0 +1,99 @@
+{
+    "canvas": {
+        "width": 390,
+        "height": 115
+    },
+    "elements": [
+        ["array",{
+            "horizontal": 4,
+            "deltaHorizontal": 40,
+            "elements":[
+                ["clip-art", {
+                    "id": "delay-block",
+                    "label": "z^{-1}",
+                    "labelScale": 1,
+                    "labelPosition": [-7.5,-5],
+                    "transform": "translate(130,15)"
+                }]
+            ]
+        }],
+        ["clip-art", {
+                    "id": "multiplier2",
+                    "transform": "translate(60,15)"
+        }],
+        ["clip-art", {
+            "id": "delay-block",
+            "label": "z^{-1}",
+            "labelScale": 1,
+            "labelPosition": [-7.5,-5],
+            "transform": "translate(315,100)"
+        }],
+        ["clip-art", {
+            "id": "adder",
+            "transform": "translate(285,60)"
+        }],
+        ["arrows",{
+            "arrows": [
+                {"p1": [25,15], "p2": [50,15]},
+                {"p1": [70,15], "p2": [120,15]},
+                {"p1": [140,15], "p2": [160,15]},
+                {"p1": [180,15], "p2": [200,15]},
+                {"p1": [220,15], "p2": [240,15]},
+                {"p1": [60,25], "p2": [60,50]},
+                {"p1": [295,60], "p2": [360,60]}
+            ],
+            "attributes": {
+                "stroke-width": 1
+            }
+        }],
+        ["polylines",{
+            "polylines": [
+                {"points": [[260,15],[285,15],[285,50]]},
+                {"points": [[95,15],[95,60],[275,60]]},
+                {"points": [[340,60],[340,100],[325,100]]},
+                {"points": [[305,100],[285,100],[285,70]]}
+            ],
+            "arrowHeads": "end"
+        }],
+        ["circles",{
+            "circles":[
+                {"center":[95,15]},
+                {"center":[340,60]}
+            ],
+            "radius": 3,
+            "attributes":{
+                "fill": "#000",
+                "stroke-width": 0
+            }
+
+        }],
+        ["latex-texts",{
+            "texts":[
+                {
+                    "text": "x[k]",
+                    "position": [5,10]
+                },
+                {
+                    "text": "y[k]",
+                    "position": [365,55]
+                },
+                {
+                    "text": "\\frac{1}{4}",
+                    "position": [55,55]
+                },
+                {
+                    "text": "-",
+                    "position": [290,38]
+                },
+                {
+                    "text": "+",
+                    "position": [263,48]
+                },
+                {
+                    "text": "+",
+                    "position": [273,75]
+                }
+            ]
+        }]
+    ]
+    }

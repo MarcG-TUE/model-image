@@ -1,0 +1,160 @@
+{
+    "canvas": {
+        "width": 325,
+        "height": 150
+    },
+    "data":[
+        ["parameters", [
+            {
+                "name": "sigma1",
+                "type": "range",
+                "initialValue": 1.25,
+                "description": "one singular value",
+                "step": 0.01,
+                "range": [0, 2]
+            },{
+                "name": "sigma2",
+                "type": "range",
+                "initialValue": 0.28,
+                "description": "another singular value",
+                "step": 0.01,
+                "range": [0, 2]
+            }]
+        ],
+        [ "variables", [
+            {
+                "name": "alpha1",
+                "value": "50/180*Math.PI"
+            },{
+                "name": "alpha2",
+                "value": "140/180*Math.PI"
+            },{
+                "name": "epsilon",
+                "value": "0.2"
+            }]
+        ]
+    ],
+    "elements": [
+        [ "axis-2d",{ "comment": "axis left",
+            "type": "4Q",
+            "xDom": [-1.2,1.2],
+            "yDom": [-1.2,1.2],
+            "center": [80,75],
+            "scale": 60,
+            "content": [
+                ["circle", {
+                    "center": [0, 0],
+                    "radius": 1,
+                    "attributes": {
+                        "stroke-width": 1,
+                        "stroke": "#00aa00",
+                        "fill": "none"
+                    }
+                }],
+                ["circle", {
+                    "center": "[Math.cos(3.7), Math.sin(3.7)]",
+                    "radius": 0.2,
+                    "attributes": {
+                        "stroke-width": 0,
+                        "fill": "#dddddd",
+                        "fill-opacity": 0.7
+                    }
+                }],
+                ["vector", {
+                    "p1": [0,0],
+                    "p2": "[Math.cos(3.7), Math.sin(3.7)]",
+                    "attributes": {
+                        "stroke": "#ff0000"
+                    }
+                }],
+                ["vector", {
+                    "p1": [0,0],
+                    "p2": "[Math.cos(3.7-0.5*Math.PI), Math.sin(3.7-0.5*Math.PI)]",
+                    "attributes": {
+                        "stroke": "#0000ff"
+                    }
+                }],
+                ["vector", {
+                    "p1": [0,0],
+                    "p2": [-0.93, -0.35],
+                    "attributes": {
+                        "stroke": "#00aa00"
+                    }
+                }]
+            ]}],
+        [ "axis-2d",{
+            "type": "4Q",
+            "xDom": [-1.2,1.2],
+            "yDom": [-1.2,1.2],
+            "center": [250,75],
+            "scale": 60,
+            "content": [
+                ["ellipse", { "comment": "big ellipse",
+                    "center": [0,0],
+                    "radius-major": "SceneData.parameters.sigma1",
+                    "radius-minor": "SceneData.parameters.sigma2",
+                    "angle": "SceneData.variables.alpha1*180/Math.PI",
+                    "attributes": {
+                        "stroke-width": 1,
+                        "stroke": "#00aa00",
+                        "fill": "none"
+                    },
+                    "updateOn": ["sigma1", "sigma2"]
+                }],
+                ["ellipse", { "comment": "smaller error ellipse",
+                    "center": "[SceneData.parameters.sigma2*Math.cos(SceneData.variables.alpha2), SceneData.parameters.sigma2*Math.sin(SceneData.variables.alpha2)]",
+                    "radius-major": "SceneData.parameters.sigma1 * SceneData.variables.epsilon",
+                    "radius-minor": "SceneData.parameters.sigma2 * SceneData.variables.epsilon",
+                    "angle": 50,
+                    "attributes": {
+                        "stroke-width": 0,
+                        "fill": "#dddddd",
+                        "fill-opacity": 0.7
+                    },
+                    "updateOn": ["sigma1", "sigma2"]
+                }],
+                ["vector", { "comment": "red vector",
+                    "p1": [0,0],
+                    "p2": "[SceneData.parameters.sigma2*Math.cos(SceneData.variables.alpha2), SceneData.parameters.sigma2*Math.sin(SceneData.variables.alpha2)]",
+                    "attributes": {
+                        "stroke": "#ff0000"
+                    },
+                    "updateOn": ["sigma1", "sigma2"]
+                }],
+                ["vector", { "comment": "blue vector",
+                    "p1": [0,0],
+                    "p2": "[SceneData.parameters.sigma1*Math.cos(SceneData.variables.alpha1), SceneData.parameters.sigma1*Math.sin(SceneData.variables.alpha1)]",
+                    "attributes": {
+                        "stroke": "#0000ff"
+                    },
+                    "updateOn": ["sigma1", "sigma2"]
+                }],
+                ["vector", { "comment": "green vector, red plus epsilon times blue",
+                    "p1": [0,0],
+                    "p2": "[SceneData.parameters.sigma2*Math.cos(SceneData.variables.alpha2)+SceneData.variables.epsilon*SceneData.parameters.sigma1*Math.cos(SceneData.variables.alpha1), SceneData.parameters.sigma2*Math.sin(SceneData.variables.alpha2)+SceneData.variables.epsilon*SceneData.parameters.sigma1*Math.sin(SceneData.variables.alpha1)]",
+                    "attributes": {
+                        "stroke": "#00aa00"
+                    },
+                    "updateOn": ["sigma1", "sigma2"]
+                }]
+            ]}],
+
+
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "\\varepsilon",
+                        "position": [40,110]
+                    },{
+                        "text": "\\sigma_d",
+                        "position": [233,77]
+                    },{
+                        "text": "\\varepsilon\\sigma_1",
+                        "position": [225,50]
+                    }
+                ]
+            }
+        ]
+    ]
+}

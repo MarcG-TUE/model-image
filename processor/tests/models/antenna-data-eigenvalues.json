@@ -1,0 +1,97 @@
+{
+    "canvas": {
+        "width": 325,
+        "height": 150
+    },
+    "elements": [
+        [ "barChart",
+            {
+                "yDom": [7],
+                "origin": [30, 125],
+                "scale": 13,
+                "width": 55,
+                "fontSize": 0.7,
+                "axisLabels": {
+                    "x": "eigenvalue",
+                    "y": "value"
+                },
+                "tickValuesY": [1, 2, 3, 4, 5, 6, 7],
+                "data": [
+                    {"label": "1", "value": 3.8},
+                    {"label": "2", "value": 1.25},
+                    {"label": "3", "value": 0.6},
+                    {"label": "4", "value": 0.35}             
+                ]
+            }
+        ],
+        [ "barChart",
+            {
+                "yDom": [7],
+                "origin": [135, 125],
+                "scale": 13,
+                "width": 55,
+                "fontSize": 0.7,
+                "axisLabels": {
+                    "x": "eigenvalue",
+                    "y": "value"
+                },
+                "tickValuesY": [1, 2, 3, 4, 5, 6, 7],
+                "data": [
+                    {"label": "1", "value": 5.2},
+                    {"label": "2", "value": 1.1},
+                    {"label": "3", "value": 1},
+                    {"label": "4", "value": 0.9}             
+                ]
+            }
+        ],
+        [ "barChart",
+            {
+                "yDom": [7],
+                "origin": [240, 125],
+                "scale": 13,
+                "width": 55,
+                "fontSize": 0.7,
+                "axisLabels": {
+                    "x": "eigenvalue",
+                    "y": "value"
+                },
+                "tickValuesY": [1, 2, 3, 4, 5, 6, 7],
+                "data": [
+                    {"label": "1", "value": 6.8},
+                    {"label": "2", "value": 2.9},
+                    {"label": "3", "value": 0.9},
+                    {"label": "4", "value": 0.8}             
+                ]
+            }
+        ],
+        ["latex-texts", {
+            "texts": [
+                {
+                    "text": "M=4,N=10,",
+                    "position": [30,7]
+                },
+                {
+                    "text": "d=1,\\sigma_n^2=1.0",
+                    "position": [30,17]
+                },
+                {
+                    "text": "M=4,N=500,",
+                    "position": [135,7]
+                },
+                {
+                    "text": "d=1,\\sigma_n^2=1.0",
+                    "position": [135,17]
+                },
+                {
+                    "text": "M=4,N=500,",
+                    "position": [240,7]
+                },
+                {
+                    "text": "d=2,\\sigma_n^2=1.0",
+                    "position": [240,17]
+                }
+            ],
+            "fontSize": 0.7
+        }]
+    ]
+}

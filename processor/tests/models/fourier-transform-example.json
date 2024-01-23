@@ -1,0 +1,118 @@
+{
+    "canvas": {
+        "width": 480,
+        "height": 175
+    },
+    "data": [
+        ["variables", [
+            {
+                "name": "signal",
+                "value": "Array.from({length:64}, (_,i)=>[Math.cos(2*Math.PI*i*5/64),0])"
+            },{
+                "name": "transformedSignal",
+                "value": "SceneData.fourierTransform(SceneData.variables.signal)"
+            }
+            ]
+        ]
+    ],
+    "elements": [
+        [ "axis-2d",
+            {
+                "type": "4Q",
+                "xDom": [0,63],
+                "yDom": [-1,1],
+                "center": [30,90],
+                "scale": [3,60],
+                "content": [
+                    ["discrete-function", {
+                        "function": "(n)=>SceneData.variables.signal[n][0]",
+                        "samples": "SceneData.linSpace(0,63,64)",
+                        "radius": 0.5,
+                        "stem": true,
+                        "attributes": {
+                            "stroke": "none",
+                            "fill": "#0072BD"
+                        },
+                        "stem-attributes": {
+                            "stroke": "#0072BD",
+                            "stroke-width": 1.0
+                        }
+                    }]
+                ],
+                "options":{
+                    "tickValuesX": [10,20,30,40,50,60],
+                    "tickValuesY": [-1,-0.5,0,0.5,1],
+                    "tickFormatY": ",.1f"
+                }
+            }
+        ],
+        [ "axis-2d",
+            {
+                "type": "4Q",
+                "xDom": [0,63],
+                "yDom": [-32,32],
+                "center": [275,90],
+                "scale": [3,1.875],
+                "content": [
+                    ["discrete-function", {
+                        "function": "(n)=>SceneData.variables.transformedSignal[n][0]",
+                        "samples": "SceneData.linSpace(0,63,64)",
+                        "radius": 0.5,
+                        "stem": true,
+                        "attributes": {
+                            "stroke": "none",
+                            "fill": "#D95319"
+                        },
+                        "stem-attributes": {
+                            "stroke": "#D95319",
+                            "stroke-width": 1.0
+                        }
+                    }]
+                ],
+                "options":{
+                    "tickValuesX": [10,20,30,40,50,60],
+                    "tickValuesY": [-32,0,32],
+                    "tickFormatY": ",.0f"
+                }
+            }
+        ],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "k",
+                        "position": [220,98],
+                        "scale":1
+                    },{
+                        "text": "k",
+                        "position": [470,98],
+                        "scale":1
+                    },{
+                        "text": "f[k]=\\cos\\left(2\\pi{}\\frac{5n}{64}\\right)",
+                        "position": [1,1],
+                        "scale":1
+                    },{
+                        "text": "F[k]",
+                        "position": [251,9],
+                        "scale":1
+                    }
+                ]
+            }
+        ],
+        [ "texts",
+            {
+                "texts": [
+                    {
+                        "text": "finite, discrete signal in the time domain",
+                        "position": [38,170],
+                        "scale":1
+                    },{
+                        "text": "same signal in the frequency domain",
+                        "position": [290,170],
+                        "scale":1
+                    }
+                ]
+            }
+        ]
+    ]
+}

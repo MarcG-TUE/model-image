@@ -1,0 +1,83 @@
+{
+    "canvas": {
+        "width": 125,
+        "height": 75
+    },
+    "elements": [
+        ["arrows", { "id": "signal rays",
+            "arrows": [{
+                "p1": [0,3],
+                "p2": [25,35]
+            },{
+                "p1": [47,0],
+                "p2": [75,35]
+            }
+            ],
+            "attributes":{
+                "stroke-width": 1,
+                "stroke": "#0000ff"
+            }
+        }],
+        ["clip-art", {
+            "id": "antenna-array",
+            "transform": "translate(25,40)",
+            "number-of-antennas": 2,
+            "delta": [50,0]
+        }],
+        ["lines", {
+            "lines": [{
+                "p1": [25,35],
+                "p2": [69,0]
+            },{
+                "p1": [75,35],
+                "p2": [118,0]
+            }
+            ],
+            "attributes":{
+                "stroke-width": 0.5,
+                "stroke": "#aa0000",
+                "stroke-dasharray": "3 2"
+            }
+        }],
+        ["arrows", {
+            "arrows": [{
+                "p1": [63,5.5],
+                "p2": [82,30]
+            }
+            ],
+            "double-headed": true,
+            "attributes":{
+                "stroke-width": 0.5,
+                "stroke": "#aa0000",
+                "stroke-dasharray": "3 2"
+            }
+        }],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "z(t)",
+                        "position": [40,40]
+                    },
+                    {
+                        "text": "s(t)",
+                        "position": [40,55]
+                    },
+                    {
+                        "text": "z_{\\tau}(t)",
+                        "position": [89,40]
+                    },
+                    {
+                        "text": "s_{\\tau}(t)",
+                        "position": [89,55]
+                    },
+                    {
+                        "text": "\\tau",
+                        "position": [78,11]
+                    }
+                ],
+                "scale": 1.0
+            }
+        ]
+    ]
+}

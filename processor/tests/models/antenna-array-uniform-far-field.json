@@ -1,0 +1,202 @@
+{
+    "canvas": {
+        "width": 340,
+        "height": 175
+    },
+    "elements": [
+        ["arrows", { "id": "rays",
+            "arrows": [{
+                "p1": [20,20],
+                "p2": [100,120]
+            },{
+                "p1": [70,20],
+                "p2": [150,120]
+            },{
+                "p1": [120,20],
+                "p2": [200,120]
+            },{
+                "p1": [220,20],
+                "p2": [300,120]
+            }
+            ],
+            "attributes":{
+                "stroke-width": 1,
+                "stroke": "#0000ff"
+            }
+        }],
+        ["lines", {
+            "lines": [{
+                "p1": [100,120],
+                "p2": [180,57]
+            },{
+                "p1": [150,120],
+                "p2": [198.5,81]
+            },{
+                "p1": [200,120],
+                "p2": [218,105]
+            }
+            ],
+            "attributes":{
+                "stroke-width": 0.5,
+                "stroke": "#aa0000",
+                "stroke-dasharray": "3 2"
+            }
+        }],
+        ["arrows", {
+            "arrows": [{
+                "p1": [138,90.5],
+                "p2": [157,115]
+            },{
+                "p1": [188,90.5],
+                "p2": [207,115]
+            }
+            ],
+            "double-headed": true,
+            "attributes":{
+                "stroke-width": 0.5,
+                "stroke": "#aa0000",
+                "stroke-dasharray": "3 2"
+            }
+        }],
+        ["lines", {
+            "lines":[{
+                "p1": [75,120],
+                "p2": [225,120]
+            },{
+                "p1": [275,120],
+                "p2": [325,120]
+            }],
+            "attributes":{
+                "stroke-width": 0.5,
+                "stroke": "#000000"
+            }
+        }],
+        ["line", {
+            "p1": [225,120],
+            "p2": [275,120],
+            "attributes":{
+                "stroke-width": 0.5,
+                "stroke": "#000000",
+                "stroke-dasharray": "4 2"
+            }
+        }],
+        ["lines", { "id": "antenna elements",
+            "lines":[{
+                "p1": [95,120],
+                "p2": [105,120]
+            },{
+                "p1": [145,120],
+                "p2": [155,120]
+            },{
+                "p1": [195,120],
+                "p2": [205,120]
+            },{
+                "p1": [295,120],
+                "p2": [305,120]
+            }],
+            "attributes":{
+                "stroke-width": 2.5
+            }
+        }],
+        ["lines", { "id": "antenna elements",
+            "lines":[{
+                "p1": [100,120],
+                "p2": [100,155]
+            },{
+                "p1": [150,120],
+                "p2": [150,155]
+            },{
+                "p1": [200,120],
+                "p2": [200,155]
+            },{
+                "p1": [300,120],
+                "p2": [300,155]
+            }],
+            "attributes":{
+                "stroke-width": 0.5
+            }
+        }],
+        ["lines", { "id": "angle line",
+            "lines":[{
+                "p1": [100,25],
+                "p2": [100,120]
+            }],
+            "attributes":{
+                "stroke-width": 0.5,
+                "stroke-dasharray": "4 2"
+            }
+        }],
+        ["arc", {
+            "center": [100, 120],
+            "radius": 50,
+            "start-angle": 90,
+            "end-angle": 129,
+            "arrowHeads": "both",
+            "attributes": {
+                "stroke-width": 0.5
+            }
+        }],
+        ["arrows", { "id": "Delta distances",
+            "arrows": [{
+                "p1": [100,145],
+                "p2": [150,145]
+            },{
+                "p1": [150,145],
+                "p2": [200,145]
+            }
+            ],
+            "double-headed": true,
+            "attributes":{
+                "stroke-width": 0.5,
+                "stroke": "#000000"
+            }
+        }],
+       [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "s(t)",
+                        "position": [50,3]
+                    },
+                    {
+                        "text": "x_1(t)",
+                        "position": [103,125]
+                    },
+                    {
+                        "text": "x_2(t)",
+                        "position": [153,125]
+                    },
+                    {
+                        "text": "x_3(t)",
+                        "position": [203,125]
+                    },
+                    {
+                        "text": "x_M(t)",
+                        "position": [303,125]
+                    },
+                    {
+                        "text": "\\tau",
+                        "position": [150,95]
+                    },
+                    {
+                        "text": "\\tau",
+                        "position": [200,95]
+                    },
+                    {
+                        "text": "\\alpha",
+                        "position": [77,64]
+                    },
+                    {
+                        "text": "\\Delta",
+                        "position": [120,150]
+                    },
+                    {
+                        "text": "\\Delta",
+                        "position": [170,150]
+                    }
+                ],
+                "scale": 1.0
+            }
+        ]
+    ]
+}

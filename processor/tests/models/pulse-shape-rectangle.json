@@ -1,0 +1,59 @@
+{
+    "canvas": {
+        "width": 152,
+        "height": 90
+    },
+    "elements": [
+        ["lines", {
+            "lines": [{
+                "p1": [25,0],
+                "p2": [25, 75]
+            },{
+                "p1": [25,75],
+                "p2": [150,75]
+            },{
+                "p1": [25,25],
+                "p2": [22,25]
+            },{
+                "p1": [100,75],
+                "p2": [100,78]
+            }],
+            "attributes": {
+                "stroke-width": 1
+            }
+        }],
+        ["polyline", {
+            "points": [[20,75],[25, 75],[25,25],[100,25],[100,75],[150,75]],
+            "attributes": {
+                "stroke-width": 1,
+                "stroke": "#0000aa"
+            }
+        }],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "g(t)",
+                        "position": [3,4]
+                    },
+                    {
+                        "text": "t",
+                        "position": [143,80]
+                    },
+                    {
+                        "text": "T",
+                        "position": [96,80]
+                    },
+                    {
+                        "text": "0",
+                        "position": [22,80]
+                    },
+                    {
+                        "text": "1",
+                        "position": [11,20]
+                    }
+                ]
+            }
+        ]
+    ]
+}

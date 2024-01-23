@@ -1,0 +1,107 @@
+{
+    "canvas": {
+        "width": 140,
+        "height": 110
+    },
+    "data": [
+        ["variables", [
+            {
+                "name": "phi",
+                "value": "50"
+            },{
+                "name": "x",
+                "value": "[1,Math.tan(SceneData.variables.phi/180*Math.PI)]"
+            },{
+                "name": "L",
+                "value": "SceneData.euclideanNorm(SceneData.variables.x)"
+            }
+        ]]
+    ],
+    "elements": [
+        [ "axis-2d", {
+            "type": "4Q",
+            "xDom": [-0.2,2.1],
+            "yDom": [-0.2,1.3],
+            "center": [15,90],
+            "scale": 50,
+            "options": {
+                "tickValuesX": [1,2],
+                "tickValuesY": [1]
+            },
+            "content": [
+                ["lines", {
+                    "lines": [
+                        {
+                            "p1": "[0,SceneData.variables.x[1]]",
+                            "p2": "SceneData.variables.x"
+                        },{
+                            "p1": "[1,0]",
+                            "p2": "SceneData.variables.x"
+                        }
+                    ],
+                    "attributes": {
+                        "stroke-width": 1,
+                        "stroke-dasharray": "2 2"
+                    }
+                }],
+                ["vector", {
+                    "p1": [0,0],
+                    "p2": "[SceneData.variables.L,0]",
+                    "attributes": {
+                        "stroke": "#00aa00",
+                        "stroke-width": 1.5
+                    }
+                }],
+                ["arc", {
+                    "radius": "SceneData.variables.L",
+                    "start-angle": 0,
+                    "end-angle": "SceneData.variables.phi",
+                    "arrowHeads": "begin",
+                    "attributes": {
+                        "stroke-dasharray": "4 2",
+                        "stroke": "#0000aa"
+                    }
+                }],
+                ["vector", {
+                    "p1": [0,0],
+                    "p2": "SceneData.variables.x",
+                    "attributes": {
+                        "stroke": "#ff0000",
+                        "stroke-width": 1.5
+                    }
+                }]
+            ]
+        }],
+        ["latex-texts", {
+            "texts": [
+                {
+                    "text": "\\begin{bmatrix}1\\\\~x\\\\\\end{bmatrix}",
+                    "position": [65,2]
+                }
+            ],
+            "scale": 1,
+            "color": "#ff0000"
+        }],
+        ["latex-texts", {
+            "texts": [
+                {
+                    "text": "\\begin{bmatrix}\\mathrm{atan}~x\\\\0\\\\\\end{bmatrix}",
+                    "position": [95,55]
+                }
+            ],
+            "scale": 1,
+            "color": "#00aa00"
+        }],
+        ["latex-text", {
+            "text": "\\varphi",
+            "position": [85,45],
+            "scale": 1,
+            "color": "#0000aa"
+        }],
+        ["latex-text", {
+            "text": "x",
+            "position": [5,28],
+            "scale": 1
+        }]
+    ]
+}

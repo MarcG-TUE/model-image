@@ -1,0 +1,67 @@
+{
+    "canvas": {
+        "width": 320,
+        "height": 110
+    },
+    "data":[
+        ["variables", [
+            {"name": "period", "value": 6},
+            {"name": "amplitude1", "value": 2},
+            {"name": "amplitude2", "value": 0.85},
+            {"name": "phaseDif", "value": 1.8}
+        ]]
+    ],
+    "elements": [
+        ["function-plot", {
+            "function": "t=>SceneData.variables.amplitude1*Math.cos(2*Math.PI*t/SceneData.variables.period)",
+            "width": 125,
+            "height": 85,
+            "origin": [30, 65],
+            "xDom": [0, 10],
+            "yDom": [-2.1,2.1],
+            "options":{
+                "tickValuesX": [2,4,6,8],
+                "tickValuesY": [-2,-1,0,1, 2],
+                "axisType": "4Q",
+                "showBackground": true,
+                "tickFormatX": ",.0f",
+                "tickFormatY": ",.0f",
+                "color": "#19CC80"
+            }
+        }],
+        ["function-plot", {
+            "function": "t=>SceneData.variables.amplitude2*Math.cos(2*Math.PI*t/SceneData.variables.period+SceneData.variables.phaseDif)",
+            "width": 125,
+            "height": 85,
+            "origin": [190, 65],
+            "xDom": [0, 10],
+            "yDom": [-2.1,2.1],
+            "options":{
+                "tickValuesX": [2,4,6,8],
+                "tickValuesY": [-2,-1,0,1, 2],
+                "axisType": "4Q",
+                "showBackground": true,
+                "tickFormatX": ",.0f",
+                "tickFormatY": ",.0f",
+                "color": "#19CC80"
+            }
+        }],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "t",
+                        "position": [140,70]
+                    },{
+                        "text": "f(t)",
+                        "position": [15,5]
+                    },{
+                        "text": "t",
+                        "position": [300,70]
+                    },{
+                        "text": "Hf(t)",
+                        "position": [175,5]
+                    }]            }
+        ]
+    ]
+}

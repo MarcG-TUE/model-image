@@ -1,0 +1,132 @@
+{
+    "canvas": {
+        "width": 350,
+        "height": 200
+    },
+    "elements": [
+        ["stencil",{
+            "offsets": [[20,145],[320,15]],
+            "elements":[
+                ["stencil", {
+                    "offsets": [[0,0],[8,8],[16,16]],
+                    "elements":[
+                        ["clip-art", {
+                            "id": "antenna",
+                            "transform": "scale(0.8)"
+                        }]
+                    ]
+                }]
+            ]
+        }],
+        ["stencil", { "comment": "beams",
+            "offsets": [[50,150],[50,150],[50,150],[310,45],[310,45],[310,45]],
+            "rotations": [-3,-22,-44,180,158,134],
+            "scales": [0.75,0.75,0.75,0.75,0.75,0.75],
+            "elements":[
+                ["path", {
+                    "string": "M 0 0 l 100 -15 c 40,-6 40,36 0,30 Z",
+                    "attributes":{
+                        "stroke": "#888823",
+                        "stroke-width": 1,
+                        "fill": "#FFFFC6"}
+                }]
+            ]
+        }],
+        ["stencil", { "comment": "building",
+            "offsets": [[150,30]],
+            "elements":[
+                ["clip-art", {
+                    "id": "from-file",
+                    "transform": "translate(-40,-30) scale(0.35)",
+                    "filename": "Pueblo_building_block.svg"
+                }]
+            ]
+        }],
+        ["stencil", { "comment": "1 tree",
+            "offsets": [[220,130]],
+            "elements":[
+                ["clip-art", {
+                    "id": "from-file",
+                    "transform": "translate(-70,-40) scale(0.42)",
+                    "filename": "Pine_tree_drawing_vector_graphic.svg"
+                }]
+            ]
+        }],
+        ["lines",{ "comment": "lines xmit-recv",
+            "lines": [
+                {
+                    "p1": [50,150],
+                    "p2": [310,45]
+                },{
+                    "p1": [50,150],
+                    "p2": [160,45]
+                },{
+                    "p1": [160,45],
+                    "p2": [310,45]
+                }
+            ]
+        }],
+        ["polygon", { "comment": "scatter",
+            "points": [[50,150], [210,125],[310,45],[225,160]],
+            "attributes":{
+                "fill": "#dddddd",
+                "fill-opacity": 0.8,
+                "stroke": 0
+            }
+        }],
+        ["stencil", { "comment": "2 trees",
+            "offsets": [[190,140],[235,150]],
+            "elements":[
+                ["clip-art", {
+                    "id": "from-file",
+                    "transform": "translate(-70,-45) scale(0.42)",
+                    "filename": "Pine_tree_drawing_vector_graphic.svg"
+                }]
+            ]
+        }],
+        ["subFigure", {"comment": "line-of-sight",
+            "transform": "translate(0,0) rotate(-23)",
+            "elements": [
+                ["text", {
+                    "text": "line-of-sight",
+                    "position": [103,155],
+                    "fontSize": 1
+                }]
+            ]
+        }],
+        ["subFigure", {"comment": "reflection",
+            "transform": "translate(0,0) rotate(0)",
+            "elements": [
+                ["text", {
+                    "text": "reflection",
+                    "position": [180,40],
+                    "fontSize": 1
+                }]
+            ]
+        }],
+        ["subFigure", {
+            "transform": "translate(0,0) rotate(-46)",
+            "elements": [
+                ["text", {
+                    "text": "scattering",
+                    "position": [98,257],
+                    "fontSize": 1
+                }]
+            ]
+        }],
+        [ "texts",
+            {
+                "texts": [
+                    {
+                        "text": "receive",
+                        "position": [310,10]
+                    },{
+                        "text": "transmit",
+                        "position": [10,195]
+                    }
+                ],
+                "fontSize": 1
+            }
+        ]
+    ]
+}

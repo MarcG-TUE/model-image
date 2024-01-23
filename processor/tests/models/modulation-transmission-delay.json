@@ -1,0 +1,138 @@
+{
+    "canvas": {
+        "width": 390,
+        "height": 125
+    },
+    "elements": [
+        ["arrows", {
+            "arrows": [{
+                "p1": [25,25],
+                "p2": [25,50]
+            },{
+                "p1": [25,75],
+                "p2": [25,100]
+            },{
+                "p1": [40,115],
+                "p2": [180,115]
+            },{
+                "p1": [200,50],
+                "p2": [200,25]
+            },{
+                "p1": [200,100],
+                "p2": [200,75]
+            }],
+            "attributes": {
+                "stroke-width": 1
+            }
+        }],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "s[k]",
+                        "position": [15,5]
+                    },
+                    {
+                        "text": "s(t)",
+                        "position": [15,57]
+                    },
+                    {
+                        "text": "z(t)",
+                        "position": [15,107]
+                    },
+                    {
+                        "text": "a\\cdot{}\\hat{z}(t~~~~~)",
+                        "position": [185,107]
+                    },
+                    {
+                        "text": "a\\cdot{}\\hat{s}(t~~~~~)",
+                        "position": [175,57]
+                    },
+                    {
+                        "text": "a~~~~~~~~~~~~~~\\cdot{}\\hat{s}[k]",
+                        "position": [160,5]
+                    }
+                ]
+            }
+        ],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "\\mathrm{pulse~shaping}",
+                        "position": [30,32]
+                    },
+                    {
+                        "text": "\\mathrm{modulation}",
+                        "position": [30,84]
+                    },
+                    {
+                        "text": "\\mathrm{transmission}",
+                        "position": [75,105]
+                    },
+                    {
+                        "text": "\\mathrm{demodulation}",
+                        "position": [137,84]
+                    },
+                    {
+                        "text": "\\mathrm{demodulation}",
+                        "position": [137,32]
+                    }
+                ],
+
+                "scale": 0.75
+            }
+        ],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "\\mathrm{digital~data}",
+                        "position": [285,8]
+                    },
+                    {
+                        "text": "\\mathrm{base-band~signal}",
+                        "position": [285,59]
+                    },
+                    {
+                        "text": "\\mathrm{modulated~signal}",
+                        "position": [285,108]
+                    }
+                ],
+
+                "scale": 1.0,
+                "color": "#0000ff"
+            }
+        ],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "+\\tau",
+                        "position": [93,95]
+                    },{
+                        "text": "-\\tau",
+                        "position": [217,109.7]
+                    },{
+                        "text": "\\cdot{}e^{-j2\\pi{}f_c\\tau}",
+                        "position": [228,55.7]
+                    },{
+                        "text": "\\cdot{}e^{-j2\\pi{}f_c\\tau}",
+                        "position": [170,4]
+                    }
+                ],
+
+                "scale": 1.0,
+                "color": "#ff0000"
+            }
+        ],
+        [ "latex-text",
+            {
+                "text": "-\\tau",
+                "position": [206,59.7],
+                "scale": 1.0,
+                "color": "#ffcccc"
+            }
+        ]
+    ]
+}

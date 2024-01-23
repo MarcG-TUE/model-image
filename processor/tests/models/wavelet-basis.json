@@ -1,0 +1,292 @@
+{
+    "canvas": {
+        "width": 370,
+        "height": 350
+    },
+    "data": [
+        ["variables", [
+            {
+                "name": "wavelet-basis",
+                "value": "SceneData.waveletBasis()"
+            }]
+        ]
+    ],
+    "elements": [
+        ["subFigure",{
+            "transform": "translate(15,115)",
+            "elements":[
+                ["rectangles",{
+                    "rectangles": [
+                        {
+                            "left": 0,
+                            "top": 25,
+                            "width": 12.5,
+                            "height": 40,
+                            "attributes":{"fill": "#7E2F8E"}
+                        },{
+                            "left": 12.5,
+                            "top": 25,
+                            "width": 12.5,
+                            "height": 40,
+                            "attributes":{"fill": "#7E2F8E"}
+                        },{
+                            "left": 25,
+                            "top": 25,
+                            "width": 12.5,
+                            "height": 40,
+                            "attributes":{"fill": "#7E2F8E"}
+                        },{
+                            "left": 37.5,
+                            "top": 25,
+                            "width": 12.5,
+                            "height": 40,
+                            "attributes":{"fill": "#7E2F8E"}
+                        },{
+                            "left": 50,
+                            "top": 25,
+                            "width": 12.5,
+                            "height": 40,
+                            "attributes":{"fill": "#7E2F8E"}
+                        },{
+                            "left": 62.5,
+                            "top": 25,
+                            "width": 12.5,
+                            "height": 40,
+                            "attributes":{"fill": "#7E2F8E"}
+                        },{
+                            "left": 75,
+                            "top": 25,
+                            "width": 12.5,
+                            "height": 40,
+                            "attributes":{"fill": "#7E2F8E"}
+                        },{
+                            "left": 87.5,
+                            "top": 25,
+                            "width": 12.5,
+                            "height": 40,
+                            "attributes":{"fill": "#7E2F8E"}
+                        },{
+                            "left": 0,
+                            "top": 65,
+                            "width": 25,
+                            "height": 20,
+                            "attributes":{"fill": "#EDB120"}
+                        },{
+                            "left": 25,
+                            "top": 65,
+                            "width": 25,
+                            "height": 20,
+                            "attributes":{"fill": "#EDB120"}
+                        },{
+                            "left": 50,
+                            "top": 65,
+                            "width": 25,
+                            "height": 20,
+                            "attributes":{"fill": "#EDB120"}
+                        },{
+                            "left": 75,
+                            "top": 65,
+                            "width": 25,
+                            "height": 20,
+                            "attributes":{"fill": "#EDB120"}
+                        },{
+                            "left": 0,
+                            "top": 85,
+                            "width": 50,
+                            "height": 10,
+                            "attributes":{"fill": "#D95319"}
+                        },{
+                            "left": 50,
+                            "top": 85,
+                            "width": 50,
+                            "height": 10,
+                            "attributes":{"fill": "#D95319"}
+                        },{
+                            "left": 0,
+                            "top": 95,
+                            "width": 100,
+                            "height": 5,
+                            "attributes":{"fill": "#0072BD"}
+                        }
+                    ],
+                    "attributes":{
+                        "fill-opacity": 0.3
+                    }
+                }]
+            ]
+        }],
+        ["function-plot", {
+            "functions": [
+                "SceneData.variables['wavelet-basis'][0][0]",
+                "SceneData.variables['wavelet-basis'][0][1]",
+                "SceneData.variables['wavelet-basis'][0][2]"
+            ],
+            "width": 200,
+            "height": 75,
+            "origin": [190, 320],
+            "xDom": [-1, 4],
+            "yDom": [-1.1, 2.5],
+            "options":{
+                "tickValuesX": [-1,0,1,2,3,4],
+                "tickValuesY": [-1, 0, 1, 2],
+                "tickFormatX": ",.0f",
+                "tickFormatY": ",.0f",
+                "axisType": "4Q",
+                "colors":[
+                    "#0072BD","#0072BD","#0072BD"
+                ],
+                "attributes": [{
+                    "stroke-width": 1,
+                    "stroke-dasharray": "3 2"
+                },{}]
+            }
+        }
+        ],
+        ["function-plot", {
+            "functions": [
+                "SceneData.variables['wavelet-basis'][1][0]",
+                "SceneData.variables['wavelet-basis'][1][1]",
+                "SceneData.variables['wavelet-basis'][1][2]",
+                "SceneData.variables['wavelet-basis'][1][3]"
+            ],
+            "width": 200,
+            "height": 75,
+            "origin": [190, 235],
+            "xDom": [-1, 4],
+            "yDom": [-1.1, 2.5],
+            "options":{
+                "tickValuesX": [-1,0,1,2,3,4],
+                "tickValuesY": [-1, 0, 1, 2],
+                "tickFormatX": ",.0f",
+                "tickFormatY": ",.0f",
+                "axisType": "4Q",
+                "colors":[
+                    "#D95319","#D95319","#D95319","#D95319"
+                ],
+                "attributes": [{
+                    "stroke-width": 1,
+                    "stroke-dasharray": "3 2"
+                },{},{"stroke-width": 1}]
+            }
+        }
+        ],
+        ["function-plot", {
+            "functions": [
+                "SceneData.variables['wavelet-basis'][2][0]",
+                "SceneData.variables['wavelet-basis'][2][1]",
+                "SceneData.variables['wavelet-basis'][2][2]",
+                "SceneData.variables['wavelet-basis'][2][3]",
+                "SceneData.variables['wavelet-basis'][2][4]",
+                "SceneData.variables['wavelet-basis'][2][5]"
+            ],
+            "width": 200,
+            "height": 75,
+            "origin": [190, 150],
+            "xDom": [-1, 4],
+            "yDom": [-1.1, 2.5],
+            "options":{
+                "tickValuesX": [-1,0,1,2,3,4],
+                "tickValuesY": [-1, 0, 1, 2],
+                "tickFormatX": ",.0f",
+                "tickFormatY": ",.0f",
+                "axisType": "4Q",
+                "colors":[
+                    "#EDB120","#EDB120","#EDB120","#EDB120","#EDB120","#EDB120"
+                ],
+                "attributes": [{
+                    "stroke-width": 0.5,
+                    "stroke-dasharray": "3 2"
+                },{},{"stroke-width": 1},{"stroke-width": 1},{"stroke-width": 1}]
+            }
+        }
+        ],
+        ["function-plot", {
+            "functions": [
+                "SceneData.variables['wavelet-basis'][3][0]",
+                "SceneData.variables['wavelet-basis'][3][1]",
+                "SceneData.variables['wavelet-basis'][3][2]",
+                "SceneData.variables['wavelet-basis'][3][3]",
+                "SceneData.variables['wavelet-basis'][3][4]",
+                "SceneData.variables['wavelet-basis'][3][5]",
+                "SceneData.variables['wavelet-basis'][3][6]",
+                "SceneData.variables['wavelet-basis'][3][7]",
+                "SceneData.variables['wavelet-basis'][3][8]",
+                "SceneData.variables['wavelet-basis'][3][9]"
+            ],
+            "width": 200,
+            "height": 75,
+            "origin": [190, 65],
+            "xDom": [-1, 4],
+            "yDom": [-1.1, 2.5],
+            "options":{
+                "tickValuesX": [-1,0,1,2,3,4],
+                "tickValuesY": [-1, 0,1,2],
+                "tickFormatX": ",.0f",
+                "tickFormatY": ",.0f",
+                "axisType": "4Q",
+                "numberOfSamples": 1000,
+                "colors":[
+                    "#7E2F8E","#7E2F8E","#7E2F8E","#7E2F8E","#7E2F8E","#7E2F8E","#7E2F8E","#7E2F8E","#7E2F8E","#7E2F8E"
+                ],
+                "attributes": [{
+                    "stroke-width": 0.5,
+                    "stroke-dasharray": "3 2"
+                },{},{"stroke-width": 1},{"stroke-width": 1},{"stroke-width": 1},{"stroke-width": 1},{"stroke-width": 1},{"stroke-width": 1},{"stroke-width": 1}]
+            }
+        }
+        ],
+        ["latex-texts",{
+            "texts":[{
+                "position": [42,187],
+                "text": "w_{k,m}"
+            },{
+                "position": [2,175],
+                "text": "k"
+            },{
+                "position": [61,128],
+                "text": "m"
+            },{
+                "position": [360,73],
+                "text": "t"
+            },{
+                "position": [360,158],
+                "text": "t"
+            },{
+                "position": [360,243],
+                "text": "t"
+            },{
+                "position": [360,328],
+                "text": "t"
+            },{
+                "position": [155,8],
+                "text": "w_{4,m}(t)"
+            },{
+                "position": [155,93],
+                "text": "w_{3,m}(t)"
+            },{
+                "position": [155,178],
+                "text": "w_{2,m}(t)"
+            },{
+                "position": [155,263],
+                "text": "w_{1,m}(t)"
+            }]
+        }],
+        ["text",{
+            "position": [160,125],
+            "text": "time"
+        }],
+        ["subFigure", {
+            "transform": "translate(128,190) rotate(-90)",
+            "elements":[
+                ["text",{
+                    "position": [0,0],
+                    "text": "scale"
+                }]
+            ]
+        }],
+        ["text",{
+            "position": [55,228],
+            "text": "time"
+        }]
+    ]
+}

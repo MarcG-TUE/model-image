@@ -1,0 +1,174 @@
+{
+    "canvas": {
+        "width": 400,
+        "height": 150
+    },
+    "elements": [
+        [ "subFigure", {
+            "transform": "translate(320,25) scale(0.5)",
+            "elements": [
+                [ "axis-2d",
+                {
+                    "type": "4Q",
+                    "xDom": [-0.7,4.2],
+                    "yDom": [-0.7,4.2],
+                    "center": [20,130],
+                    "scale": 30,
+                    "content": [
+                        ["vectors", {
+                            "vectors": [
+                                { "p1": [1.4339,2.0479], "p2": [3.6997, 3.10440]},
+                                { "p1": [2.2658,1.0565], "p2": [3.6997, 3.10440]}
+                            ],
+                            "attributes": {
+                                "stroke": "#888888",
+                                "stroke-width": 2.0
+                            }
+                        }],
+                        ["vectors", {
+                            "vectors": [
+                                { "p1": [0, 0], "p2": [1.4339,2.0479]},
+                                { "p1": [0, 0], "p2": [2.2658,1.0565]}
+                            ],
+                            "attributes": {
+                                "stroke": "#0000ff",
+                                "stroke-width": 2.0
+                            }
+                        }],
+                        ["vectors", {
+                            "vectors": [
+                                { "p1": [0, 0], "p2": [3.6997, 3.10440]},
+                                { "p1": [2.2658,1.0565], "p2": [1.4339,2.0479]}
+                            ],
+                            "attributes": {
+                                "stroke": "#ff0000",
+                                "stroke-width": 2.0
+                            }
+                        }]
+                    ]
+                }
+            ]                ]
+        } ],
+        [ "barChart",
+            {
+                "yDom": [20],
+                "origin": [30, 125],
+                "scale": 5,
+                "width": 65,
+                "fontSize": 0.7,
+                "axisLabels": {
+                    "x": "singular value",
+                    "y": "value"
+                },
+                "data": [
+                    {"label": "1", "value": 17},
+                    {"label": "2", "value": 13},
+                    {"label": "3", "value": 0.8},
+                    {"label": "4", "value": 0.7},
+                    {"label": "5", "value": 0.6}             
+                ]
+            }
+        ],
+        [ "barChart",
+            {
+                "yDom": [20],
+                "origin": [135, 125],
+                "scale": 5,
+                "width": 65,
+                "fontSize": 0.7,
+                "axisLabels": {
+                    "x": "singular value",
+                    "y": "value"
+                },
+                "data": [
+                    {"label": "1", "value": 20},
+                    {"label": "2", "value": 5},
+                    {"label": "3", "value": 0.8},
+                    {"label": "4", "value": 0.7},
+                    {"label": "5", "value": 0.6}             
+                ]
+            }
+        ],
+        [ "barChart",
+            {
+                "yDom": [20],
+                "origin": [240, 125],
+                "scale": 5,
+                "width": 65,
+                "fontSize": 0.7,
+                "axisLabels": {
+                    "x": "singular value",
+                    "y": "value"
+                },
+                "data": [
+                    {"label": "1", "value": 20},
+                    {"label": "2", "value": 15},
+                    {"label": "3", "value": 8},
+                    {"label": "4", "value": 7},
+                    {"label": "5", "value": 6}             
+                ]
+            }
+        ],
+        [ "lines", {
+            "lines": [
+                {"p1": [62.5,60], "p2": [62.5,120]},
+                {"p1": [167.5,100], "p2": [167.5,120]},
+                {"p1": [272.5,50], "p2": [272.5,84]}
+            ],
+            "endMarker": true,
+            "beginMarker": true,
+            "attributes": {
+                "stroke": "#0000ff"
+            }
+        }],
+        ["texts", {
+            "texts": [
+                {
+                    "position": [65,92.5],
+                    "text": "large gap"
+                },
+                {
+                    "position": [170,112],
+                    "text": "small gap"
+                },
+                {
+                    "position": [275,68],
+                    "text": "small gap"
+                }
+            ],
+            "fontSize": 0.5,
+            "attributes": {
+                "fill": "#0000ff"
+            }
+        }],
+        ["texts", {
+            "texts": [
+                {
+                    "text": "a) well-separated:",
+                    "position": [30,7]
+                },
+                {
+                    "text": "SNR=20dB, sep=60°",
+                    "position": [30,17]
+                },
+                {
+                    "text": "b) closely-spaced:",
+                    "position": [135,7]
+                },
+                {
+                    "text": "SNR=20dB, sep=5°",
+                    "position": [135,17]
+                },
+                {
+                    "text": "c) more noise:",
+                    "position": [240,7]
+                },
+                {
+                    "text": "SNR=0dB, sep=60°",
+                    "position": [240,17]
+                }
+            ],
+            "fontSize": 0.7
+        }]
+    ]
+}

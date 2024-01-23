@@ -1,0 +1,147 @@
+{
+    "canvas": {
+        "width": 175,
+        "height": 150
+    },
+    "elements": [
+        ["rectangle", {
+            "left": 25,
+            "top": 25,
+            "width": 140,
+            "height": 120,
+            "attributes": {
+                "stroke": "#000000",
+                "stroke-width": 0,
+                "fill": "#9DCBFC"
+            }
+        }],
+        ["rectangles", {
+            "rectangles": [{
+                "left": 25,
+                "top": 75
+            },{
+                "left": 25,
+                "top": 135
+            },{
+                "left": 65,
+                "top": 45
+            },{
+                "left": 65,
+                "top": 105
+            },{
+                "left": 95,
+                "top": 75
+            },{
+                "left": 95,
+                "top": 135
+            },{
+                "left": 135,
+                "top": 45
+            },{
+                "left": 135,
+                "top": 105
+            }],
+            "width": 10,
+            "height": 10,
+            "attributes": {
+                "stroke-width": 0,
+                "fill": "#ffff88"
+            }
+        }],
+        ["array",{
+            "horizontal": 15,
+            "deltaHorizontal": 10,
+            "elements":[
+                ["line", {
+                    "p1": [25,25],
+                    "p2": [25,145],
+                    "attributes": {
+                        "stroke-width": 0.7,
+                        "stroke": "#000000"
+                    }
+                }]
+            ]
+        }],
+        ["array",{
+            "vertical": 13,
+            "deltaVertical": 10,
+            "elements":[
+                ["line", {
+                    "p1": [25,25],
+                    "p2": [165,25],
+                    "attributes": {
+                        "stroke-width": 0.7,
+                        "stroke": "#000000"
+                    }
+                }]
+            ]
+        }],
+        ["rectangle", {
+            "left": 25,
+            "top": 25,
+            "width": 70,
+            "height": 120,
+            "attributes": {
+                "stroke": "#000000",
+                "stroke-width": 1.5,
+                "fill": "none"
+            }
+        }],
+        ["rectangle", {
+            "left": 95,
+            "top": 25,
+            "width": 70,
+            "height": 120,
+            "attributes": {
+                "stroke": "#000000",
+                "stroke-width": 1.5,
+                "fill": "none"
+            }
+        }],
+        ["array",{
+            "horizontal": 2,
+            "deltaHorizontal": 70,
+            "vertical": 2,
+            "deltaVertical": 60,
+            "elements":[
+                [ "text",
+                {
+                    "text": "R",
+                    "position": [67.5,52.3],
+                    "fontSize": 0.7
+                }
+            ]
+            ]
+        }],
+        ["array",{
+            "horizontal": 2,
+            "deltaHorizontal": 70,
+            "vertical": 2,
+            "deltaVertical": 60,
+            "elements":[
+                [ "text",
+                {
+                    "text": "R",
+                    "position": [27.5,82.3],
+                    "fontSize": 0.7
+                }
+            ]
+            ]
+        }],
+        ["text", {
+            "text": "time",
+            "position": [85,18],
+            "fontSize": 1
+        }],
+        [ "subFigure", {
+            "transform": "rotate(-90)",
+            "elements": [
+                ["text", {
+                    "text": "frequency",
+                    "position": [-110,15],
+                    "fontSize": 1
+                }]
+            ]
+        }]
+    ]
+}

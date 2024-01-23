@@ -1,0 +1,108 @@
+{
+    "canvas": {
+        "width": 380,
+        "height": 115
+    },
+    "elements": [
+        ["array",{
+            "horizontal": 3,
+            "deltaHorizontal": 70,
+            "elements":[
+                ["clip-art", {
+                    "id": "delay-block",
+                    "label": "z^{-1}",
+                    "labelScale": 1,
+                    "labelPosition": [-7.5,-5],
+                    "transform": "translate(85,15)"
+                }]
+            ]
+        }],
+        ["array",{
+            "horizontal": 4,
+            "deltaHorizontal": 70,
+            "elements":[
+                ["clip-art", {
+                    "id": "multiplier2",
+                    "transform": "translate(50,60)"
+                }]
+            ]
+        }],
+        ["clip-art", {
+            "id": "adder",
+            "transform": "translate(310,100)"
+        }],
+        ["lines",{
+            "lines": [
+                {"p1": [25,15], "p2": [75,15]},
+                {"p1": [95,15], "p2": [145,15]},
+                {"p1": [165,15], "p2": [215,15]},
+                {"p1": [50,15], "p2": [50,50]},
+                {"p1": [120,15], "p2": [120,50]},
+                {"p1": [190,15], "p2": [190,50]},
+                {"p1": [320,100], "p2": [350,100]}
+            ]
+        }],
+        ["polylines",{
+            "polylines": [
+                {"points": [[235,15],[260,15],[260,50]]},
+                {"points": [[50,70],[50,107.5],[302.8,107.5]]},
+                {"points": [[120,70],[120,102.5],[300,102.5]]},
+                {"points": [[190,70],[190,97.5],[300,97.5]]},
+                {"points": [[260,70],[260,92.5],[302.8,92.5]]}
+            ]
+        }],
+        ["circles",{
+            "circles":[
+                {"center":[50,15]},
+                {"center":[120,15]},
+                {"center":[190,15]}
+            ],
+            "radius": 3,
+            "attributes":{
+                "fill": "#000",
+                "stroke-width": 0
+            }
+
+        }],
+        ["latex-texts",{
+            "texts":[
+                {
+                    "text": "x[k]",
+                    "position": [5,10]
+                },
+                {
+                    "text": "x[k-1]",
+                    "position": [100,2]
+                },
+                {
+                    "text": "x[k-2]",
+                    "position": [170,2]
+                },
+                {
+                    "text": "x[k-3]",
+                    "position": [240,2]
+                },
+                {
+                    "text": "h[0]",
+                    "position": [20,55]
+                },
+                {
+                    "text": "h[1]",
+                    "position": [90,55]
+                },
+                {
+                    "text": "h[2]",
+                    "position": [160,55]
+                },
+                {
+                    "text": "h[3]",
+                    "position": [230,55]
+                },
+                {
+                    "text": "y[k]",
+                    "position": [353,93]
+                }
+            ]
+        }]
+    ]
+    }

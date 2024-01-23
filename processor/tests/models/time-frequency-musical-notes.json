@@ -1,0 +1,120 @@
+{
+    "canvas": {
+        "width": 430,
+        "height": 250
+    },
+    "elements": [
+        ["clip-art", {
+            "id": "from-file",
+            "transform": "translate(27,15) scale(0.69)",
+            "filename": "Score-input-example.svg"
+        }],
+        ["rectangle", {
+            "left": 25,
+            "top": 75,
+            "width": 150,
+            "height": 150,
+            "attributes": {
+                "stroke": "#000000",
+                "stroke-width": 1.5,
+                "fill": "#ffffff"
+            }
+        }],
+        ["rectangle", {
+            "left": 250,
+            "top": 75,
+            "width": 150,
+            "height": 150,
+            "attributes": {
+                "stroke": "#000000",
+                "stroke-width": 1.5,
+                "fill": "#ffffff"
+            }
+        }],
+        ["array",{
+            "horizontal": 9,
+            "deltaHorizontal": 15,
+            "elements":[
+                ["line", {
+                    "p1": [40,75],
+                    "p2": [40,225],
+                    "attributes": {
+                        "stroke-width": 0.5
+                    }
+                }]
+        ]}
+        ],
+        ["array",{
+            "vertical": 9,
+            "deltaVertical": 15,
+            "elements":[
+                ["line", {
+                    "p1": [250,90],
+                    "p2": [400,90],
+                    "attributes": {
+                        "stroke-width": 0.5
+                    }
+                }]
+        ]}
+        ],
+        ["stencil",{
+            "offsets": [[47.5,202.5],[77.50,187.5],[122.5,157.5],[152.5,142.5],[272.5,202.5],[302.50,187.5],[347.5,157.5],[377.5,142.5]],
+            "elements":[
+                ["clip-art", {
+                    "id": "from-file",
+                    "transform": "translate(-12,-63) scale(0.53)",
+                    "filename": "1-8_note_quaver_(music).svg"
+                }]
+            ]
+        }],
+        ["stencil",{
+            "offsets": [[47.5,225],[77.5,225],[122.5,225],[152.5,225],[250,202.5],[250,187.5],[250,157.5],[250,142.5]],
+            "elements":[
+                ["circle", {
+                    "radius": 6,
+                    "attributes":{
+                        "stroke-width": 0,
+                        "fill": "#0000ff"
+                    }
+                }]
+            ]
+        }],
+        ["texts", {
+            "texts": [
+                {
+                    "position": [91,240],
+                    "text": "time"
+                },
+                {
+                    "position": [316,240],
+                    "text": "time"
+                }
+            ],
+            "fontSize": 1,
+            "attributes": {
+                "fill": "#0000ff"
+            }
+        }],
+        [ "subFigure", {
+            "transform": "translate(12,170) rotate(-90)",
+            "elements": [
+                ["texts", {
+                    "texts": [
+                        {
+                            "position": [0,0],
+                            "text": "frequency"
+                        },
+                        {
+                            "position": [0,225],
+                            "text": "frequency"
+                        }
+                    ],
+                    "fontSize": 1,
+                    "attributes": {
+                        "fill": "#0000ff"
+                    }
+                }]
+            ]
+        } ]
+    ]
+}

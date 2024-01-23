@@ -1,0 +1,50 @@
+{
+    "canvas": {
+        "width": 200,
+        "height": 150
+    },
+    "data": [
+        ["variables", [
+            {
+                "name": "spectrogram-basis",
+                "value": "SceneData.spectrogramBasis()"
+            }]
+        ]
+    ],
+    "elements": [
+        ["bitmap",{
+            "width": 136.0,
+            "height": 107.5,
+            "position": [45,23.5],
+            "filename": "spectrogram-chirp-spectrogram.png"
+        }],
+        ["function-plot", {
+            "functions": [],
+            "width": 136.0,
+            "height": 107.5,
+            "origin": [45, 130],
+            "xDom": [0, 10.0],
+            "yDom": [0, 2560],
+            "options":{
+                "tickValuesX": [0,2, 4, 6, 8, 10],
+                "tickValuesY": [0, 500, 1000, 1500, 2000,2500],
+                "tickFormatX": ",.0f",
+                "axisType": "1Q",
+                "showBackground": false
+            }
+        }
+        ],
+        ["latex-texts",{
+            "texts":[{
+                "position": [195,138],
+                "text": "t"
+            },{
+                "position": [75,5],
+                "text": "s(t)=e^{j\\cdot{2\\pi\\cdot{}125\\cdot{}t}}"
+            },{
+                "position": [15,5],
+                "text": "f [\\mathit{Hz}]"
+            }]
+        }]
+    ]
+}

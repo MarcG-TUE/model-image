@@ -1,0 +1,166 @@
+{
+    "canvas": {
+        "width": 275,
+        "height": 265
+    },
+    "data": [
+        ["variables", [
+            {
+                "name": "signals",
+                "value": "SceneData.averagingExample()"
+            },
+            {
+                "name": "noiseVariance",
+                "value": 0.003,
+                "description": "Noise Variance"
+            },
+            {
+                "name": "number of samples",
+                "value": 65,
+                "description": "Number of antenna samples"
+            }
+            ]
+        ]
+    ],
+    "elements": [
+        [ "axis-2d",
+            {
+                "type": "1Q",
+                "xDom": [-0.0,70.5],
+                "yDom": [0,5.1],
+                "center": [45,65],
+                "scale": [3,12],
+                "content": [
+                    ["discrete-function", {
+                        "function": "(t)=>SceneData.variables.signals.g1[t]",
+                        "samples": "SceneData.linSpace(0,70,71)",
+                        "radius": 0.5,
+                        "stem": true,
+                        "attributes": {
+                            "stroke": "none",
+                            "fill": "#0072BD"
+                        },
+                        "stem-attributes": {
+                            "stroke": "#0072BD",
+                            "stroke-width": 1.0
+                        }
+                    }]
+                ],
+                "options":{
+                    "tickValuesX": [0,10,20,30,40,50,60,70],
+                    "tickValuesY": [0, 1, 2, 3, 4, 5],
+                    "fontSize": 7.13
+                }
+            }
+        ],
+        [ "axis-2d",
+            {
+                "type": "1Q",
+                "xDom": [-0.0,70.5],
+                "yDom": [0,5.1],
+                "center": [45,155],
+                "scale": [3,12],
+                "content": [
+                    ["discrete-function", {
+                        "function": "(t)=>SceneData.variables.signals.g5[t]",
+                        "samples": "SceneData.linSpace(0,70,71)",
+                        "radius": 0.5,
+                        "stem": true,
+                        "attributes": {
+                            "stroke": "none",
+                            "fill": "#0072BD"
+                        },
+                        "stem-attributes": {
+                            "stroke": "#0072BD",
+                            "stroke-width": 1.0
+                        }
+                    }]
+                ],
+                "options":{
+                    "tickValuesX": [0,10,20,30,40,50,60,70],
+                    "tickValuesY": [0, 1, 2, 3, 4, 5]
+                }
+            }
+        ],
+        [ "axis-2d",
+            {
+                "type": "1Q",
+                "xDom": [-0.0,70.5],
+                "yDom": [0,5.1],
+                "center": [45,245],
+                "scale": [3,12],
+                "content": [
+                    ["discrete-function", {
+                        "function": "(t)=>SceneData.variables.signals.g11[t]",
+                        "samples": "SceneData.linSpace(0,70,71)",
+                        "radius": 0.6,
+                        "stem": true,
+                        "attributes": {
+                            "stroke": "none",
+                            "fill": "#0072BD"
+                        },
+                        "stem-attributes": {
+                            "stroke": "#0072BD",
+                            "stroke-width": 1.0
+                        }
+                    }]
+                ],
+                "options":{
+                    "tickValuesX": [0,10,20,30,40,50,60,70],
+                    "tickValuesY": [0, 1, 2, 3, 4, 5],
+                    "font-size": 1
+                }
+            }
+        ],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "k",
+                        "position": [264,73.5],
+                        "scale":1
+                    },{
+                        "text": "k",
+                        "position": [264,163.5],
+                        "scale":1
+                    },{
+                        "text": "k",
+                        "position": [264,253.5],
+                        "scale":1
+                    },{
+                        "text": "g[k]",
+                        "position": [1,1],
+                        "scale":1
+                    },{
+                        "text": "g^{5}[k]",
+                        "position": [1,91],
+                        "scale":1
+                    },{
+                        "text": "g^{11}[k]",
+                        "position": [1,181],
+                        "scale":1
+                    }
+                ]
+            }
+        ],
+        [ "texts",
+            {
+                "texts": [
+                    {
+                        "text": "original signal",
+                        "position": [55,17],
+                        "scale":1
+                    },{
+                        "text": "5-point average",
+                        "position": [55,107],
+                        "scale":1
+                    },{
+                        "text": "11-point average",
+                        "position": [55,197],
+                        "scale":1
+                    }
+                ]
+            }
+        ]
+    ]
+}

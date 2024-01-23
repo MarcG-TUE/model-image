@@ -1,0 +1,70 @@
+{
+    "canvas": {
+        "width": 300,
+        "height": 300
+    },
+    "data": [
+        ["parameters", [
+            {
+                "name": "alpha1",
+                "type": "range",
+                "initialValue": 54,
+                "description": "direction of response vector 1",
+                "range": [-90, 90]
+            },
+            {
+                "name": "alpha2",
+                "type": "range",
+                "initialValue": -32,
+                "description": "direction of response vector 2",
+                "range": [-90, 90]
+            }]
+        ]
+    ],
+    "elements": [
+        ["axis-3d",{
+                "type": "Perspective8Q",
+                "position": [5,5,3.5],
+                "target": [0,0,0],
+                "fieldOfView": 45,
+                "xDom": [-1.5,1.5],
+                "yDom": [-1.5,1.5],
+                "zDom": [-1.5,1.5],
+                "center": [140,150],
+                "scale": 650,
+                "content": [
+                    ["manifold",
+                        {
+                            "M": 5,
+                            "Delta": 0.5,
+                            "show-rays": true,
+                            "response-vectors": "[SceneData.parameters.alpha1*Math.PI/180,SceneData.parameters.alpha2*Math.PI/180]",
+                            "updateOn": ["alpha1","alpha2"]
+                        }
+                    ]
+                ]
+        }],
+        ["latex-text", {
+                "text": "{\\cal A}",
+                "position": [175,25],
+                "scale": 2.5,
+                "color": "#0000ff"
+            }
+        ],
+        ["latex-texts", {
+                "texts": [
+                    {
+                        "text": "{\\bf{}a}(\\alpha_1)",
+                        "position": [220,30]
+                    },
+                    {
+                        "text": "{\\bf{}a}(\\alpha_2)",
+                        "position": [65,15]
+                    }
+                ],
+                "scale": 1.0,
+                "color": "#ff0000"
+            }
+        ]
+    ]
+}

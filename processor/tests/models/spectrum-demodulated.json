@@ -1,0 +1,66 @@
+{
+    "canvas": {
+        "width": 350,
+        "height": 100
+    },
+    "elements": [
+        ["polyline", {
+            "points": [[20, 75],[20,25],[50,75],[50,25],[57.5,32],[65,25],[72.5,32],[80,25],[80,75]],
+            "attributes": {
+                "stroke-width": 0.5,
+                "fill": "#E5EDFF",
+                "stroke-dasharray": "4 2",
+                "stroke": "#0000aa"
+            }
+        }],
+        ["polyline", {
+            "points": [[270,75],[270,25],[277.5,32],[285,25],[292.5,32],[300,25],[300,75],[330,25],[330,75]],
+            "attributes": {
+                "stroke-width": 0,
+                "fill": "#BFD2FF",
+                "stroke": "#0000aa"
+            }
+        }],
+        ["lines", {
+            "lines": [{
+                "p1": [0,75],
+                "p2": [350,75]
+            },{
+                "p1": [300,5],
+                "p2": [300,80]
+            }],
+            "attributes": {
+                "stroke-width": 1
+            }
+        }],
+        ["lines", {
+            "lines": [{
+                "p1": [50,75],
+                "p2": [50,10]
+            }],
+            "attributes": {
+                "stroke-width": 1,
+                "stroke-dasharray": "4 2",
+                "stroke": "#0000ff"
+            }
+        }],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "S(f)",
+                        "position": [272,5]
+                    },
+                    {
+                        "text": "0",
+                        "position": [297,83]
+                    },
+                    {
+                        "text": "-2 f_c",
+                        "position": [38,83]
+                    }
+                ]
+            }
+        ]
+    ]
+}

@@ -1,0 +1,118 @@
+{
+    "canvas": {
+        "width": 335,
+        "height": 65
+    },
+    "elements": [
+        ["rectangles", {
+            "rectangles": [
+                {
+                    "left": 10,
+                    "width": 10,
+                    "attributes": {
+                        "stroke": "#000000",
+                        "stroke-width": 0,
+                        "fill": "#BDDBF9"
+                    }
+                },{
+                    "left": 20,
+                    "width": 80,
+                    "attributes": {
+                        "stroke": "#000000",
+                        "stroke-width": 0,
+                        "fill": "#F7BBBB"
+                    }
+                },{
+                    "left": 100,
+                    "width": 230,
+                    "attributes": {
+                        "stroke": "#000000",
+                        "stroke-width": 0,
+                        "fill": "#BAF4C1"
+                    }
+                }
+            ],
+            "top": 10,
+            "height": 10
+        }],
+        ["array",{
+            "horizontal": 32,
+            "deltaHorizontal": 10,
+            "elements":[
+                ["rectangle", {
+                    "left": 10, "top": 10,
+                    "width": 10,"height": 10,
+                    "attributes": {
+                        "stroke-width": 1,
+                        "fill": "none"
+                    }
+                }]            ]
+        }],
+        ["texts", {
+            "texts":[
+                {"text": "31", "position": [12,17]},
+                {"text": "30", "position": [22,17]},
+                {"text": "29", "position": [32,17]},
+                {"text": "28", "position": [42,17]},
+                {"text": "27", "position": [52,17]},
+                {"text": "26", "position": [62,17]},
+                {"text": "25", "position": [72,17]},
+                {"text": "24", "position": [82,17]},
+                {"text": "23", "position": [92,17]},
+                {"text": "22", "position": [102,17]},
+                {"text": "21", "position": [112,17]},
+                {"text": "20", "position": [122,17]},
+                {"text": "19", "position": [132,17]},
+                {"text": "18", "position": [142,17]},
+                {"text": "17", "position": [152,17]},
+                {"text": "16", "position": [162,17]},
+                {"text": "15", "position": [172,17]},
+                {"text": "14", "position": [182,17]},
+                {"text": "13", "position": [192,17]},
+                {"text": "12", "position": [202,17]},
+                {"text": "11", "position": [212,17]},
+                {"text": "10", "position": [222,17]},
+                {"text": "9", "position": [233,17]},
+                {"text": "8", "position": [243,17]},
+                {"text": "7", "position": [253,17]},
+                {"text": "6", "position": [263,17]},
+                {"text": "5", "position": [273,17]},
+                {"text": "4", "position": [283,17]},
+                {"text": "3", "position": [293,17]},
+                {"text": "2", "position": [303,17]},
+                {"text": "1", "position": [313,17]},
+                {"text": "0", "position": [323,17]},
+                {"text": "MSB", "position": [21,7]},
+                {"text": "LSB", "position": [87,7]},
+                {"text": "MSB", "position": [101,7]},
+                {"text": "LSB", "position": [317,7]}
+            ],
+            "fontSize": 0.6
+        }],
+        ["polylines",{
+            "polylines": [{
+                "points": [[22,24],[25,27],[58,27],[60,30],[62,27],[95,27],[98,24]]
+            },{
+                "points": [[102,24],[105,27],[213,27],[215,30],[217,27],[325,27],[328,24]]
+            }],
+            "attributes": {
+                "stroke-width": 1
+            }
+        }],
+        ["texts", {
+            "texts":[
+                {"text": "sign (1 bit)", "position": [2,60]},
+                {"text": "exponent (8 bits)", "position": [23,40]},
+                {"text": "mantissa (23 bits)", "position": [180,40]}
+            ],
+            "fontSize": 1
+        }],
+        ["arrow", {
+            "p1": [15,50],
+            "p2": [15,22],
+            "attributes":{
+                "stroke-width": 1
+            }
+        }]
+    ]
+}

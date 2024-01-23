@@ -1,0 +1,215 @@
+{
+    "canvas": {
+        "width": 320,
+        "height": 320
+    },
+    "data": [
+        ["variables", [
+            {
+                "name": "phi",
+                "value": "50"
+            },{
+                "name": "length",
+                "value": "1.3"
+            },{
+                "name": "eigenvalue",
+                "value": "1.5"
+            },{
+                "name": "x",
+                "value": "[SceneData.variables.length*Math.cos(SceneData.variables.phi/180*Math.PI),SceneData.variables.length*Math.sin(SceneData.variables.phi/180*Math.PI)]"
+            }
+        ]]
+    ],
+    "elements": [
+        [ "axis-2d", {
+            "type": "4Q",
+            "xDom": [-0.8,2.1],
+            "yDom": [-0.8,2.1],
+            "center": [40,90],
+            "scale": 40,
+            "options": {
+                "tickValuesX": [],
+                "tickValuesY": []
+            },
+            "content": [
+                ["vector", {
+                    "p1": [0,0], 
+                    "p2": "SceneData.variables.x",
+                    "attributes": {
+                        "stroke": "#ff0000",
+                        "stroke-width": 1.5
+                    }
+                }],
+                ["arc", {
+                    "end-angle": "SceneData.variables.phi",
+                    "arrowHeads": "end",
+                    "attributes": {
+                        "stroke-dasharray": "2 2",
+                        "stroke": "#0000aa"
+                    }
+                }],
+                ["vector", {
+                    "p1": [0,0], 
+                    "p2": "[SceneData.variables.length,0]",
+                    "attributes": {
+                        "stroke": "#00aa00",
+                        "stroke-width": 1.5
+                    }
+                }]
+            ]
+        }],
+        [ "axis-2d", {
+            "type": "4Q",
+            "xDom": [-0.8,2.1],
+            "yDom": [-0.8,2.1],
+            "center": [230,90],
+            "scale": 40,
+            "options": {
+                "tickValuesX": [],
+                "tickValuesY": []
+            },
+            "content": [
+                ["vector", {
+                    "p1": [0,0], 
+                    "p2": "SceneData.scalePoint(SceneData.variables.x, SceneData.variables.eigenvalue)",
+                    "attributes": {
+                        "stroke": "#ff0000",
+                        "stroke-width": 1.5
+                    }
+                }],
+                ["arc", {
+                    "end-angle": "SceneData.variables.phi",
+                    "arrowHeads": "begin",
+                    "attributes": {
+                        "stroke-dasharray": "2 2",
+                        "stroke": "#0000aa"
+                    }
+                }],
+                ["vector", {
+                    "p1": [0,0], 
+                    "p2": "[SceneData.variables.length*SceneData.variables.eigenvalue,0]",
+                    "attributes": {
+                        "stroke": "#00aa00",
+                        "stroke-width": 1.5
+                    }
+                }]
+            ]
+        }],
+        [ "axis-2d", {
+            "type": "4Q",
+            "xDom": [-0.8,2.1],
+            "yDom": [-0.8,2.1],
+            "center": [40,280],
+            "scale": 40,
+            "options": {
+                "tickValuesX": [],
+                "tickValuesY": []
+            },
+            "content": [
+                ["vector", {
+                    "p1": [0,0], 
+                    "p2": "SceneData.variables.x",
+                    "attributes": {
+                        "stroke": "#ff0000",
+                        "stroke-width": 1.5
+                    }
+                }]
+            ]
+        }],
+        [ "axis-2d", {
+            "type": "4Q",
+            "xDom": [-0.8,2.1],
+            "yDom": [-0.8,2.1],
+            "center": [230,280],
+            "scale": 40,
+            "options": {
+                "tickValuesX": [],
+                "tickValuesY": []
+            },
+            "content": [
+                ["vector", {
+                    "p1": [0,0], 
+                    "p2": "SceneData.scalePoint(SceneData.variables.x, SceneData.variables.eigenvalue)",
+                    "attributes": {
+                        "stroke": "#ff0000",
+                        "stroke-width": 1.5
+                    }
+                }]
+            ]
+        }],
+        ["arrows", {
+            "arrows": [
+                {
+                    "p1": [130,60],
+                    "p2": [190,60]
+                },{
+                    "p1": [130,250],
+                    "p2": [190,250]
+                },{
+                    "p1": [60,130],
+                    "p2": [60,190]
+                },{
+                    "p1": [250,190],
+                    "p2": [250,130]
+                }],
+                "attributes": {
+                    "stroke":  "#888888",
+                 "stroke-width": 1.5
+                }
+            }],
+        ["latex-texts", {
+            "texts": [
+                {
+                    "text": "{\\bf{}x}",
+                    "position": [80,230]        
+                },{
+                    "text": "{\\bf{}A}",
+                    "position": [150,255],
+                    "scale": 1.5
+                    },{
+                    "text": "\\lambda{\\bf{}x}",
+                    "position": [285,210]        
+                }
+            ],
+            "scale": 1,
+            "color": "#ff0000"
+        }],
+        ["latex-texts", {
+            "texts": [
+                {
+                    "text": "{\\bf{}U}_{\\varphi}^{H}{\\bf{}x}",
+                    "position": [80,100]        
+                },{
+                    "text": "{{\\bf{}U}_{\\varphi}^{H}\\bf{}A}{\\bf{}U}_{\\varphi}",
+                    "position": [125,35],
+                    "scale": 1.5
+                    },{
+                    "text": "\\lambda{\\bf{}U}_{\\varphi}^{H}{\\bf{}x}",
+                    "position": [280,100]        
+                }
+            ],
+            "scale": 1,
+            "color": "#00aa00"
+        }],
+        ["latex-texts", {
+            "texts": [
+                {
+                    "text": "{\\bf{}U}_{\\varphi}",
+                    "position": [30,150],
+                    "scale": 1.5
+                },{
+                    "text": "{\\bf{}U}_{\\varphi}^{H}",
+                    "position": [260,150],
+                    "scale": 1.5
+                },{
+                    "text": "\\varphi",
+                    "position": [80,70]
+                },{
+                    "text": "-\\varphi",
+                    "position": [270,70]
+                }
+            ],
+            "color": "#0000aa"
+        }]
+    ]
+}

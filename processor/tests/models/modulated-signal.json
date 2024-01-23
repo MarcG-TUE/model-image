@@ -1,0 +1,83 @@
+    {
+    "canvas": {
+        "width": 250,
+        "height": 140
+    },
+    "elements": [
+        ["rectangle", {
+            "left": 25,
+            "top": 25,
+            "width": 70,
+            "height": 100,
+            "attributes": {
+                "stroke-width": 0,
+
+                "fill": "#D2E4F7"
+            }
+        }],
+        ["rectangle", {
+            "left": 95,
+            "top": 25,
+            "width": 70,
+            "height": 100,
+            "attributes": {
+                "stroke-width": 0,
+
+                "fill": "#F2DED2"
+            }
+        }],
+        ["rectangle", {
+            "left": 165,
+            "top": 25,
+            "width": 70,
+            "height": 100,
+            "attributes": {
+                "stroke-width": 0,
+
+                "fill": "#E4D2F4"
+            }
+        }],
+        ["function-plot", {
+            "function": "(t)=>((t>=1)&&(t<2))?Math.cos(t*14+Math.PI):Math.cos(t*14)",
+            "width": 210,
+            "height": 100,
+            "origin": [25, 75],
+            "xDom": [0, 3],
+            "yDom": [-1.1, 1.1],
+            "options":{
+                "axisType": "4Q",
+                "showBackground": false,
+                "tickValuesX": [1, 2, 3],
+                "tickFormatX": ",.0f",
+                "tickValuesY": [-1, -0.5, 0, 0.5, 1]
+            }
+        }
+        ],
+        [ "latex-texts",
+            {
+                "texts": [
+                    {
+                        "text": "\\mathit{Re}(z(t))",
+                        "position": [3,4]
+                    },
+                    {
+                        "text": "t",
+                        "position": [240,80]
+                    },
+                    {
+                        "text": "s_1",
+                        "position": [55,130]
+                    },
+                    {
+                        "text": "s_2",
+                        "position": [125,130]
+                    },
+                    {
+                        "text": "s_3",
+                        "position": [195,130]
+                    }
+                ]
+            }
+        ]
+    ]
+}

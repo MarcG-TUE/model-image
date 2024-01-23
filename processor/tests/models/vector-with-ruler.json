@@ -1,0 +1,32 @@
+{
+    "canvas": {
+        "width": 160,
+        "height": 105
+    },
+    "elements": [
+        [ "axis-2d",
+            {
+                "type": "4Q",
+                "xDom": [-1.2,4.2],
+                "yDom": [-1.2,2.5],
+                "center": [40,70],
+                "scale": 25,
+                "content": [
+                    ["vector", {
+                        "p1": [0, 0],
+                        "p2": [4,2],
+                        "attributes": {
+                            "stroke": "#0000ff",
+                            "stroke-width": 2.0
+                        }
+                    }]
+                ]
+            }
+        ],
+        ["clip-art", {
+            "id": "from-file",
+            "transform": "translate(32,107) scale(0.75) rotate(-71.4)",
+            "filename": "ruler.svg"
+        }]
+    ]
+}

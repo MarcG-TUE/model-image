@@ -1,0 +1,29 @@
+{
+  "name": "processor",
+  "version": "1.0.0",
+  "description": "Generate figures from json models",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "build-start": "npm run build && node dist/index.js",
+    "start": "node dist/index.js",
+    "test": "jest"
+  },
+  "author": "Marc Geilen",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jsdom": "^21.1.6",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "jsdom": "^23.2.0",
+    "path": "^0.12.7"
+  }
+}

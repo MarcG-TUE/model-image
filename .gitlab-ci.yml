@@ -32,5 +32,5 @@ test:
          - npm link
          - cd ../../processor
          - npm install
-         - npm link modelviewer
+         - npm link model-image
          - npm run test

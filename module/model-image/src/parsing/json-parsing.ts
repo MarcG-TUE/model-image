@@ -15,6 +15,7 @@ import { axes3DIsometric1Q, axes3DIsometric8Q, axes3DPerspective1Q, axes3DPerspe
 import { cAbs, cAddVectors, cInnerProduct, cScaleVector } from "../math/complex-numbers"
 import { rnGen } from "../utils/random"
 import { ColorPalette } from "../config/colors";
+import { addClipArt } from "../graphics/clipart";
 
 export var SceneData: any = {
     inBasis: vectorInBasis,
@@ -675,6 +676,12 @@ export class JSonSceneParser2D extends JSonSceneParser {
             case 'bitmap':
                 e[1].data = evaluateSpec(e[1].data)
                 this.addBitmap(e[1])
+                break
+
+            case 'clip-art':
+                this.sceneBuilder2D().startSubFigure(e[1].transform)
+                addClipArt(this.sceneBuilder2D().getScene(), e[1])
+                this.sceneBuilder2D().endSubFigure()
                 break
 
             case 'comment':

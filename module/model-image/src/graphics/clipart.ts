@@ -5,6 +5,16 @@ import { DOMMimeTypeImageSvg, DomParse } from "../utils/dom";
 export const clipArtFile = (f: string)=> `../clipart/${f}`
 
 
+export function addClipArt(svg: SvgCanvas, o: any) {
+    switch (o.id) {
+        case 'from-file':
+            addFromFile(svg, o.filename)
+            break;
+
+        default:
+            throw new Error(`Unknown clip-art element: ${o.id}`);
+    }
+}
 
 export function addFromFile(svg: SvgCanvas, filename: string) {
     if (Config.GetClipartSynchronous === undefined) {

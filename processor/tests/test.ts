@@ -3,6 +3,7 @@ import * as fs from "fs"
 import { makeFromJson } from "../src/make-figures"
 import { Config, DOMConfig } from 'model-image';
 import { JSDOM } from "jsdom"
+import { compareFiles } from './utils/utils';
 
 DOMConfig.DomParser = () => {
     const dp = (new JSDOM()).window.DOMParser
@@ -109,21 +110,13 @@ const Figures = [
     "wavelet-ecg-example"
 ]
 
-// test('test makeFromJson', () => {
-//     const inputFile = "./tests/models/vector-with-ruler.json"
-//     const outputFile = "./tests/output/vector-with-ruler.svg"
-//     const referenceFile = "./tests/output/reference/vector-with-ruler.svg"
-//     makeFromJson(inputFile, outputFile)
-//     expect(fs.readFileSync(outputFile)).toEqual(fs.readFileSync(referenceFile));
-// })
-
 Figures.forEach((fig: string, index: number) => {
     test(`test model ${index}: ${fig}`, () => {
         const inputFile = `./tests/models/${fig}.json`
         const outputFile = `./tests/output/${fig}.svg`
         const referenceFile = `./tests/output/reference/${fig}.svg`
         makeFromJson(inputFile, outputFile)
-        expect(fs.readFileSync(outputFile)).toEqual(fs.readFileSync(referenceFile));
+        expect(compareFiles(outputFile, referenceFile)).toBeTruthy()
     })
 })
 

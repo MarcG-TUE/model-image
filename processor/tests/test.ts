@@ -1,9 +1,10 @@
 import { expect, test } from '@jest/globals'
 import * as fs from "fs"
 import { makeFromJson } from "../src/make-figures"
-import { Config, DOMConfig } from 'model-image';
+import { Config, DOMConfig } from 'model-image'
 import { JSDOM } from "jsdom"
-import { compareFiles } from './utils/utils';
+import { compareFiles } from './utils/utils'
+import { PNG, PackerOptions } from 'pngjs'
 
 DOMConfig.DomParser = () => {
     const dp = (new JSDOM()).window.DOMParser
@@ -20,6 +21,28 @@ Config.GetDataFileSynchronous = (name: string) => {
 
 Config.GetBitmapFileSynchronous = (name: string) => {
     return fs.readFileSync(`./tests/clipart/${name}`)
+}
+
+Config.ConvertToPng = (data: number[][][], width: number, height: number)=> {
+
+    const png = new PNG({ width, height })
+
+    for (let y = 0; y < png.height; y++) {
+        for (let x = 0; x < png.width; x++) {
+            const idx = (png.width * y + x) << 2
+            png.data[idx] = data[y][x][0]
+            png.data[idx + 1] = data[y][x][1]
+            png.data[idx + 2] = data[y][x][2]
+            png.data[idx + 3] = data[y][x][3]
+        }
+    }
+
+    const o: PackerOptions = {
+        colorType: 6
+    }
+    const buffer = PNG.sync.write(png, o);
+
+    return new Uint8Array(buffer)
 }
 
 

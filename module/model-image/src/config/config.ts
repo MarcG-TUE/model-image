@@ -1,3 +1,4 @@
+// factor out some functions that depend on the platform, node.js, or browser
 export type TModelImageConfig = {
     GetClipartSynchronous: undefined | ((name: string)=>string),
     GetDataFileSynchronous: undefined | ((name: string)=>any),
@@ -5,6 +6,7 @@ export type TModelImageConfig = {
     GetDataFileAsynchronous: undefined | ((name: string)=>Promise<any>)
     GetClipartAsynchronous: undefined | ((name: string)=>Promise<string>)
     GetBitmapFileAsynchronous: undefined | ((name: string)=>Promise<any>)
+    ConvertToPng: undefined | ((data: number[][][], width: number, height:number)=>Uint8Array)
 }
 
 export var Config: TModelImageConfig = {
@@ -14,7 +16,8 @@ export var Config: TModelImageConfig = {
     GetDataFileSynchronous: undefined,
     GetDataFileAsynchronous: undefined,
     GetBitmapFileSynchronous: undefined,
-    GetBitmapFileAsynchronous: undefined
+    GetBitmapFileAsynchronous: undefined,
+    ConvertToPng: undefined
 }
 
 

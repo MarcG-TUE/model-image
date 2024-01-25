@@ -1,4 +1,4 @@
-export type TModelViewerConfig = {
+export type TModelImageConfig = {
     GetClipartSynchronous: undefined | ((name: string)=>string),
     GetDataFileSynchronous: undefined | ((name: string)=>any),
     GetBitmapFileSynchronous: undefined | ((name: string)=>any),
@@ -7,7 +7,7 @@ export type TModelViewerConfig = {
     GetBitmapFileAsynchronous: undefined | ((name: string)=>Promise<any>)
 }
 
-export var Config: TModelViewerConfig = {
+export var Config: TModelImageConfig = {
     // ClipArtRootFetch: "https://mgeilen.pages.tue.nl/5lik0/2dviewer/clipart/",
     GetClipartSynchronous: undefined,
     GetClipartAsynchronous: undefined,

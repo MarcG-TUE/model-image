@@ -684,6 +684,10 @@ export class JSonSceneParser2D extends JSonSceneParser {
                 this.sceneBuilder2D().endSubFigure()
                 break
 
+            case 'grid':
+                this.addGrid()
+                break
+
             case 'comment':
                 break
 
@@ -1544,6 +1548,11 @@ export class JSonSceneParser2D extends JSonSceneParser {
             this.add3DPolygon(l, at)
         })
     }
+
+    addGrid() {
+        this.sceneBuilder2D().getScene().addGrid()
+    }
+
 
     makeSpan2D(sp: any, at: Point3DTransform, parentNode?: any): any {
         var a1: Point3D

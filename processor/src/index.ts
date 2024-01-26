@@ -10,8 +10,15 @@ const dataFileSrcDir = "./tests/data"
 
 
 function makeFigure(inputFile: string, outputFile: string) {
-    console.log(outputFile)
+    console.log(`Processing: ${inputFile}`)
+    console.log(`Output: ${outputFile}`)
     makeFromJson(inputFile, outputFile)
+}
+
+function makeFigureLoop(inputFile: string, outputFile: string) {
+    console.log(`Processing: ${inputFile}`)
+    console.log(`Output: ${outputFile}`)
+    makeFromJsonLoop(inputFile, outputFile)
 }
 
 Config.GetClipartSynchronous = (name: string) => {
@@ -32,19 +39,31 @@ DOMConfig.DomParser = () => {
     return new dp()
 }
 
-type TArgs = {inputFile: string|undefined, outputFile: string|undefined}
-type TArgsStrong = {inputFile: string, outputFile: string}
+type TArgs = {
+    inputFile: string|undefined,
+    outputFile: string|undefined
+    loop: boolean|undefined
+}
+type TArgsStrong = {
+    inputFile: string,
+    outputFile: string,
+    loop: boolean
+}
 
 function processArgs(args: string[]): TArgsStrong{
     const result: TArgs = {
         inputFile: undefined,
-        outputFile: undefined
+        outputFile: undefined,
+        loop: false
     }
     var i = 2
     while (i<args.length) {
         if (args[i].startsWith("output-file=")) {
             result.outputFile = args[i].substring("output-file=".length)
-        } else {
+        } else if (args[i].startsWith("loop")) {
+            result.loop = true
+        }
+        else {
             result.inputFile = args[i]
         }
         i += 1
@@ -61,12 +80,14 @@ function processArgs(args: string[]): TArgsStrong{
 }
 
 
-// makeFigureLoop("antenna-data-one-source-no-noise")
-
 // args
 // -o outputfile
 // inputfile
 
 const pArgs = processArgs(process.argv)
-makeFigure(pArgs.inputFile, pArgs.outputFile)
+if (pArgs.loop) {
+    makeFigureLoop(pArgs.inputFile, pArgs.outputFile)
+} else {
+    makeFigure(pArgs.inputFile, pArgs.outputFile)
+}
 

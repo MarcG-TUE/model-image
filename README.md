@@ -10,7 +10,7 @@ Generation of static or dynamic svg images from json descriptions and typescript
 
 ## Installation
 
-### Module
+### Install Module
 
 Go into `/module/model-image` and run
 
@@ -41,16 +41,31 @@ npm run build
 
 ### Module
 
-- module to integrate in other programs
-  - node.js or browser
-  - implement functions to create  DOMParser (from jsdom or native)
+Module to integrate in other programs, node.js or browser based projects.
+
+Usage requires to implement some plugin functions
+to create  DOMParser (from jsdom in node.js or native in a browser)
+
+Targets svg output or babylon.js 3D output.
+
+#### Module Interface
+
+To be described and to be reorganized.
+
+### Standalone
+
 - command line, create svg
 - development, watch source file and update svg
 - parametric viewer 2D/3D
 
-### Standalone
+### Powershell scripts
 
-### Powershell script
+In `/scripts`, `model-image-convert.ps1` converts json file into svg.
+
+`convert-to-pdf-chrome.ps1` converts SVG files to pdf files, for example for use in LaTeX.
+
+Most accurate conversion from svg to pdf seems be by chromium-based browsers.
+
 
 
 ## Author

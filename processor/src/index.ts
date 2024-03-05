@@ -69,7 +69,7 @@ function processArgs(args: string[]): TArgsStrong{
         i += 1
     }
     if (result.inputFile === undefined) {
-        throw new Error("Please pass input file to the script.");
+        throw new Error("Please pass input file to the script with: inputFile <model.json>.");
     }
     if (result.outputFile === undefined) {
         const filePath = fs.realpathSync(result.inputFile)

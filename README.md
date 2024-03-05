@@ -39,6 +39,20 @@ npm run build
 
 ## Usage
 
+Use the following to process an input file `<model.json>` and produce an output SVG file `<out.svg>`.
+
+``` sh
+npm run start inputFile <model.json> outputFile <out.svg>
+```
+
+If `outputFile` is omitted, a file will generated in the same location as teh input file with a `.svg` extension.
+
+The following will do the transformation, but the program will keep running and monitoring the source JSON file. Whenever it changes, it reruns the conversion.The svg can be monitored while the model is being edited.
+
+``` sh
+npm run start inputFile <model.json> outputFile <out.svg> loop
+```
+
 ### Module
 
 Module to integrate in other programs, node.js or browser based projects.
@@ -64,9 +78,7 @@ In `/scripts`, `model-image-convert.ps1` converts json file into svg.
 
 `convert-to-pdf-chrome.ps1` converts SVG files to pdf files, for example for use in LaTeX.
 
-Most accurate conversion from svg to pdf seems be by chromium-based browsers.
-
-
+Most accurate conversion from svg to pdf seems to be by chromium-based browsers.
 
 ## Author
 

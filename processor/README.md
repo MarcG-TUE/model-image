@@ -11,12 +11,12 @@ TypeScript tool to process image models into SVG figures.
 Use the script:
 
 ``` sh
-/scripts/model-image-convert input-file [output-file]
+/scripts/model-image-convert input-file [output-file] [-watch]
 ```
 
 Direct call:
 
 ``` sh
-npm run start <jsonfile> [output-file=<outputfile>]
+npm run start -- <jsonfile> [--output-file=<outputfile>] [--watch]
 ```
 

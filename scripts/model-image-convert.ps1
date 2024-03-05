@@ -2,7 +2,8 @@
 #!/usr/bin/env pwsh
 param(
   [parameter(Mandatory = $true)][string] $inputfile,
-  [parameter(Mandatory = $false)][string] $outputfile
+  [parameter(Mandatory = $false)][string] $outputfile,
+  [parameter(Mandatory = $false)][switch] $watch
 )
 
 $startinglocation = Get-Location
@@ -24,10 +25,15 @@ if ("" -ne $outputfile) {
 $mypath = Split-Path -Path $MyInvocation.MyCommand.Path
 Set-Location $mypath/../processor
 
+$watchArg =""
+if ($watch) {
+  $watchArg = "--watch"
+}
+
 Write-Output $inputfile
 Write-Output $outputfile
 
 npm run build
-npm run start $inputfile output-file=$outputfile
+npm run start -- $inputfile --output-file=$outputfile $watchArg
 
 Set-Location $startinglocation

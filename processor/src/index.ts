@@ -3,6 +3,9 @@ import { makeFromJson, makeFromJsonLoop } from "./make-figures"
 import * as fs from "fs"
 import { JSDOM } from "jsdom"
 import path from "path"
+import yargs from 'yargs'
+import { hideBin } from 'yargs/helpers'
+
 
 const clipartSrcDir = "./tests/clipart"
 const dataFileSrcDir = "./tests/data"
@@ -42,31 +45,27 @@ DOMConfig.DomParser = () => {
 type TArgs = {
     inputFile: string|undefined,
     outputFile: string|undefined
-    loop: boolean|undefined
+    watch: boolean|undefined
 }
 type TArgsStrong = {
     inputFile: string,
     outputFile: string,
-    loop: boolean
+    watch: boolean
 }
 
-function processArgs(args: string[]): TArgsStrong{
+function processArgs(args: any): TArgsStrong{
     const result: TArgs = {
         inputFile: undefined,
         outputFile: undefined,
-        loop: false
+        watch: false
     }
-    var i = 2
-    while (i<args.length) {
-        if (args[i].startsWith("output-file=")) {
-            result.outputFile = args[i].substring("output-file=".length)
-        } else if (args[i].startsWith("loop")) {
-            result.loop = true
-        }
-        else {
-            result.inputFile = args[i]
-        }
-        i += 1
+
+    result.inputFile = args['_'][0]
+    if(args['output-file']) {
+        result.outputFile = args['output-file']
+    }
+    if(args['watch']) {
+        result.watch = true
     }
     if (result.inputFile === undefined) {
         throw new Error("Please pass input file to the script with: inputFile <model.json>.");
@@ -80,12 +79,20 @@ function processArgs(args: string[]): TArgsStrong{
 }
 
 
-// args
-// -o outputfile
-// inputfile
+yargs(hideBin(process.argv))
+  .command('npm run start -- <model.json> --output-file=<output-file.svg> --watch', 'process a JSON model image', () => {}, (argv) => {
+    console.info(argv)
+  })
+  .demandCommand(1)
+  .parse()
 
-const pArgs = processArgs(process.argv)
-if (pArgs.loop) {
+
+const pArgs = processArgs(yargs.argv)
+
+console.log(pArgs.inputFile)
+console.log(typeof(pArgs.inputFile))
+
+if (pArgs.watch) {
     makeFigureLoop(pArgs.inputFile, pArgs.outputFile)
 } else {
     makeFigure(pArgs.inputFile, pArgs.outputFile)

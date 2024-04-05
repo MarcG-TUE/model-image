@@ -22,6 +22,9 @@ export { Vector2, innerProduct } from "./math/linear-algebra"
 // math numerical methods
 export { randomFloat } from "./math/numerical-methods"
 
+// utils data
+export { generateRandomData } from "./utils/data"
+
 // math utils
 export { degreesToRadians } from "./math/utils"
 
@@ -44,7 +47,7 @@ export { SceneBuilder, SceneBuilder2D } from './scene-builder/scene-builder-svg'
 export { deepCopy, indirectEval, setPropertyIfNotExists } from "./utils/utils"
 
 // utils random
-export { rnGen } from "./utils/random"
+export { rnGen, rnGenInt } from "./utils/random"
 
 // svg function-plot
 export { addPlot, addPlotPolar } from "./svg/function-plot"

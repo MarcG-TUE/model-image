@@ -826,6 +826,7 @@ export class JSonSceneParser2D extends JSonSceneParser {
     }
 
     add2DCircles(cs: any, at: PointTransform, parent?: any) {
+        cs.circles = evaluateSpec(cs.circles)
         const elements: any[] = []
         cs.circles.forEach((c: any) => {
             transferAttributes(cs, c)

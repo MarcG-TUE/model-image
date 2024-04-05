@@ -120,6 +120,7 @@ abstract class JSonSceneParser {
                         case 'parameters':
                             d[1].forEach((p: any) => {
                                 SceneData.parameters[p.name] = evalInContext(p.initialValue, { SceneData })
+                                p.range = evaluateSpec(p.range)
                                 this.addParameter(p)
                             })
                             break
@@ -825,7 +826,7 @@ export class JSonSceneParser2D extends JSonSceneParser {
         return circle
     }
 
-    add2DCircles(cs: any, at: PointTransform, parent?: any) {
+    make2DCircles(cs: any, at: PointTransform, parent?: any) {
         cs.circles = evaluateSpec(cs.circles)
         const elements: any[] = []
         cs.circles.forEach((c: any) => {
@@ -834,6 +835,15 @@ export class JSonSceneParser2D extends JSonSceneParser {
             elements.push(this.add2DCircle(c, at, parent))
         })
         return elements
+    }
+
+    add2DCircles(cs: any, at: PointTransform, parent?: any) {
+        var circles = this.make2DCircles(deepCopy(cs), at, parent)
+        this.setupUpdateCallbacks(cs, (v: any) => {
+            this.sceneBuilder2D().scene?.removeElements(circles)
+            circles = this.make2DCircles(deepCopy(cs), at, parent)
+        })
+        return circles
     }
 
     make2DEllipse(e: any, at: PointTransform, parentNode?: any) {

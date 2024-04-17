@@ -726,7 +726,7 @@ export class JSonSceneParser2D extends JSonSceneParser {
             const axisTransform = axes2D4QTransform(axisSpec.xDom, xRange, axisSpec.yDom, yRange)
             const content = axisSpec['background-content']
             content.forEach((c: any) => {
-                this.addAxis2DContent(c, axisTransform)
+                this.addAxis2DContent(axisSpec, c, axisTransform)
             })
         }
 
@@ -757,7 +757,7 @@ export class JSonSceneParser2D extends JSonSceneParser {
         if (axisSpec.hasOwnProperty("content")) {
             const content = axisSpec['content']
             content.forEach((c: any) => {
-                this.addAxis2DContent(c, axisTransform)
+                this.addAxis2DContent(axisSpec, c, axisTransform)
             })
         }
     }
@@ -1230,7 +1230,7 @@ export class JSonSceneParser2D extends JSonSceneParser {
 
     }
 
-    addAxis2DContent(c: any, at: PointTransform, polar = false): any[] {
+    addAxis2DContent(axis: any, c: any, at: PointTransform, polar = false): any[] {
         var elements: any[] = []
         switch (c[0]) {
             case 'vector':
@@ -1298,7 +1298,7 @@ export class JSonSceneParser2D extends JSonSceneParser {
                 break
 
             case 'array':
-                elements.push(...this.addArrayToAxis(c[1], at))
+                elements.push(...this.addArrayToAxis(axis, c[1], at))
                 break
 
 
@@ -1306,13 +1306,42 @@ export class JSonSceneParser2D extends JSonSceneParser {
                 this.sceneBuilder2D().startSubFigure(c[1].transform)
                 elements.push(this.sceneBuilder2D().getScene().currentCanvas.node())
                 c[1].elements.forEach((e: any) => {
-                    this.addAxis2DContent(e, at)
+                    this.addAxis2DContent(axis, e, at)
                 })
                 this.sceneBuilder2D().endSubFigure()
                 break
 
             case 'comment':
                 //just skip
+                break
+
+            case 'grid':
+                const xTicks = axis.options.tickValuesX
+                const yTicks = axis.options.tickValuesY
+                xTicks.forEach((x: number)=>{
+                    if (x != 0) {
+                        elements.push(this.add2DLine({
+                            p1: [x,axis.yDom[0]],
+                            p2: [x,axis.yDom[1]],
+                            attributes: {
+                                "stroke": "#ffaaaa",
+                                "stroke-width": 1
+                            }
+                        }, at))
+                    }
+                })
+                yTicks.forEach((y: number)=>{
+                    if (y!=0) {
+                        elements.push(this.add2DLine({
+                            p1: [axis.xDom[0],y],
+                            p2: [axis.yDom[1],y],
+                            attributes: {
+                                "stroke": "#ffaaaa",
+                                "stroke-width": 1
+                            }
+                        }, at))
+                    }
+                })
                 break
 
             default:
@@ -1492,7 +1521,7 @@ export class JSonSceneParser2D extends JSonSceneParser {
         }
     }
 
-    addArrayToAxis(ar: any, at: PointTransform) {
+    addArrayToAxis(axis: any, ar: any, at: PointTransform) {
         SceneData.arrays.level += 1
         SceneData.arrays.indices = SceneData.arrays.indices.concat([{ horizontal: 0, vertical: 0 }])
         setPropertyIfNotExists(ar, "horizontal", 1)
@@ -1509,7 +1538,7 @@ export class JSonSceneParser2D extends JSonSceneParser {
                 SceneData.arrays.indices[SceneData.arrays.level - 1].vertical = v
                 elements.push(this.sceneBuilder2D().startSubFigure(`translate(${h * ar.deltaHorizontal * scale},${v * ar.deltaVertical * scale})`))
                 ar.elements.forEach((e: any) => {
-                    this.addAxis2DContent(e, at)
+                    this.addAxis2DContent(axis, e, at)
                 })
                 this.sceneBuilder2D().endSubFigure()
             }
@@ -1872,7 +1901,7 @@ export class JSonSceneParser2D extends JSonSceneParser {
 
             const at: PointTransform = (p: [number, number]) => [p[0] * xScaling + xOrigin, p[1] * yScaling + yOrigin]
             content.forEach((c: any) => {
-                elements.push(...this.addAxis2DContent(c, at))
+                elements.push(...this.addAxis2DContent(fp, c, at))
             })
         }
         return elements

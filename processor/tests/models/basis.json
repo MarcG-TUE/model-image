@@ -1,0 +1,25 @@
+{
+    "canvas": {
+        "width": 250,
+        "height": 250
+    },
+    "elements": [
+        [ "axis-2d",
+            {
+                "type": "1Q",
+                "xDom": [-0.0,10],
+                "yDom": [0,10],
+                "center": [25,225],
+                "scale": [20,20],
+                "options":{
+                    "tickValuesX": [0,1,2,3,4,5,6,7,8,9,10],
+                    "tickValuesY": [0,1,2,3,4,5,6,7,8,9,10],
+                    "fontSize": 7.13
+                },
+                "content": [
+                    ["grid"]
+                ]
+            }
+        ]
+    ]
+}

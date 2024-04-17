@@ -70,6 +70,9 @@ function processArgs(args: any): TArgsStrong{
     if (result.inputFile === undefined) {
         throw new Error("Please pass input file to the script with: inputFile <model.json>.");
     }
+    if (!fs.existsSync(result.inputFile)) {
+        throw new Error(`The specified input file does not exist.`)
+    }
     if (result.outputFile === undefined) {
         const filePath = fs.realpathSync(result.inputFile)
         const p = path.parse(filePath)
@@ -77,6 +80,9 @@ function processArgs(args: any): TArgsStrong{
     }
     return result as TArgsStrong
 }
+
+
+console.log("Model-Image Processor")
 
 
 yargs(hideBin(process.argv))

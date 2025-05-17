@@ -6,12 +6,6 @@ import { TFunction, addPlot, addPlotPolar } from "./function-plot"
 import { arrayBufferToBase64, loadBitmap, setPropertyIfNotExists } from "../utils/utils"
 import { pngData } from "../utils/png"
 import { DomParse, QuerySelector } from "../utils/dom"
-import { Config } from "../config/config"
-
-const MathJaxScaleCorrection = 0.7
-
-// export type Attribute = [string, string]
-// export type Attributes = Attribute[]
 
 export class SvgCanvas {
 
@@ -21,13 +15,17 @@ export class SvgCanvas {
     svgCanvas: any
     currentCanvas: any
     canvasStack: any[]
+    // mathjax subfigure svg seems to need scale correction that is context dependent
+    // 0.7 seems to be good for standalone figures, 0.45 for the dynamic javascript figures
+    // to be resolved later perhaps...
+    mathJaxScaleCorrection: number
 
     /**
      * Create a canvas of size width, height in pixels.
      * For print, a px should be equal to 1/96th of an inch.
      */
 
-    constructor(innerHeight: number, innerWidth: number, outerHeight: number, outerWidth: number, parentNode: any) {
+    constructor(innerHeight: number, innerWidth: number, outerHeight: number, outerWidth: number, parentNode: any, mathJaxScaleCorrection: number) {
 
         if(parentNode === undefined || parentNode === null) {
             // const dom = asDOM(`<!DOCTYPE html><body></body>`)
@@ -46,10 +44,9 @@ export class SvgCanvas {
             .attr('height', outerHeight)
             .attr('viewBox', `0 0 ${innerWidth} ${innerHeight}`)
             .attr('xmlns', 'http://www.w3.org/2000/svg')
-        // const gNode = this.svgCanvas.append('g')
-        //     .attr("transform", "scale(1)")
         this.currentCanvas = this.svgCanvas
         this.canvasStack = [this.currentCanvas]
+        this.mathJaxScaleCorrection = mathJaxScaleCorrection
     }
 
     pushCanvas(c: any) {
@@ -415,9 +412,9 @@ export class SvgCanvas {
         const doc = getMathjaxSvg(formula, s => s.replace(/currentColor/g, color))
         const svgElement: HTMLOrSVGElement = doc.documentElement
         if (scale) {
-            scale *= MathJaxScaleCorrection
+            scale *= this.mathJaxScaleCorrection
         } else {
-            scale = MathJaxScaleCorrection
+            scale = this.mathJaxScaleCorrection
         }
 
 

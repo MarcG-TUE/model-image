@@ -509,11 +509,11 @@ export class JSonSceneParser2D extends JSonSceneParser {
         )
     }
 
-    createScene(canvas: HTMLDivElement | null, scale: number = 1) {
+    createScene(canvas: HTMLDivElement | null, mathJaxScaleCorrection: number, scale: number) {
         setPropertyIfNotExists(this.sceneDescription, "canvas", {})
         setPropertyIfNotExists(this.sceneDescription.canvas, "height", 400)
         setPropertyIfNotExists(this.sceneDescription.canvas, "width", 600)
-        this.sceneBuilder2D().createStandardScene(canvas, this.sceneDescription.canvas.height, this.sceneDescription.canvas.width, scale)
+        this.sceneBuilder2D().createStandardScene(canvas, this.sceneDescription.canvas.height, this.sceneDescription.canvas.width, mathJaxScaleCorrection, scale)
         if (!this.sceneBuilder2D().scene) {
             throw new Error("Failed to create scene.");
         }

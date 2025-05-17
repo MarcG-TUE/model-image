@@ -55,9 +55,9 @@ export class SceneBuilder2D extends SceneBuilder {
     scene: SvgCanvas | undefined
     _canvas: HTMLDivElement | null = null
 
-    createStandardScene(canvas: HTMLDivElement|null, height: number, width: number, scale=1) {
+    createStandardScene(canvas: HTMLDivElement|null, height: number, width: number, mathJaxScaleCorrection: number, scale: number) {
         this._canvas = canvas
-        this.scene = new SvgCanvas(height,width, scale*height,scale*width, canvas);
+        this.scene = new SvgCanvas(height,width, scale*height,scale*width, canvas, mathJaxScaleCorrection);
     }
 
     getScene(): SvgCanvas {

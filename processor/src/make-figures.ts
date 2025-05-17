@@ -1,12 +1,14 @@
 import { JSonSceneParser2D } from "model-image"
 import * as fs from "fs"
 
+const MathJaxScaleSVG = 0.7
+
 export function makeFromJson(inputFile: string, outputFile: string) {
     const jsonText = fs.readFileSync(inputFile, "utf-8")
     const sceneDescription = JSON.parse(jsonText)
 
     const parser = new JSonSceneParser2D(sceneDescription)
-    const svg = parser.createScene(null)
+    const svg = parser.createScene(null, MathJaxScaleSVG, 1)
     if (svg === undefined) {
         console.error("Failed to create SVG.")
     } else {
